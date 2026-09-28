@@ -1,489 +1,705 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Tabla Anual | Liga Tucson</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* =========================================================
-       TABLA ANUAL
-       ========================================================= */
-
-    .tabla-anual-container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 25px auto 50px;
-      padding: 0 10px;
-      box-sizing: border-box;
-    }
-
-    .tabla-anual-titulo {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .tabla-anual-titulo h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #ffffff;
-    }
-
-    .tabla-anual-titulo p {
-      margin: 6px 0 0;
-      color: #bfc9d4;
-      font-size: 14px;
-    }
-
-    .tabla-wrapper {
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      border-radius: 10px;
-    }
-
-    .tabla-anual {
-      width: 100%;
-      border-collapse: collapse;
-      table-layout: fixed;
-      background: #ffffff;
-      color: #17212b;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .tabla-anual th {
-      background: #0b1f33;
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 700;
-      text-align: center;
-      padding: 9px 3px;
-      white-space: nowrap;
-    }
-
-    .tabla-anual td {
-      font-size: 13px;
-      font-weight: 500;
-      text-align: center;
-      padding: 7px 3px;
-      border-bottom: 1px solid #e4e8ec;
-      white-space: nowrap;
-    }
-
-    .tabla-anual tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* =========================================================
-       ANCHOS
-       ========================================================= */
-
-    .col-pos {
-      width: 38px;
-    }
-
-    .col-equipo {
-      width: auto;
-      text-align: left !important;
-      padding-left: 8px !important;
-    }
-
-    .col-pts {
-      width: 48px;
-    }
-
-    .col-stat {
-      width: 37px;
-    }
-
-    /* =========================================================
-       POSICIÓN
-       ========================================================= */
-
-    .posicion {
-      font-weight: 700;
-    }
-
-    /* =========================================================
-       EQUIPO
-       ========================================================= */
-
-    .nombre-equipo {
-      text-align: left;
-      font-weight: 600;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    /* =========================================================
-       PUNTOS
-       ========================================================= */
-
-    .puntos {
-      font-weight: 800;
-      color: #0b5fa5;
-      font-size: 14px !important;
-    }
-
-    /* =========================================================
-       DIFERENCIA DE GOL
-       ========================================================= */
-
-    .dg-positivo {
-      font-weight: 700;
-      color: #16803c;
-    }
-
-    .dg-negativo {
-      font-weight: 700;
-      color: #c62828;
-    }
-
-    .dg-cero {
-      font-weight: 700;
-      color: #555555;
-    }
-
-    /* =========================================================
-       CLASIFICACIONES
-       ========================================================= */
-
-    /* Puestos 1 al 6 */
-    .clasifica-directo td {
-      background: rgba(46, 160, 67, 0.10);
-    }
-
-    .clasifica-directo td:first-child {
-      border-left: 4px solid #2ea043;
-    }
-
-    /* Puestos 7 al 24 */
-    .clasifica-playoff td {
-      background: rgba(38, 139, 210, 0.08);
-    }
-
-    .clasifica-playoff td:first-child {
-      border-left: 4px solid #268bd2;
-    }
-
-    /* Repechaje */
-    .repechaje td {
-      background: rgba(198, 40, 40, 0.09);
-    }
-
-    .repechaje td:first-child {
-      border-left: 4px solid #c62828;
-    }
-
-    .etiqueta {
-      display: inline-block;
-      margin-left: 6px;
-      padding: 2px 5px;
-      border-radius: 4px;
-      font-size: 9px;
-      font-weight: 800;
-      vertical-align: middle;
-      background: #c62828;
-      color: #ffffff;
-    }
-
-    /* =========================================================
-       REFERENCIAS
-       ========================================================= */
-
-    .referencias {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px 16px;
-      margin-top: 15px;
-      color: #d5dce3;
-      font-size: 11px;
-    }
-
-    .referencia {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .referencia-color {
-      width: 12px;
-      height: 12px;
-      border-radius: 2px;
-      display: inline-block;
-    }
-
-    .referencia-verde {
-      background: #2ea043;
-    }
-
-    .referencia-azul {
-      background: #268bd2;
-    }
-
-    .referencia-amarillo {
-      background: #d6a500;
-    }
-
-    .referencia-rojo {
-      background: #c62828;
-    }
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-    @media (max-width: 700px) {
-
-      .tabla-anual-container {
-        margin-top: 18px;
-        padding: 0 5px;
-      }
-
-      .tabla-anual-titulo {
-        margin-bottom: 14px;
-      }
-
-      .tabla-anual-titulo h1 {
-        font-size: 22px;
-      }
-
-      .tabla-anual-titulo p {
-        font-size: 12px;
-      }
-
-      .tabla-wrapper {
-        overflow-x: hidden;
-      }
-
-      .tabla-anual {
-        table-layout: fixed;
-      }
-
-      .tabla-anual th {
-        font-size: 9px;
-        padding: 7px 1px;
-      }
-
-      .tabla-anual td {
-        font-size: 10px;
-        padding: 6px 1px;
-      }
-
-      .col-pos {
-        width: 25px;
-      }
-
-      .col-equipo {
-        width: auto;
-        padding-left: 5px !important;
-        padding-right: 3px !important;
-      }
-
-      .col-pts {
-        width: 35px;
-      }
-
-      .col-stat {
-        width: 25px;
-      }
-
-      .nombre-equipo {
-        font-size: 10px;
-      }
-
-      .puntos {
-        font-size: 11px !important;
-      }
-
-      .etiqueta {
-        display: none;
-      }
-
-      .referencias {
-        font-size: 9px;
-        gap: 6px 10px;
-        margin-top: 12px;
-      }
-
-      .referencia-color {
-        width: 9px;
-        height: 9px;
-      }
-    }
-
-    /* =========================================================
-       PANTALLAS MUY PEQUEÑAS
-       ========================================================= */
-
-    @media (max-width: 390px) {
-
-      .tabla-anual th {
-        font-size: 8px;
-      }
-
-      .tabla-anual td {
-        font-size: 9px;
-      }
-
-      .nombre-equipo {
-        font-size: 9px;
-      }
-
-      .col-pos {
-        width: 23px;
-      }
-
-      .col-pts {
-        width: 32px;
-      }
-
-      .col-stat {
-        width: 23px;
-      }
-    }
-  </style>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>Tabla Anual | Liga Tucson</title>
+
+
+<style>
+
+/* =========================================================
+   ESTILO GENERAL
+   MISMO DISEÑO QUE POSICIONES.HTML
+   ========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#eef3f9;
+  color:#16324f;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  transition:
+    transform .35s ease,
+    opacity .35s ease;
+}
+
+.site-header.header-hidden{
+  transform:translateY(-100%);
+  opacity:0;
+  pointer-events:none;
+}
+
+.header-top{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  padding:30px 20px 25px;
+
+  background:#0b1f3a;
+
+  text-align:center;
+}
+
+.header-logo{
+  width:105px;
+  height:105px;
+
+  max-width:105px;
+  max-height:105px;
+
+  object-fit:contain;
+
+  display:block;
+}
+
+.header-title h1{
+  margin-top:12px;
+
+  color:white;
+
+  font-size:44px;
+  font-weight:800;
+
+  letter-spacing:2px;
+}
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.main-nav{
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:18px;
+
+  padding:20px 15px;
+
+  background:#19375c;
+
+  flex-wrap:wrap;
+}
+
+.main-nav a{
+  color:white;
+
+  text-decoration:none;
+
+  font-size:22px;
+  font-weight:500;
+
+  padding:12px 18px;
+
+  border-radius:10px;
+
+  transition:.2s;
+}
+
+.main-nav a:hover{
+  background:#2d6597;
+}
+
+.main-nav a.active{
+  background:#3f7db5;
+  color:white;
+}
+
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.container{
+  max-width:1250px;
+
+  margin:0 auto;
+
+  padding:42px 20px 70px;
+}
+
+.page-title{
+  text-align:center;
+
+  color:#102a49;
+
+  font-size:42px;
+
+  margin-bottom:10px;
+}
+
+.page-subtitle{
+  text-align:center;
+
+  color:#6c7785;
+
+  font-size:20px;
+
+  margin-bottom:35px;
+}
+
+
+/* =========================================================
+   TABLA
+   ========================================================= */
+
+.table-card{
+  background:white;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+  margin-bottom:40px;
+}
+
+.table-wrapper{
+  width:100%;
+
+  overflow-x:auto;
+
+  -webkit-overflow-scrolling:touch;
+}
+
+table{
+  width:100%;
+
+  border-collapse:collapse;
+
+  min-width:720px;
+}
+
+thead{
+  background:#0b1f3a;
+}
+
+th{
+  padding:17px 10px;
+
+  color:white;
+
+  font-size:16px;
+
+  white-space:nowrap;
+}
+
+td{
+  padding:14px 10px;
+
+  border-top:1px solid #edf1f5;
+
+  text-align:center;
+
+  white-space:nowrap;
+}
+
+td:nth-child(2){
+  text-align:left;
+}
+
+
+/* =========================================================
+   EQUIPO
+   ========================================================= */
+
+.team-cell{
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+}
+
+.team-crest{
+  width:36px;
+  height:36px;
+
+  max-width:36px;
+  max-height:36px;
+
+  object-fit:contain;
+
+  flex-shrink:0;
+}
+
+.position{
+  font-weight:800;
+}
+
+.points{
+  font-weight:800;
+}
+
+
+/* =========================================================
+   COLORES TABLA ANUAL
+   ========================================================= */
+
+/*
+   1° al 6°:
+   campeones de zona / clasificación directa
+*/
+
+.clasificacion-directa{
+  background:#e5f4e9;
+}
+
+
+/*
+   7° al 24°:
+   Play-Off
+*/
+
+.clasificacion-playoff{
+  background:#e8f2fb;
+}
+
+
+/*
+   25° al 40°:
+   sin clasificación de Play-Off
+*/
+
+.sin-clasificacion{
+  background:white;
+}
+
+
+/*
+   41° al 44°:
+   repechaje por descenso
+*/
+
+.zona-descenso{
+  background:#fbe8e5;
+}
+
+
+/* =========================================================
+   ETIQUETAS
+   ========================================================= */
+
+.badge{
+  display:inline-block;
+
+  margin-left:8px;
+
+  padding:4px 8px;
+
+  border-radius:10px;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  vertical-align:middle;
+}
+
+.badge-green{
+  background:#d8f0df;
+
+  color:#24733b;
+}
+
+.badge-blue{
+  background:#dcecf9;
+
+  color:#17639a;
+}
+
+.badge-red{
+  background:#f5d6d2;
+
+  color:#9f3328;
+}
+
+
+/* =========================================================
+   DIFERENCIA DE GOL
+   ========================================================= */
+
+.dg-positive{
+  color:#287d43;
+
+  font-weight:700;
+}
+
+.dg-negative{
+  color:#b53d31;
+
+  font-weight:700;
+}
+
+
+/* =========================================================
+   REFERENCIAS
+   ========================================================= */
+
+.legend{
+  margin:25px auto 0;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:10px;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  color:#596674;
+}
+
+.legend-item{
+  display:flex;
+
+  align-items:center;
+
+  gap:7px;
+}
+
+.legend-box{
+  width:20px;
+  height:20px;
+
+  border-radius:5px;
+}
+
+.legend-green{
+  background:#39a957;
+}
+
+.legend-blue{
+  background:#2f8bd1;
+}
+
+.legend-red{
+  background:#bd4736;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.info{
+  margin-top:30px;
+
+  background:white;
+
+  border-radius:20px;
+
+  padding:25px;
+
+  box-shadow:
+    0 6px 20px rgba(0,0,0,.06);
+}
+
+.info h2{
+  color:#102a49;
+
+  margin-bottom:12px;
+}
+
+.info p{
+  color:#687785;
+
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+  background:#0b1f3a;
+
+  color:#d5deea;
+
+  text-align:center;
+
+  padding:30px 20px;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media(max-width:700px){
+
+  .header-top{
+    padding:25px 15px 22px;
+  }
+
+  .header-logo{
+    width:92px;
+    height:92px;
+
+    max-width:92px;
+    max-height:92px;
+  }
+
+  .header-title h1{
+    font-size:32px;
+  }
+
+  .main-nav{
+    gap:5px 8px;
+
+    padding:14px 8px;
+  }
+
+  .main-nav a{
+    font-size:18px;
+
+    padding:10px 12px;
+  }
+
+  .container{
+    padding:35px 14px 55px;
+  }
+
+  .page-title{
+    font-size:34px;
+  }
+
+  .page-subtitle{
+    font-size:18px;
+  }
+
+  th{
+    padding:13px 8px;
+
+    font-size:13px;
+  }
+
+  td{
+    padding:11px 8px;
+
+    font-size:13px;
+  }
+
+  .team-crest{
+    width:32px;
+    height:32px;
+
+    max-width:32px;
+    max-height:32px;
+  }
+
+  .badge{
+    font-size:9px;
+
+    padding:3px 6px;
+
+    margin-left:4px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media(max-width:390px){
+
+  .header-logo{
+    width:85px;
+    height:85px;
+
+    max-width:85px;
+    max-height:85px;
+  }
+
+  .header-title h1{
+    font-size:29px;
+  }
+
+  .main-nav a{
+    font-size:16px;
+
+    padding:9px 10px;
+  }
+
+  .page-title{
+    font-size:31px;
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <!-- =======================================================
-       ENCABEZADO
-       ======================================================= -->
 
-  <header>
+<!-- =======================================================
+     ENCABEZADO
+     ======================================================= -->
 
-    <div class="header-container">
+<header
+  class="site-header"
+  id="siteHeader"
+>
 
-      <a href="index.html" class="logo-link">
+  <div class="header-top">
 
-        <img
-          src="https://raw.githubusercontent.com/ianulisespaez-netizen/Liga-tucson/main/FDDF80B7-4151-4091-AB6F-C5DF10F36391.png"
-          alt="Liga Tucson"
-          class="logo"
-        >
+    <img
+      class="header-logo"
+      src="FDDF80B7-4151-4091-AB6F-C5DF10F36391.png"
+      alt="Liga Tucson"
+    >
 
-      </a>
+    <div class="header-title">
 
-      <div class="titulo-header">
-
-        <h1>LIGA TUCSON</h1>
-
-        <p>Liga Tucumana de Fútbol</p>
-
-      </div>
+      <h1>LIGA TUCSON</h1>
 
     </div>
 
-
-    <!-- =====================================================
-         MENÚ PRINCIPAL
-         ===================================================== -->
-
-    <nav>
-
-      <a href="index.html">
-        Inicio
-      </a>
-
-      <a href="posiciones.html">
-        Posiciones
-      </a>
-
-      <a href="tabla-anual.html" class="activo">
-        Tabla Anual
-      </a>
-
-      <a href="partidos.html">
-        Partidos
-      </a>
-
-      <a href="equipos.html">
-        Equipos
-      </a>
-
-      <a href="playoff.html">
-        Play-Off
-      </a>
-
-    </nav>
-
-  </header>
+  </div>
 
 
-  <!-- =======================================================
-       CONTENIDO
-       ======================================================= -->
+  <nav class="main-nav">
 
-  <main class="tabla-anual-container">
+    <a href="index.html">
+      Inicio
+    </a>
 
-    <div class="tabla-anual-titulo">
+    <a href="posiciones.html">
+      Posiciones
+    </a>
 
-      <h1>
-        Tabla Anual
-      </h1>
+    <a
+      href="tabla-anual.html"
+      class="active"
+    >
+      Tabla Anual
+    </a>
 
-      <p>
-        Primera División A — Temporada 2026
-      </p>
+    <a href="partidos.html">
+      Partidos
+    </a>
 
-    </div>
+    <a href="equipos.html">
+      Equipos
+    </a>
+
+    <a href="playoff.html">
+      Play-Off
+    </a>
+
+  </nav>
+
+</header>
 
 
-    <!-- =====================================================
-         TABLA
-         ===================================================== -->
 
-    <div class="tabla-wrapper">
+<!-- =======================================================
+     CONTENIDO
+     ======================================================= -->
 
-      <table class="tabla-anual">
+<main class="container">
+
+
+  <h1 class="page-title">
+    Tabla Anual
+  </h1>
+
+
+  <p class="page-subtitle">
+    Apertura + Clausura 2026
+  </p>
+
+
+
+  <!-- =====================================================
+       TABLA
+       ===================================================== -->
+
+  <div class="table-card">
+
+    <div class="table-wrapper">
+
+      <table>
 
         <thead>
 
           <tr>
 
-            <th class="col-pos">
-              #
+            <th>
+              Pos.
             </th>
 
-            <th class="col-equipo">
+            <th>
               Equipo
             </th>
 
-            <th class="col-pts">
+            <th>
               PTS
             </th>
 
-            <th class="col-stat">
+            <th>
               PJ
             </th>
 
-            <th class="col-stat">
+            <th>
               PG
             </th>
 
-            <th class="col-stat">
+            <th>
               PE
             </th>
 
-            <th class="col-stat">
+            <th>
               PP
             </th>
 
-            <th class="col-stat">
+            <th>
               GF
             </th>
 
-            <th class="col-stat">
+            <th>
               GC
             </th>
 
-            <th class="col-stat">
+            <th>
               DG
             </th>
 
@@ -492,12 +708,16 @@
         </thead>
 
 
-        <tbody id="tablaAnualBody">
+        <tbody id="tablaAnual">
 
           <tr>
 
-            <td colspan="10">
-              Cargando tabla...
+            <td
+              colspan="10"
+              style="text-align:center;"
+            >
+              Cargando tabla anual...
+
             </td>
 
           </tr>
@@ -508,397 +728,761 @@
 
     </div>
 
-
-    <!-- =====================================================
-         REFERENCIAS
-         ===================================================== -->
-
-    <div class="referencias">
-
-      <div class="referencia">
-
-        <span class="referencia-color referencia-verde"></span>
-
-        <span>
-          Clasificación directa
-        </span>
-
-      </div>
+  </div>
 
 
-      <div class="referencia">
 
-        <span class="referencia-color referencia-azul"></span>
+  <!-- =====================================================
+       REFERENCIAS
+       ===================================================== -->
 
-        <span>
-          Play-Off
-        </span>
-
-      </div>
+  <div class="legend">
 
 
-      <div class="referencia">
+    <div class="legend-item">
 
-        <span class="referencia-color referencia-rojo"></span>
+      <span
+        class="legend-box legend-green"
+      ></span>
 
-        <span>
-          Repechaje
-        </span>
-
-      </div>
+      <span>
+        Clasificación directa
+      </span>
 
     </div>
 
-  </main>
+
+    <div class="legend-item">
+
+      <span
+        class="legend-box legend-blue"
+      ></span>
+
+      <span>
+        Play-Off
+      </span>
+
+    </div>
 
 
-  <!-- =======================================================
-       DATOS
-       ======================================================= -->
+    <div class="legend-item">
 
-  <script src="datos.js?v=20260926"></script>
+      <span
+        class="legend-box legend-red"
+      ></span>
 
+      <span>
+        Repechaje
+      </span>
 
-  <!-- =======================================================
-       TABLA ANUAL
-       ======================================================= -->
-
-  <script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const tbody =
-        document.getElementById("tablaAnualBody");
+    </div>
 
 
-      /* =====================================================
-         COMPROBAR DATOS
-         ===================================================== */
+  </div>
 
-      if (
-        typeof datosLiga === "undefined"
-      ) {
 
-        tbody.innerHTML = `
-          <tr>
-            <td colspan="10">
-              No se pudo cargar datos.js.
-            </td>
-          </tr>
-        `;
 
-        return;
+  <!-- =====================================================
+       INFORMACIÓN
+       ===================================================== -->
+
+  <section class="info">
+
+    <h2>
+      Tabla anual
+    </h2>
+
+    <p>
+      La tabla anual reúne los puntos obtenidos durante
+      el Torneo Apertura y el Torneo Clausura 2026.
+      Los cuatro equipos ubicados en las últimas posiciones
+      quedan señalados como zona de repechaje por descenso.
+    </p>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+<footer>
+
+  Liga Tucson — Liga Tucumana de Fútbol
+
+</footer>
+
+
+
+<!-- =======================================================
+     DATOS
+     ======================================================= -->
+
+<script src="datos.js?v=20260928"></script>
+
+
+
+<script>
+
+/* =========================================================
+   ESCUDOS
+   ========================================================= */
+
+const escudos = {
+
+  "Talleres":
+    "IMG_1621.png",
+
+  "Juventud Unida":
+    "IMG_1622.png",
+
+  "Estación Experimental":
+    "IMG_1623.png",
+
+  "Central Norte":
+    "21B48DFD-98C8-4EDD-B633-35738F9B089D.png",
+
+  "Villa Mitre":
+    "IMG_1625.jpeg",
+
+  "All Boys":
+    "IMG_1627.png",
+
+  "San José":
+    "IMG_1628.png",
+
+  "Argentinos del Norte":
+    "IMG_1629.png",
+
+  "San Martín":
+    "IMG_1630.png",
+
+  "San Antonio":
+    "IMG_1631.jpeg",
+
+  "Atlético Tucumán":
+    "IMG_1632.jpeg",
+
+  "Sportivo Guzmán":
+    "IMG_1633.png",
+
+  "Amalia":
+    "IMG_1634.png",
+
+  "Tucumán Central":
+    "IMG_1635.png",
+
+  "Garmendia":
+    "IMG_1637.jpeg",
+
+  "Atlético Concepción":
+    "IMG_1638.png",
+
+  "San Juan":
+    "9D389031-3751-4B06-A800-AE5B7A426605.png",
+
+  "San Lorenzo (DG)":
+    "IMG_1646.png",
+
+  "Unión del Norte":
+    "IMG_1641.jpeg",
+
+  "Lastenia":
+    "IMG_1645.png",
+
+  "Cruz Alta":
+    "IMG_1644.png",
+
+  "Bella Vista":
+    "IMG_1651.png",
+
+  "San Fernando":
+    "IMG_1652.png",
+
+  "Almirante Brown":
+    "IMG_1653.jpeg",
+
+  "Famaillá":
+    "IMG_1654.png",
+
+  "Ateneo Parroquial Alderetes":
+    "IMG_1655.png",
+
+  "Santa Lucía":
+    "IMG_1656.jpeg",
+
+  "San Pablo":
+    "IMG_1671.png",
+
+  "Alto Verde":
+    "IMG_1657.png",
+
+  "Concepción FC":
+    "IMG_1658.png",
+
+  "Azucarera Argentina":
+    "IMG_1659.png",
+
+  "Ñuñorco":
+    "IMG_1660.png",
+
+  "Unión Simoca":
+    "IMG_1661.jpeg",
+
+  "San Ramón":
+    "IMG_1662.jpeg",
+
+  "Santa Rosa":
+    "IMG_1663.png",
+
+  "La Providencia":
+    "IMG_1664.jpeg",
+
+  "Deportivo Aguilares":
+    "IMG_1665.png",
+
+  "San Lorenzo (SA)":
+    "IMG_1666.webp",
+
+  "Jorge Newbery":
+    "IMG_1673.png",
+
+  "Graneros":
+    "IMG_1667.jpeg",
+
+  "Santa Ana":
+    "IMG_1668.png",
+
+  "Trinidad":
+    "IMG_1669.png",
+
+  "Marapa":
+    "IMG_1670.jpeg",
+
+  "Llorens":
+    "IMG_1672.jpeg"
+
+};
+
+
+
+/* =========================================================
+   MOSTRAR TABLA ANUAL
+   ========================================================= */
+
+function mostrarTablaAnual(){
+
+  const contenedor =
+    document.getElementById(
+      "tablaAnual"
+    );
+
+
+  /*
+   * Primero usamos la tabla anual que
+   * datos.js ya genera.
+   */
+
+  let tabla =
+    Array.isArray(datosLiga.tablaAnual)
+      ? [...datosLiga.tablaAnual]
+      : [];
+
+
+  /*
+   * Si por alguna razón todavía no existe,
+   * intentamos generarla directamente.
+   */
+
+  if(
+    tabla.length === 0 &&
+    typeof generarTablaAnual === "function"
+  ){
+
+    tabla =
+      generarTablaAnual();
+
+  }
+
+
+  /*
+   * Sin datos.
+   */
+
+  if(
+    !Array.isArray(tabla) ||
+    tabla.length === 0
+  ){
+
+    contenedor.innerHTML = `
+
+      <tr>
+
+        <td
+          colspan="10"
+          style="
+            text-align:center;
+            padding:25px;
+          "
+        >
+          No hay datos disponibles.
+
+        </td>
+
+      </tr>
+
+    `;
+
+    return;
+
+  }
+
+
+
+  /*
+   * Orden oficial:
+   *
+   * 1. Puntos
+   * 2. Menor cantidad de PJ
+   * 3. Diferencia de gol
+   * 4. Goles a favor
+   * 5. Goles en contra
+   */
+
+  tabla.sort(
+    (a,b) => {
+
+      if(
+        b.pts !== a.pts
+      ){
+
+        return b.pts - a.pts;
+
       }
 
 
-      if (
-        typeof datosLiga.generarTablaAnual !== "function"
-      ) {
+      if(
+        a.pj !== b.pj
+      ){
 
-        tbody.innerHTML = `
-          <tr>
-            <td colspan="10">
-              No se encontró la función de tabla anual.
-            </td>
-          </tr>
-        `;
+        return a.pj - b.pj;
 
-        return;
       }
 
 
-      /* =====================================================
-         OBTENER TABLA
-         ===================================================== */
+      const dgA =
+        Number(a.gf || 0) -
+        Number(a.gc || 0);
 
-      let tabla =
-        datosLiga.generarTablaAnual();
+      const dgB =
+        Number(b.gf || 0) -
+        Number(b.gc || 0);
 
 
-      if (
-        !Array.isArray(tabla) ||
-        tabla.length === 0
-      ) {
+      if(
+        dgB !== dgA
+      ){
 
-        tbody.innerHTML = `
-          <tr>
-            <td colspan="10">
-              No hay datos disponibles.
-            </td>
-          </tr>
-        `;
+        return dgB - dgA;
 
-        return;
       }
 
 
-      /* =====================================================
-         ORDEN OFICIAL
-         =====================================================
+      if(
+        Number(b.gf || 0) !==
+        Number(a.gf || 0)
+      ){
 
-         1. Puntos
-         2. Menor cantidad de partidos jugados
-         3. Diferencia de gol
-         4. Goles a favor
-         5. Goles en contra
-         6. Orden alfabético
-         */
-
-      tabla.sort(function (a, b) {
-
-        if (b.pts !== a.pts) {
-          return b.pts - a.pts;
-        }
-
-        if (a.pj !== b.pj) {
-          return a.pj - b.pj;
-        }
-
-        const dgA =
-          (a.gf || 0) -
-          (a.gc || 0);
-
-        const dgB =
-          (b.gf || 0) -
-          (b.gc || 0);
-
-        if (dgB !== dgA) {
-          return dgB - dgA;
-        }
-
-        if (
-          (b.gf || 0) !==
-          (a.gf || 0)
-        ) {
-
-          return (
-            (b.gf || 0) -
-            (a.gf || 0)
-          );
-
-        }
-
-        if (
-          (a.gc || 0) !==
-          (b.gc || 0)
-        ) {
-
-          return (
-            (a.gc || 0) -
-            (b.gc || 0)
-          );
-
-        }
-
-        return a.equipo.localeCompare(
-          b.equipo,
-          "es"
+        return (
+          Number(b.gf || 0) -
+          Number(a.gf || 0)
         );
 
-      });
+      }
 
 
-      /* =====================================================
-         LIMPIAR TABLA
-         ===================================================== */
+      if(
+        Number(a.gc || 0) !==
+        Number(b.gc || 0)
+      ){
 
-      tbody.innerHTML = "";
+        return (
+          Number(a.gc || 0) -
+          Number(b.gc || 0)
+        );
 
-
-      /* =====================================================
-         CREAR FILAS
-         ===================================================== */
-
-      tabla.forEach(function (equipo, index) {
-
-        const posicion =
-          index + 1;
+      }
 
 
-        const pts =
-          equipo.pts || 0;
+      return a.equipo.localeCompare(
+        b.equipo,
+        "es"
+      );
 
-        const pj =
-          equipo.pj || 0;
-
-        const pg =
-          equipo.pg || 0;
-
-        const pe =
-          equipo.pe || 0;
-
-        const pp =
-          equipo.pp || 0;
-
-        const gf =
-          equipo.gf || 0;
-
-        const gc =
-          equipo.gc || 0;
-
-        const dg =
-          gf - gc;
+    }
+  );
 
 
-        /* =================================================
-           CLASE DE LA FILA
-           ================================================= */
 
-        let claseFila = "";
+  /*
+   * Limpiar tabla.
+   */
 
-
-        /*
-         * Puestos 1 al 6
-         */
-
-        if (posicion <= 6) {
-
-          claseFila =
-            "clasifica-directo";
-
-        }
+  contenedor.innerHTML = "";
 
 
-        /*
-         * Puestos 7 al 24
-         */
 
-        else if (posicion <= 24) {
+  /*
+   * Crear las 44 filas.
+   */
 
-          claseFila =
-            "clasifica-playoff";
+  tabla.forEach(
+    (e,index) => {
 
-        }
-
-
-        /*
-         * Puestos 41 al 44
-         */
-
-        else if (posicion >= 41) {
-
-          claseFila =
-            "repechaje";
-
-        }
+      const posicion =
+        index + 1;
 
 
-        /* =================================================
-           DIFERENCIA DE GOL
-           ================================================= */
+      const pts =
+        Number(e.pts || 0);
 
-        let claseDG =
-          "dg-cero";
+      const pj =
+        Number(e.pj || 0);
 
+      const pg =
+        Number(e.pg || 0);
 
-        if (dg > 0) {
+      const pe =
+        Number(e.pe || 0);
 
-          claseDG =
-            "dg-positivo";
+      const pp =
+        Number(e.pp || 0);
 
-        }
+      const gf =
+        Number(e.gf || 0);
 
+      const gc =
+        Number(e.gc || 0);
 
-        if (dg < 0) {
-
-          claseDG =
-            "dg-negativo";
-
-        }
-
-
-        /* =================================================
-           ETIQUETA REPECHAJE
-           ================================================= */
-
-        let etiqueta = "";
+      const dg =
+        gf - gc;
 
 
-        if (posicion >= 41) {
 
-          etiqueta =
-            `<span class="etiqueta">REPECHAJE</span>`;
+      /*
+       * Determinar color de fila.
+       */
 
-        }
-
-
-        /* =================================================
-           CREAR FILA
-           ================================================= */
-
-        const fila =
-          document.createElement("tr");
+      let claseFila =
+        "sin-clasificacion";
 
 
-        fila.className =
-          claseFila;
+      /*
+       * Primeros 6:
+       * clasificación directa.
+       */
+
+      if(
+        posicion <= 6
+      ){
+
+        claseFila =
+          "clasificacion-directa";
+
+      }
 
 
-        /*
-         * IMPORTANTE:
-         *
-         * En datos.js la propiedad se llama
-         * equipo.equipo
-         *
-         * NO equipo.nombre
-         */
+      /*
+       * Puestos 7 al 24:
+       * Play-Off.
+       */
 
-        fila.innerHTML = `
+      else if(
+        posicion <= 24
+      ){
 
-          <td class="posicion">
+        claseFila =
+          "clasificacion-playoff";
+
+      }
+
+
+      /*
+       * Últimos 4:
+       * repechaje.
+       */
+
+      else if(
+        posicion >= 41
+      ){
+
+        claseFila =
+          "zona-descenso";
+
+      }
+
+
+
+      /*
+       * Etiqueta.
+       */
+
+      let etiqueta = "";
+
+
+      if(
+        posicion <= 6
+      ){
+
+        etiqueta = `
+          <span class="badge badge-green">
+            Directo
+          </span>
+        `;
+
+      }
+
+      else if(
+        posicion <= 24
+      ){
+
+        etiqueta = `
+          <span class="badge badge-blue">
+            Play-Off
+          </span>
+        `;
+
+      }
+
+      else if(
+        posicion >= 41
+      ){
+
+        etiqueta = `
+          <span class="badge badge-red">
+            Repechaje
+          </span>
+        `;
+
+      }
+
+
+
+      /*
+       * Escudo.
+       */
+
+      const escudo =
+        escudos[e.equipo]
+          ? `
+            <img
+              class="team-crest"
+              src="${escudos[e.equipo]}"
+              alt="${e.equipo}"
+            >
+          `
+          : "";
+
+
+
+      /*
+       * Diferencia de gol.
+       */
+
+      let claseDG = "";
+
+      if(
+        dg > 0
+      ){
+
+        claseDG =
+          "dg-positive";
+
+      }
+
+      else if(
+        dg < 0
+      ){
+
+        claseDG =
+          "dg-negative";
+
+      }
+
+
+
+      /*
+       * Crear fila.
+       */
+
+      contenedor.innerHTML += `
+
+        <tr
+          class="${claseFila}"
+        >
+
+          <td class="position">
             ${posicion}
           </td>
 
-          <td class="nombre-equipo col-equipo">
 
-            ${equipo.equipo}
+          <td>
 
-            ${etiqueta}
+            <div class="team-cell">
+
+              ${escudo}
+
+              <span>
+
+                ${e.equipo}
+
+                ${etiqueta}
+
+              </span>
+
+            </div>
 
           </td>
 
-          <td class="puntos">
+
+          <td class="points">
             ${pts}
           </td>
+
 
           <td>
             ${pj}
           </td>
 
+
           <td>
             ${pg}
           </td>
+
 
           <td>
             ${pe}
           </td>
 
+
           <td>
             ${pp}
           </td>
+
 
           <td>
             ${gf}
           </td>
 
+
           <td>
             ${gc}
           </td>
 
-          <td class="${claseDG}">
+
+          <td
+            class="${claseDG}"
+          >
             ${dg > 0 ? "+" : ""}${dg}
           </td>
 
-        `;
+        </tr>
+
+      `;
+
+    }
+  );
 
 
-        tbody.appendChild(fila);
+  console.log(
+    "Tabla anual cargada:",
+    tabla.length,
+    "equipos"
+  );
 
-      });
+}
 
-    });
 
-  </script>
+
+/* =========================================================
+   OCULTAR / MOSTRAR ENCABEZADO AL DESPLAZARSE
+   MISMO COMPORTAMIENTO QUE POSICIONES
+   ========================================================= */
+
+let ultimaPosicion =
+  window.scrollY;
+
+
+const header =
+  document.getElementById(
+    "siteHeader"
+  );
+
+
+window.addEventListener(
+  "scroll",
+  () => {
+
+    const posicionActual =
+      window.scrollY;
+
+
+    if(
+      posicionActual <= 10
+    ){
+
+      header.classList.remove(
+        "header-hidden"
+      );
+
+    }
+
+    else if(
+      posicionActual >
+      ultimaPosicion
+    ){
+
+      header.classList.add(
+        "header-hidden"
+      );
+
+    }
+
+    else if(
+      posicionActual <
+      ultimaPosicion
+    ){
+
+      header.classList.remove(
+        "header-hidden"
+      );
+
+    }
+
+
+    ultimaPosicion =
+      posicionActual;
+
+  },
+  {
+    passive:true
+  }
+);
+
+
+
+/* =========================================================
+   INICIAR
+   ========================================================= */
+
+mostrarTablaAnual();
+
+</script>
 
 </body>
+
 </html>
