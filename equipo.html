@@ -339,7 +339,7 @@
     <a href="index.html">Inicio</a>
     <a href="posiciones.html">Posiciones</a>
     <a href="partidos.html">Partidos</a>
-    <a href="equipos.html">Equipos</a>
+    <a href="equipos.html" class="activo">Equipos</a>
     <a href="playoff.html">🏆 Play-Off</a>
   </nav>
 
@@ -357,7 +357,7 @@
 </main>
 
 
-<script src="datos.js"></script>
+<script src="datos.js?v=20260928"></script>
 
 <script>
 
@@ -436,26 +436,61 @@
 
 
   /* =========================================================
-     BUSCAR EQUIPO
+     NORMALIZAR NOMBRES
+     ========================================================= */
+
+  function normalizarNombre(nombre) {
+
+    if (nombre === null || nombre === undefined) {
+      return "";
+    }
+
+    return String(nombre)
+      .trim()
+      .replace(/\s+/g, " ");
+
+  }
+
+
+  const nombreBuscado = normalizarNombre(nombreEquipo);
+
+
+  /* =========================================================
+     BUSCAR EQUIPO Y ZONA
      ========================================================= */
 
   let equipoEncontrado = null;
-  let zonaEncontrada = zonaParametro || null;
+  let zonaEncontrada = null;
+
 
   if (
     typeof datosLiga !== "undefined" &&
     datosLiga.zonas
   ) {
 
+    /*
+      En datos.js los equipos están guardados como strings:
+
+      "Talleres"
+      "San Martín"
+      "Atlético Tucumán"
+
+      Por eso NO usamos e.equipo.
+    */
+
     for (const zona in datosLiga.zonas) {
 
-      const encontrado = datosLiga.zonas[zona].find(
-        e => e.equipo === nombreEquipo
+      const listaEquipos = datosLiga.zonas[zona] || [];
+
+      const encontrado = listaEquipos.find(
+        equipo => normalizarNombre(equipo) === nombreBuscado
       );
 
       if (encontrado) {
-        equipoEncontrado = encontrado;
+
+        equipoEncontrado = normalizarNombre(encontrado);
         zonaEncontrada = zona;
+
         break;
       }
     }
@@ -463,49 +498,116 @@
 
 
   /* =========================================================
-     MOSTRAR ERROR
+     SI NO SE ENCONTRÓ EN LAS ZONAS
      ========================================================= */
 
   if (!equipoEncontrado) {
 
     document.getElementById("contenido").innerHTML = `
       <div class="error">
+
         <h2>Equipo no encontrado</h2>
-        <p>No se pudo encontrar el equipo solicitado.</p>
+
+        <p>
+          No se pudo encontrar el equipo solicitado.
+        </p>
+
         <br>
-        <a href="equipos.html">Volver a equipos</a>
+
+        <a href="equipos.html">
+          Volver a equipos
+        </a>
+
       </div>
     `;
 
   } else {
 
+
     /* =======================================================
-       TABLA DE LA ZONA
+       OBTENER TABLA DE LA ZONA
        ======================================================= */
 
-    const equiposZona = [...datosLiga.zonas[zonaEncontrada]];
+    let tablaZona = [];
 
-    equiposZona.sort((a, b) => {
+    if (
+      typeof datosLiga.tablasClausura !== "undefined" &&
+      datosLiga.tablasClausura[zonaEncontrada]
+    ) {
 
-      if (b.pts !== a.pts)
-        return b.pts - a.pts;
+      tablaZona = [...datosLiga.tablasClausura[zonaEncontrada]];
 
-      if (b.dg !== a.dg)
-        return b.dg - a.dg;
+    }
 
-      if (b.gf !== a.gf)
-        return b.gf - a.gf;
 
-      if (a.gc !== b.gc)
-        return a.gc - b.gc;
+    /* =======================================================
+       BUSCAR ESTADÍSTICAS DEL EQUIPO
+       ======================================================= */
 
-      return a.equipo.localeCompare(b.equipo);
+    let estadisticas = tablaZona.find(
+      equipo => normalizarNombre(equipo.equipo) === nombreBuscado
+    );
+
+
+    /*
+      Si por algún motivo todavía no aparece en la tabla,
+      creamos estadísticas en cero para evitar que la página
+      se rompa.
+    */
+
+    if (!estadisticas) {
+
+      estadisticas = {
+        equipo: equipoEncontrado,
+        pts: 0,
+        pj: 0,
+        pg: 0,
+        pe: 0,
+        pp: 0,
+        gf: 0,
+        gc: 0,
+        dg: 0
+      };
+
+    }
+
+
+    /* =======================================================
+       ORDENAR TABLA DE LA ZONA
+       ======================================================= */
+
+    tablaZona.sort((a, b) => {
+
+      if ((b.pts || 0) !== (a.pts || 0))
+        return (b.pts || 0) - (a.pts || 0);
+
+      if ((b.dg || 0) !== (a.dg || 0))
+        return (b.dg || 0) - (a.dg || 0);
+
+      if ((b.gf || 0) !== (a.gf || 0))
+        return (b.gf || 0) - (a.gf || 0);
+
+      if ((a.gc || 0) !== (b.gc || 0))
+        return (a.gc || 0) - (b.gc || 0);
+
+      return normalizarNombre(a.equipo)
+        .localeCompare(
+          normalizarNombre(b.equipo),
+          "es"
+        );
+
     });
 
 
+    /* =======================================================
+       POSICIÓN DEL EQUIPO
+       ======================================================= */
+
     const posicion =
-      equiposZona.findIndex(
-        e => e.equipo === equipoEncontrado.equipo
+
+      tablaZona.findIndex(
+        equipo =>
+          normalizarNombre(equipo.equipo) === nombreBuscado
       ) + 1;
 
 
@@ -515,6 +617,7 @@
 
     let partidosEquipo = [];
 
+
     if (
       typeof datosLiga !== "undefined" &&
       Array.isArray(datosLiga.partidos)
@@ -523,8 +626,8 @@
       partidosEquipo = datosLiga.partidos.filter(partido => {
 
         return (
-          partido.local === nombreEquipo ||
-          partido.visitante === nombreEquipo
+          normalizarNombre(partido.local) === nombreBuscado ||
+          normalizarNombre(partido.visitante) === nombreBuscado
         );
 
       });
@@ -533,7 +636,7 @@
 
 
     /* =======================================================
-       ORDENAR POR FECHA
+       ORDENAR PARTIDOS
        ======================================================= */
 
     partidosEquipo.sort((a, b) => {
@@ -547,20 +650,23 @@
        SEPARAR JUGADOS Y PRÓXIMOS
        ======================================================= */
 
-    const jugados = partidosEquipo.filter(
-      partido =>
-        partido.golesLocal !== null &&
-        partido.golesLocal !== undefined &&
-        partido.golesVisitante !== null &&
-        partido.golesVisitante !== undefined
+    const jugados = partidosEquipo.filter(partido =>
+
+      partido.golesLocal !== null &&
+      partido.golesLocal !== undefined &&
+      partido.golesVisitante !== null &&
+      partido.golesVisitante !== undefined
+
     );
 
-    const proximos = partidosEquipo.filter(
-      partido =>
-        partido.golesLocal === null ||
-        partido.golesLocal === undefined ||
-        partido.golesVisitante === null ||
-        partido.golesVisitante === undefined
+
+    const proximos = partidosEquipo.filter(partido =>
+
+      partido.golesLocal === null ||
+      partido.golesLocal === undefined ||
+      partido.golesVisitante === null ||
+      partido.golesVisitante === undefined
+
     );
 
 
@@ -573,21 +679,27 @@
       <section class="perfil">
 
         <img
-          src="${escudos[nombreEquipo] || ""}"
-          alt="Escudo de ${nombreEquipo}"
+          src="${escudos[equipoEncontrado] || ""}"
+          alt="Escudo de ${equipoEncontrado}"
           onerror="this.style.display='none'"
         >
 
         <div class="perfil-info">
 
           <div class="zona">
-            Zona ${zonaEncontrada}
+            ${zonaEncontrada === "E"
+              ? "Interzonal"
+              : `Zona ${zonaEncontrada}`}
           </div>
 
-          <h2>${nombreEquipo}</h2>
+          <h2>${equipoEncontrado}</h2>
 
           <div class="posicion">
-            ${posicion}° puesto
+
+            ${posicion > 0
+              ? `${posicion}° puesto`
+              : "Posición no disponible"}
+
           </div>
 
         </div>
@@ -598,42 +710,42 @@
       <section class="stats">
 
         <div class="stat">
-          <strong>${equipoEncontrado.pj || 0}</strong>
+          <strong>${estadisticas.pj || 0}</strong>
           <span>PJ</span>
         </div>
 
         <div class="stat">
-          <strong>${equipoEncontrado.pg || 0}</strong>
+          <strong>${estadisticas.pg || 0}</strong>
           <span>PG</span>
         </div>
 
         <div class="stat">
-          <strong>${equipoEncontrado.pe || 0}</strong>
+          <strong>${estadisticas.pe || 0}</strong>
           <span>PE</span>
         </div>
 
         <div class="stat">
-          <strong>${equipoEncontrado.pp || 0}</strong>
+          <strong>${estadisticas.pp || 0}</strong>
           <span>PP</span>
         </div>
 
         <div class="stat">
-          <strong>${equipoEncontrado.gf || 0}</strong>
+          <strong>${estadisticas.gf || 0}</strong>
           <span>GF</span>
         </div>
 
         <div class="stat">
-          <strong>${equipoEncontrado.gc || 0}</strong>
+          <strong>${estadisticas.gc || 0}</strong>
           <span>GC</span>
         </div>
 
         <div class="stat">
-          <strong>${equipoEncontrado.dg || 0}</strong>
+          <strong>${estadisticas.dg || 0}</strong>
           <span>DG</span>
         </div>
 
         <div class="stat">
-          <strong>${equipoEncontrado.pts || 0}</strong>
+          <strong>${estadisticas.pts || 0}</strong>
           <span>PTS</span>
         </div>
 
@@ -685,9 +797,11 @@
     if (jugados.length === 0) {
 
       html += `
+
         <div class="sin-partidos">
           Todavía no hay partidos registrados.
         </div>
+
       `;
 
     } else {
@@ -695,39 +809,45 @@
       jugados.forEach(partido => {
 
         const esLocal =
-          partido.local === nombreEquipo;
+          normalizarNombre(partido.local) === nombreBuscado;
 
-        const rival =
-          esLocal
-            ? partido.visitante
-            : partido.local;
 
-        const golesEquipo =
-          esLocal
-            ? partido.golesLocal
-            : partido.golesVisitante;
+        const rival = esLocal
+          ? partido.visitante
+          : partido.local;
 
-        const golesRival =
-          esLocal
-            ? partido.golesVisitante
-            : partido.golesLocal;
+
+        const golesEquipo = esLocal
+          ? partido.golesLocal
+          : partido.golesVisitante;
+
+
+        const golesRival = esLocal
+          ? partido.golesVisitante
+          : partido.golesLocal;
 
 
         let claseResultado = "";
 
+
         if (golesEquipo > golesRival) {
+
           claseResultado = "ganado";
+
         } else if (golesEquipo === golesRival) {
+
           claseResultado = "empatado";
+
         } else {
+
           claseResultado = "perdido";
+
         }
 
 
-        const tipoPartido =
-          partido.interzonal
-            ? "Interzonal"
-            : `Zona ${zonaEncontrada}`;
+        const tipoPartido = partido.interzonal
+          ? "Interzonal"
+          : `Zona ${zonaEncontrada}`;
 
 
         html += `
@@ -741,7 +861,7 @@
             <div class="rivales">
 
               ${esLocal ? "🏠 " : ""}
-              ${nombreEquipo}
+              ${equipoEncontrado}
 
               <br>
 
@@ -790,9 +910,11 @@
     if (proximos.length === 0) {
 
       html += `
+
         <div class="sin-partidos">
           No hay próximos partidos cargados.
         </div>
+
       `;
 
     } else {
@@ -800,18 +922,17 @@
       proximos.forEach(partido => {
 
         const esLocal =
-          partido.local === nombreEquipo;
-
-        const rival =
-          esLocal
-            ? partido.visitante
-            : partido.local;
+          normalizarNombre(partido.local) === nombreBuscado;
 
 
-        const tipoPartido =
-          partido.interzonal
-            ? "Interzonal"
-            : `Zona ${zonaEncontrada}`;
+        const rival = esLocal
+          ? partido.visitante
+          : partido.local;
+
+
+        const tipoPartido = partido.interzonal
+          ? "Interzonal"
+          : `Zona ${zonaEncontrada}`;
 
 
         html += `
@@ -825,7 +946,7 @@
             <div class="rivales">
 
               ${esLocal ? "🏠 " : ""}
-              ${nombreEquipo}
+              ${equipoEncontrado}
 
               <br>
 
