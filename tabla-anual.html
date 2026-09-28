@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ================================
+    /* =========================================================
        TABLA ANUAL
-       ================================ */
+       ========================================================= */
 
     .tabla-anual-container {
       width: 100%;
@@ -78,7 +78,10 @@
       border-bottom: none;
     }
 
-    /* Anchos */
+    /* =========================================================
+       ANCHOS
+       ========================================================= */
+
     .col-pos {
       width: 38px;
     }
@@ -97,12 +100,18 @@
       width: 37px;
     }
 
-    /* Posición */
+    /* =========================================================
+       POSICIÓN
+       ========================================================= */
+
     .posicion {
       font-weight: 700;
     }
 
-    /* Equipo */
+    /* =========================================================
+       EQUIPO
+       ========================================================= */
+
     .nombre-equipo {
       text-align: left;
       font-weight: 600;
@@ -110,14 +119,20 @@
       text-overflow: ellipsis;
     }
 
-    /* Puntos */
+    /* =========================================================
+       PUNTOS
+       ========================================================= */
+
     .puntos {
       font-weight: 800;
       color: #0b5fa5;
       font-size: 14px !important;
     }
 
-    /* Diferencia de gol */
+    /* =========================================================
+       DIFERENCIA DE GOL
+       ========================================================= */
+
     .dg-positivo {
       font-weight: 700;
       color: #16803c;
@@ -133,11 +148,11 @@
       color: #555555;
     }
 
-    /* ================================
+    /* =========================================================
        CLASIFICACIONES
-       ================================ */
+       ========================================================= */
 
-    /* 1° de zona */
+    /* Puestos 1 al 6 */
     .clasifica-directo td {
       background: rgba(46, 160, 67, 0.10);
     }
@@ -146,22 +161,13 @@
       border-left: 4px solid #2ea043;
     }
 
-    /* Puestos 2 al 4 */
+    /* Puestos 7 al 24 */
     .clasifica-playoff td {
       background: rgba(38, 139, 210, 0.08);
     }
 
     .clasifica-playoff td:first-child {
       border-left: 4px solid #268bd2;
-    }
-
-    /* Mejores quintos */
-    .mejor-quinto td {
-      background: rgba(230, 180, 40, 0.13);
-    }
-
-    .mejor-quinto td:first-child {
-      border-left: 4px solid #d6a500;
     }
 
     /* Repechaje */
@@ -185,9 +191,9 @@
       color: #ffffff;
     }
 
-    /* ================================
+    /* =========================================================
        REFERENCIAS
-       ================================ */
+       ========================================================= */
 
     .referencias {
       display: flex;
@@ -228,9 +234,9 @@
       background: #c62828;
     }
 
-    /* ================================
+    /* =========================================================
        MOBILE
-       ================================ */
+       ========================================================= */
 
     @media (max-width: 700px) {
 
@@ -311,7 +317,10 @@
       }
     }
 
-    /* Pantallas muy pequeñas */
+    /* =========================================================
+       PANTALLAS MUY PEQUEÑAS
+       ========================================================= */
+
     @media (max-width: 390px) {
 
       .tabla-anual th {
@@ -343,66 +352,156 @@
 
 <body>
 
+  <!-- =======================================================
+       ENCABEZADO
+       ======================================================= -->
+
   <header>
+
     <div class="header-container">
 
       <a href="index.html" class="logo-link">
+
         <img
           src="https://raw.githubusercontent.com/ianulisespaez-netizen/Liga-tucson/main/FDDF80B7-4151-4091-AB6F-C5DF10F36391.png"
           alt="Liga Tucson"
           class="logo"
         >
+
       </a>
 
       <div class="titulo-header">
+
         <h1>LIGA TUCSON</h1>
+
         <p>Liga Tucumana de Fútbol</p>
+
       </div>
 
     </div>
 
+
+    <!-- =====================================================
+         MENÚ PRINCIPAL
+         ===================================================== -->
+
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="posiciones.html">Posiciones</a>
-      <a href="tabla-anual.html" class="activo">Tabla Anual</a>
-      <a href="partidos.html">Partidos</a>
-      <a href="equipos.html">Equipos</a>
-      <a href="playoff.html">Play-Off</a>
+
+      <a href="index.html">
+        Inicio
+      </a>
+
+      <a href="posiciones.html">
+        Posiciones
+      </a>
+
+      <a href="tabla-anual.html" class="activo">
+        Tabla Anual
+      </a>
+
+      <a href="partidos.html">
+        Partidos
+      </a>
+
+      <a href="equipos.html">
+        Equipos
+      </a>
+
+      <a href="playoff.html">
+        Play-Off
+      </a>
+
     </nav>
+
   </header>
 
+
+  <!-- =======================================================
+       CONTENIDO
+       ======================================================= -->
 
   <main class="tabla-anual-container">
 
     <div class="tabla-anual-titulo">
-      <h1>Tabla Anual</h1>
-      <p>Primera División A — Temporada 2026</p>
+
+      <h1>
+        Tabla Anual
+      </h1>
+
+      <p>
+        Primera División A — Temporada 2026
+      </p>
+
     </div>
 
+
+    <!-- =====================================================
+         TABLA
+         ===================================================== -->
 
     <div class="tabla-wrapper">
 
       <table class="tabla-anual">
 
         <thead>
+
           <tr>
-            <th class="col-pos">#</th>
-            <th class="col-equipo">Equipo</th>
-            <th class="col-pts">PTS</th>
-            <th class="col-stat">PJ</th>
-            <th class="col-stat">PG</th>
-            <th class="col-stat">PE</th>
-            <th class="col-stat">PP</th>
-            <th class="col-stat">GF</th>
-            <th class="col-stat">GC</th>
-            <th class="col-stat">DG</th>
+
+            <th class="col-pos">
+              #
+            </th>
+
+            <th class="col-equipo">
+              Equipo
+            </th>
+
+            <th class="col-pts">
+              PTS
+            </th>
+
+            <th class="col-stat">
+              PJ
+            </th>
+
+            <th class="col-stat">
+              PG
+            </th>
+
+            <th class="col-stat">
+              PE
+            </th>
+
+            <th class="col-stat">
+              PP
+            </th>
+
+            <th class="col-stat">
+              GF
+            </th>
+
+            <th class="col-stat">
+              GC
+            </th>
+
+            <th class="col-stat">
+              DG
+            </th>
+
           </tr>
+
         </thead>
 
+
         <tbody id="tablaAnualBody">
+
           <tr>
-            <td colspan="10">Cargando tabla...</td>
+
+            <td colspan="10">
+              Cargando tabla...
+            </td>
+
           </tr>
+
         </tbody>
 
       </table>
@@ -410,26 +509,42 @@
     </div>
 
 
+    <!-- =====================================================
+         REFERENCIAS
+         ===================================================== -->
+
     <div class="referencias">
 
       <div class="referencia">
+
         <span class="referencia-color referencia-verde"></span>
-        <span>Clasificación directa</span>
+
+        <span>
+          Clasificación directa
+        </span>
+
       </div>
 
+
       <div class="referencia">
+
         <span class="referencia-color referencia-azul"></span>
-        <span>Play-Off</span>
+
+        <span>
+          Play-Off
+        </span>
+
       </div>
 
-      <div class="referencia">
-        <span class="referencia-color referencia-amarillo"></span>
-        <span>Mejores quintos</span>
-      </div>
 
       <div class="referencia">
+
         <span class="referencia-color referencia-rojo"></span>
-        <span>Repechaje</span>
+
+        <span>
+          Repechaje
+        </span>
+
       </div>
 
     </div>
@@ -437,40 +552,97 @@
   </main>
 
 
+  <!-- =======================================================
+       DATOS
+       ======================================================= -->
+
   <script src="datos.js?v=20260926"></script>
+
+
+  <!-- =======================================================
+       TABLA ANUAL
+       ======================================================= -->
 
   <script>
 
     document.addEventListener("DOMContentLoaded", function () {
 
-      const tbody = document.getElementById("tablaAnualBody");
+      const tbody =
+        document.getElementById("tablaAnualBody");
+
+
+      /* =====================================================
+         COMPROBAR DATOS
+         ===================================================== */
 
       if (
-        typeof datosLiga === "undefined" ||
-        typeof datosLiga.generarTablaAnual !== "function"
+        typeof datosLiga === "undefined"
       ) {
+
         tbody.innerHTML = `
           <tr>
             <td colspan="10">
-              No se pudo cargar la tabla anual.
+              No se pudo cargar datos.js.
             </td>
           </tr>
         `;
+
         return;
       }
 
 
-      let tabla = datosLiga.generarTablaAnual();
+      if (
+        typeof datosLiga.generarTablaAnual !== "function"
+      ) {
+
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="10">
+              No se encontró la función de tabla anual.
+            </td>
+          </tr>
+        `;
+
+        return;
+      }
 
 
-      /*
-       * La tabla anual oficial se ordena:
-       * 1. Puntos
-       * 2. Menor cantidad de partidos jugados
-       * 3. Diferencia de gol
-       * 4. Goles a favor
-       * 5. Goles en contra
-       */
+      /* =====================================================
+         OBTENER TABLA
+         ===================================================== */
+
+      let tabla =
+        datosLiga.generarTablaAnual();
+
+
+      if (
+        !Array.isArray(tabla) ||
+        tabla.length === 0
+      ) {
+
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="10">
+              No hay datos disponibles.
+            </td>
+          </tr>
+        `;
+
+        return;
+      }
+
+
+      /* =====================================================
+         ORDEN OFICIAL
+         =====================================================
+
+         1. Puntos
+         2. Menor cantidad de partidos jugados
+         3. Diferencia de gol
+         4. Goles a favor
+         5. Goles en contra
+         6. Orden alfabético
+         */
 
       tabla.sort(function (a, b) {
 
@@ -482,124 +654,241 @@
           return a.pj - b.pj;
         }
 
-        const dgA = (a.gf || 0) - (a.gc || 0);
-        const dgB = (b.gf || 0) - (b.gc || 0);
+        const dgA =
+          (a.gf || 0) -
+          (a.gc || 0);
+
+        const dgB =
+          (b.gf || 0) -
+          (b.gc || 0);
 
         if (dgB !== dgA) {
           return dgB - dgA;
         }
 
-        if ((b.gf || 0) !== (a.gf || 0)) {
-          return (b.gf || 0) - (a.gf || 0);
+        if (
+          (b.gf || 0) !==
+          (a.gf || 0)
+        ) {
+
+          return (
+            (b.gf || 0) -
+            (a.gf || 0)
+          );
+
         }
 
-        if ((a.gc || 0) !== (b.gc || 0)) {
-          return (a.gc || 0) - (b.gc || 0);
+        if (
+          (a.gc || 0) !==
+          (b.gc || 0)
+        ) {
+
+          return (
+            (a.gc || 0) -
+            (b.gc || 0)
+          );
+
         }
 
-        return a.nombre.localeCompare(b.nombre);
+        return a.equipo.localeCompare(
+          b.equipo,
+          "es"
+        );
+
       });
 
+
+      /* =====================================================
+         LIMPIAR TABLA
+         ===================================================== */
 
       tbody.innerHTML = "";
 
 
+      /* =====================================================
+         CREAR FILAS
+         ===================================================== */
+
       tabla.forEach(function (equipo, index) {
 
-        const posicion = index + 1;
+        const posicion =
+          index + 1;
 
-        const pts = equipo.pts || 0;
-        const pj = equipo.pj || 0;
-        const pg = equipo.pg || 0;
-        const pe = equipo.pe || 0;
-        const pp = equipo.pp || 0;
-        const gf = equipo.gf || 0;
-        const gc = equipo.gc || 0;
-        const dg = gf - gc;
 
+        const pts =
+          equipo.pts || 0;
+
+        const pj =
+          equipo.pj || 0;
+
+        const pg =
+          equipo.pg || 0;
+
+        const pe =
+          equipo.pe || 0;
+
+        const pp =
+          equipo.pp || 0;
+
+        const gf =
+          equipo.gf || 0;
+
+        const gc =
+          equipo.gc || 0;
+
+        const dg =
+          gf - gc;
+
+
+        /* =================================================
+           CLASE DE LA FILA
+           ================================================= */
 
         let claseFila = "";
 
 
         /*
-         * Tabla anual:
-         *
-         * Los últimos cuatro puestos:
-         * 41, 42, 43 y 44
-         * quedan marcados como repechaje.
+         * Puestos 1 al 6
          */
 
-        if (posicion >= 41) {
-          claseFila = "repechaje";
+        if (posicion <= 6) {
+
+          claseFila =
+            "clasifica-directo";
+
         }
 
 
         /*
-         * Los primeros puestos se mantienen
-         * diferenciados visualmente.
+         * Puestos 7 al 24
          */
-
-        else if (posicion <= 6) {
-          claseFila = "clasifica-directo";
-        }
 
         else if (posicion <= 24) {
-          claseFila = "clasifica-playoff";
+
+          claseFila =
+            "clasifica-playoff";
+
         }
 
 
         /*
-         * Diferencia de gol
+         * Puestos 41 al 44
          */
 
-        let claseDG = "dg-cero";
+        else if (posicion >= 41) {
+
+          claseFila =
+            "repechaje";
+
+        }
+
+
+        /* =================================================
+           DIFERENCIA DE GOL
+           ================================================= */
+
+        let claseDG =
+          "dg-cero";
+
 
         if (dg > 0) {
-          claseDG = "dg-positivo";
+
+          claseDG =
+            "dg-positivo";
+
         }
+
 
         if (dg < 0) {
-          claseDG = "dg-negativo";
+
+          claseDG =
+            "dg-negativo";
+
         }
 
 
-        /*
-         * Etiqueta para repechaje
-         */
+        /* =================================================
+           ETIQUETA REPECHAJE
+           ================================================= */
 
         let etiqueta = "";
 
+
         if (posicion >= 41) {
-          etiqueta = `<span class="etiqueta">REPECHAJE</span>`;
+
+          etiqueta =
+            `<span class="etiqueta">REPECHAJE</span>`;
+
         }
 
 
-        const fila = document.createElement("tr");
+        /* =================================================
+           CREAR FILA
+           ================================================= */
 
-        fila.className = claseFila;
+        const fila =
+          document.createElement("tr");
 
+
+        fila.className =
+          claseFila;
+
+
+        /*
+         * IMPORTANTE:
+         *
+         * En datos.js la propiedad se llama
+         * equipo.equipo
+         *
+         * NO equipo.nombre
+         */
 
         fila.innerHTML = `
-          <td class="posicion">${posicion}</td>
 
-          <td class="nombre-equipo col-equipo">
-            ${equipo.nombre}
-            ${etiqueta}
+          <td class="posicion">
+            ${posicion}
           </td>
 
-          <td class="puntos">${pts}</td>
+          <td class="nombre-equipo col-equipo">
 
-          <td>${pj}</td>
-          <td>${pg}</td>
-          <td>${pe}</td>
-          <td>${pp}</td>
+            ${equipo.equipo}
 
-          <td>${gf}</td>
-          <td>${gc}</td>
+            ${etiqueta}
+
+          </td>
+
+          <td class="puntos">
+            ${pts}
+          </td>
+
+          <td>
+            ${pj}
+          </td>
+
+          <td>
+            ${pg}
+          </td>
+
+          <td>
+            ${pe}
+          </td>
+
+          <td>
+            ${pp}
+          </td>
+
+          <td>
+            ${gf}
+          </td>
+
+          <td>
+            ${gc}
+          </td>
 
           <td class="${claseDG}">
             ${dg > 0 ? "+" : ""}${dg}
           </td>
+
         `;
 
 
