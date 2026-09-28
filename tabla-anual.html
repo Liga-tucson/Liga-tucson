@@ -17,7 +17,6 @@
 
 /* =========================================================
    ESTILO GENERAL
-   MISMO DISEÑO QUE POSICIONES.HTML
    ========================================================= */
 
 *{
@@ -263,32 +262,13 @@ td:nth-child(2){
 
 
 /* =========================================================
-   COLORES TABLA ANUAL
+   TABLA ANUAL
+   SOLO SE DESTACA EL REPECHAJE
    ========================================================= */
 
 /*
-   1° al 6°:
-   campeones de zona / clasificación directa
-*/
-
-.clasificacion-directa{
-  background:#e5f4e9;
-}
-
-
-/*
-   7° al 24°:
-   Play-Off
-*/
-
-.clasificacion-playoff{
-  background:#e8f2fb;
-}
-
-
-/*
-   25° al 40°:
-   sin clasificación de Play-Off
+   Los puestos 1.º al 40.º
+   mantienen el fondo normal.
 */
 
 .sin-clasificacion{
@@ -297,8 +277,8 @@ td:nth-child(2){
 
 
 /*
-   41° al 44°:
-   repechaje por descenso
+   Últimos cuatro:
+   zona de repechaje por descenso.
 */
 
 .zona-descenso{
@@ -307,7 +287,7 @@ td:nth-child(2){
 
 
 /* =========================================================
-   ETIQUETAS
+   ETIQUETA DE REPECHAJE
    ========================================================= */
 
 .badge{
@@ -324,18 +304,6 @@ td:nth-child(2){
   font-weight:700;
 
   vertical-align:middle;
-}
-
-.badge-green{
-  background:#d8f0df;
-
-  color:#24733b;
-}
-
-.badge-blue{
-  background:#dcecf9;
-
-  color:#17639a;
 }
 
 .badge-red{
@@ -363,7 +331,7 @@ td:nth-child(2){
 
 
 /* =========================================================
-   REFERENCIAS
+   REFERENCIA
    ========================================================= */
 
 .legend{
@@ -373,11 +341,7 @@ td:nth-child(2){
 
   justify-content:center;
 
-  gap:10px;
-
   align-items:center;
-
-  flex-wrap:wrap;
 
   color:#596674;
 }
@@ -387,7 +351,7 @@ td:nth-child(2){
 
   align-items:center;
 
-  gap:7px;
+  gap:9px;
 }
 
 .legend-box{
@@ -395,14 +359,6 @@ td:nth-child(2){
   height:20px;
 
   border-radius:5px;
-}
-
-.legend-green{
-  background:#39a957;
-}
-
-.legend-blue{
-  background:#2f8bd1;
 }
 
 .legend-red{
@@ -714,7 +670,10 @@ footer{
 
             <td
               colspan="10"
-              style="text-align:center;"
+              style="
+                text-align:center;
+                padding:25px;
+              "
             >
               Cargando tabla anual...
 
@@ -733,37 +692,10 @@ footer{
 
 
   <!-- =====================================================
-       REFERENCIAS
+       REFERENCIA DE DESCENSO
        ===================================================== -->
 
   <div class="legend">
-
-
-    <div class="legend-item">
-
-      <span
-        class="legend-box legend-green"
-      ></span>
-
-      <span>
-        Clasificación directa
-      </span>
-
-    </div>
-
-
-    <div class="legend-item">
-
-      <span
-        class="legend-box legend-blue"
-      ></span>
-
-      <span>
-        Play-Off
-      </span>
-
-    </div>
-
 
     <div class="legend-item">
 
@@ -772,11 +704,10 @@ footer{
       ></span>
 
       <span>
-        Repechaje
+        Repechaje por descenso
       </span>
 
     </div>
-
 
   </div>
 
@@ -797,6 +728,8 @@ footer{
       el Torneo Apertura y el Torneo Clausura 2026.
       Los cuatro equipos ubicados en las últimas posiciones
       quedan señalados como zona de repechaje por descenso.
+      Entre estos cuatro equipos se disputará un partido
+      para determinar los descensos correspondientes.
     </p>
 
   </section>
@@ -981,11 +914,6 @@ function mostrarTablaAnual(){
       "tablaAnual"
     );
 
-
-  /*
-   * Primero usamos la tabla anual que
-   * datos.js ya genera.
-   */
 
   let tabla =
     Array.isArray(datosLiga.tablaAnual)
@@ -1174,101 +1102,35 @@ function mostrarTablaAnual(){
 
 
       /*
-       * Determinar color de fila.
+       * SOLO LOS ÚLTIMOS CUATRO
+       * SE DESTACAN EN ROJO.
        */
 
-      let claseFila =
-        "sin-clasificacion";
+      const esRepechaje =
+        posicion >= 41;
 
 
-      /*
-       * Primeros 6:
-       * clasificación directa.
-       */
 
-      if(
-        posicion <= 6
-      ){
-
-        claseFila =
-          "clasificacion-directa";
-
-      }
-
-
-      /*
-       * Puestos 7 al 24:
-       * Play-Off.
-       */
-
-      else if(
-        posicion <= 24
-      ){
-
-        claseFila =
-          "clasificacion-playoff";
-
-      }
-
-
-      /*
-       * Últimos 4:
-       * repechaje.
-       */
-
-      else if(
-        posicion >= 41
-      ){
-
-        claseFila =
-          "zona-descenso";
-
-      }
+      const claseFila =
+        esRepechaje
+          ? "zona-descenso"
+          : "sin-clasificacion";
 
 
 
       /*
-       * Etiqueta.
+       * SOLO LOS ÚLTIMOS CUATRO
+       * TIENEN LA ETIQUETA.
        */
 
-      let etiqueta = "";
-
-
-      if(
-        posicion <= 6
-      ){
-
-        etiqueta = `
-          <span class="badge badge-green">
-            Directo
-          </span>
-        `;
-
-      }
-
-      else if(
-        posicion <= 24
-      ){
-
-        etiqueta = `
-          <span class="badge badge-blue">
-            Play-Off
-          </span>
-        `;
-
-      }
-
-      else if(
-        posicion >= 41
-      ){
-
-        etiqueta = `
-          <span class="badge badge-red">
-            Repechaje
-          </span>
-        `;
-
-      }
+      const etiqueta =
+        esRepechaje
+          ? `
+            <span class="badge badge-red">
+              Repechaje
+            </span>
+          `
+          : "";
 
 
 
@@ -1410,7 +1272,6 @@ function mostrarTablaAnual(){
 
 /* =========================================================
    OCULTAR / MOSTRAR ENCABEZADO AL DESPLAZARSE
-   MISMO COMPORTAMIENTO QUE POSICIONES
    ========================================================= */
 
 let ultimaPosicion =
