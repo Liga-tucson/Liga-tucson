@@ -1,1349 +1,994 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<title>Tabla Anual | Liga Tucson</title>
-
-
-<style>
-
-/* =========================================================
-   ESTILO GENERAL
-   ========================================================= */
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#eef3f9;
-  color:#16324f;
-}
-
-
-/* =========================================================
-   ENCABEZADO
-   ========================================================= */
-
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-
-  transition:
-    transform .35s ease,
-    opacity .35s ease;
-}
-
-.site-header.header-hidden{
-  transform:translateY(-100%);
-  opacity:0;
-  pointer-events:none;
-}
-
-.header-top{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-
-  padding:30px 20px 25px;
-
-  background:#0b1f3a;
-
-  text-align:center;
-}
-
-.header-logo{
-  width:105px;
-  height:105px;
-
-  max-width:105px;
-  max-height:105px;
-
-  object-fit:contain;
-
-  display:block;
-}
-
-.header-title h1{
-  margin-top:12px;
-
-  color:white;
-
-  font-size:44px;
-  font-weight:800;
-
-  letter-spacing:2px;
-}
-
-
-/* =========================================================
-   MENÚ
-   ========================================================= */
-
-.main-nav{
-  display:flex;
-
-  justify-content:center;
-  align-items:center;
-
-  gap:18px;
-
-  padding:20px 15px;
-
-  background:#19375c;
-
-  flex-wrap:wrap;
-}
-
-.main-nav a{
-  color:white;
-
-  text-decoration:none;
-
-  font-size:22px;
-  font-weight:500;
-
-  padding:12px 18px;
-
-  border-radius:10px;
-
-  transition:.2s;
-}
-
-.main-nav a:hover{
-  background:#2d6597;
-}
-
-.main-nav a.active{
-  background:#3f7db5;
-  color:white;
-}
-
-
-/* =========================================================
-   CONTENEDOR
-   ========================================================= */
-
-.container{
-  max-width:1250px;
-
-  margin:0 auto;
-
-  padding:42px 20px 70px;
-}
-
-.page-title{
-  text-align:center;
-
-  color:#102a49;
-
-  font-size:42px;
-
-  margin-bottom:10px;
-}
-
-.page-subtitle{
-  text-align:center;
-
-  color:#6c7785;
-
-  font-size:20px;
-
-  margin-bottom:35px;
-}
-
-
-/* =========================================================
-   TABLA
-   ========================================================= */
-
-.table-card{
-  background:white;
-
-  border-radius:22px;
-
-  overflow:hidden;
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.08);
-
-  margin-bottom:40px;
-}
-
-.table-wrapper{
-  width:100%;
-
-  overflow-x:auto;
-
-  -webkit-overflow-scrolling:touch;
-}
-
-table{
-  width:100%;
-
-  border-collapse:collapse;
-
-  min-width:720px;
-}
-
-thead{
-  background:#0b1f3a;
-}
-
-th{
-  padding:17px 10px;
-
-  color:white;
-
-  font-size:16px;
-
-  white-space:nowrap;
-}
-
-td{
-  padding:14px 10px;
-
-  border-top:1px solid #edf1f5;
-
-  text-align:center;
-
-  white-space:nowrap;
-}
-
-td:nth-child(2){
-  text-align:left;
-}
-
-
-/* =========================================================
-   EQUIPO
-   ========================================================= */
-
-.team-cell{
-  display:flex;
-
-  align-items:center;
-
-  gap:10px;
-}
-
-.team-crest{
-  width:36px;
-  height:36px;
-
-  max-width:36px;
-  max-height:36px;
-
-  object-fit:contain;
-
-  flex-shrink:0;
-}
-
-.position{
-  font-weight:800;
-}
-
-.points{
-  font-weight:800;
-}
-
-
-/* =========================================================
-   TABLA ANUAL
-   SOLO SE DESTACA EL REPECHAJE
-   ========================================================= */
-
-/*
-   Los puestos 1.º al 40.º
-   mantienen el fondo normal.
-*/
-
-.sin-clasificacion{
-  background:white;
-}
-
-
-/*
-   Últimos cuatro:
-   zona de repechaje por descenso.
-*/
-
-.zona-descenso{
-  background:#fbe8e5;
-}
-
-
-/* =========================================================
-   ETIQUETA DE REPECHAJE
-   ========================================================= */
-
-.badge{
-  display:inline-block;
-
-  margin-left:8px;
-
-  padding:4px 8px;
-
-  border-radius:10px;
-
-  font-size:11px;
-
-  font-weight:700;
-
-  vertical-align:middle;
-}
-
-.badge-red{
-  background:#f5d6d2;
-
-  color:#9f3328;
-}
-
-
-/* =========================================================
-   DIFERENCIA DE GOL
-   ========================================================= */
-
-.dg-positive{
-  color:#287d43;
-
-  font-weight:700;
-}
-
-.dg-negative{
-  color:#b53d31;
-
-  font-weight:700;
-}
-
-
-/* =========================================================
-   REFERENCIA
-   ========================================================= */
-
-.legend{
-  margin:25px auto 0;
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  color:#596674;
-}
-
-.legend-item{
-  display:flex;
-
-  align-items:center;
-
-  gap:9px;
-}
-
-.legend-box{
-  width:20px;
-  height:20px;
-
-  border-radius:5px;
-}
-
-.legend-red{
-  background:#bd4736;
-}
-
-
-/* =========================================================
-   INFORMACIÓN
-   ========================================================= */
-
-.info{
-  margin-top:30px;
-
-  background:white;
-
-  border-radius:20px;
-
-  padding:25px;
-
-  box-shadow:
-    0 6px 20px rgba(0,0,0,.06);
-}
-
-.info h2{
-  color:#102a49;
-
-  margin-bottom:12px;
-}
-
-.info p{
-  color:#687785;
-
-  line-height:1.6;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer{
-  background:#0b1f3a;
-
-  color:#d5deea;
-
-  text-align:center;
-
-  padding:30px 20px;
-}
-
-
-/* =========================================================
-   MÓVIL
-   ========================================================= */
-
-@media(max-width:700px){
-
-  .header-top{
-    padding:25px 15px 22px;
-  }
-
-  .header-logo{
-    width:92px;
-    height:92px;
-
-    max-width:92px;
-    max-height:92px;
-  }
-
-  .header-title h1{
-    font-size:32px;
-  }
-
-  .main-nav{
-    gap:5px 8px;
-
-    padding:14px 8px;
-  }
-
-  .main-nav a{
-    font-size:18px;
-
-    padding:10px 12px;
-  }
-
-  .container{
-    padding:35px 14px 55px;
-  }
-
-  .page-title{
-    font-size:34px;
-  }
-
-  .page-subtitle{
-    font-size:18px;
-  }
-
-  th{
-    padding:13px 8px;
-
-    font-size:13px;
-  }
-
-  td{
-    padding:11px 8px;
-
-    font-size:13px;
-  }
-
-  .team-crest{
-    width:32px;
-    height:32px;
-
-    max-width:32px;
-    max-height:32px;
-  }
-
-  .badge{
-    font-size:9px;
-
-    padding:3px 6px;
-
-    margin-left:4px;
-  }
-
-}
-
-
-/* =========================================================
-   MÓVIL PEQUEÑO
-   ========================================================= */
-
-@media(max-width:390px){
-
-  .header-logo{
-    width:85px;
-    height:85px;
-
-    max-width:85px;
-    max-height:85px;
-  }
-
-  .header-title h1{
-    font-size:29px;
-  }
-
-  .main-nav a{
-    font-size:16px;
-
-    padding:9px 10px;
-  }
-
-  .page-title{
-    font-size:31px;
-  }
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tabla Anual | Liga Tucson</title>
+
+  <meta
+    name="description"
+    content="Tabla anual 2026 de Liga Tucson. Posiciones generales del fútbol tucumano."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Liga Tucson">
+  <meta name="theme-color" content="#0b1f38">
+
+  <link rel="canonical" href="https://liga-tucson.github.io/Liga-tucson/tabla-anual.html">
+
+  <meta
+    property="og:title"
+    content="Tabla Anual | Liga Tucson"
+  >
+
+  <meta
+    property="og:description"
+    content="Tabla anual 2026 del fútbol tucumano."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://liga-tucson.github.io/Liga-tucson/tabla-anual.html"
+  >
+
+  <meta
+    name="google-site-verification"
+    content="_SxIjKfHDSxrk2J8NgNh8GDmd4yMjAKJz3lqsJdlg5g"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef3f9;
+      color: #10233f;
+      min-height: 100vh;
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: transform 0.28s ease;
+    }
+
+    .site-header.hidden {
+      transform: translateY(-100%);
+    }
+
+    .header-top {
+      background: #0b1f38;
+      color: white;
+      min-height: 112px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+    }
+
+    .header-inner {
+      width: 100%;
+      max-width: 1250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .header-logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .header-title {
+      text-align: left;
+    }
+
+    .header-title h1 {
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .header-title span {
+      display: block;
+      margin-top: 7px;
+      font-size: 17px;
+      color: #b9d7f3;
+      font-weight: 500;
+    }
+
+    /* =========================================================
+       NAV
+       ========================================================= */
+
+    .main-nav {
+      background: #17365d;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      max-width: 1250px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 15px 20px;
+      white-space: nowrap;
+      transition: background 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .main-nav a.active {
+      background: #3f7fb8;
+    }
+
+    /* =========================================================
+       CONTENEDOR
+       ========================================================= */
+
+    .container {
+      width: min(1250px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 55px;
+    }
+
+    .page-heading {
+      margin-bottom: 30px;
+    }
+
+    .page-heading h2 {
+      font-size: 38px;
+      line-height: 1.1;
+      color: #10233f;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .page-heading p {
+      font-size: 18px;
+      color: #5e7087;
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       TABLA
+       ========================================================= */
+
+    .table-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(15, 39, 67, 0.08);
+      border: 1px solid #dce5ef;
+    }
+
+    .table-title {
+      padding: 22px 24px;
+      border-bottom: 1px solid #dce5ef;
+      background: white;
+    }
+
+    .table-title h3 {
+      font-size: 22px;
+      color: #10233f;
+      margin-bottom: 5px;
+    }
+
+    .table-title p {
+      font-size: 15px;
+      color: #718198;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 850px;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: #edf4fa;
+    }
+
+    th {
+      padding: 14px 10px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #294766;
+      text-align: center;
+      border-bottom: 1px solid #d7e1eb;
+      white-space: nowrap;
+    }
+
+    th:nth-child(2) {
+      text-align: left;
+    }
+
+    td {
+      padding: 11px 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #253a52;
+      border-bottom: 1px solid #e7edf3;
+      white-space: nowrap;
+    }
+
+    td:nth-child(2) {
+      text-align: left;
+    }
+
+    tbody tr {
+      transition: background 0.18s ease;
+    }
+
+    tbody tr:hover {
+      background: #f5f8fb;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .position {
+      font-weight: 800;
+      color: #50657c;
+      width: 45px;
+    }
+
+    .team-cell {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 240px;
+    }
+
+    .team-crest {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .team-name {
+      font-weight: 700;
+      color: #10233f;
+    }
+
+    .points {
+      font-weight: 800;
+      color: #10233f;
+    }
+
+    .positive {
+      color: #1d6f42;
+      font-weight: 700;
+    }
+
+    .negative {
+      color: #a83b3b;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       REPECHAJE
+       ========================================================= */
+
+    tr.zona-descenso {
+      background: #fff0f0;
+    }
+
+    tr.zona-descenso:hover {
+      background: #ffe7e7;
+    }
+
+    tr.zona-descenso td {
+      border-bottom-color: #f0d4d4;
+    }
+
+    .badge-descenso {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f4caca;
+      color: #8d2929;
+      font-size: 11px;
+      font-weight: 800;
+      vertical-align: middle;
+    }
+
+    /* =========================================================
+       LEYENDA
+       ========================================================= */
+
+    .legend {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #52677e;
+    }
+
+    .legend-color {
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      background: #f4caca;
+      border: 1px solid #e4b5b5;
+    }
+
+    /* =========================================================
+       INFORMACIÓN
+       ========================================================= */
+
+    .info-card {
+      margin-top: 28px;
+      background: white;
+      border: 1px solid #dce5ef;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 25px rgba(15, 39, 67, 0.06);
+    }
+
+    .info-card h3 {
+      font-size: 20px;
+      color: #10233f;
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      font-size: 15px;
+      color: #5e7087;
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: #0b1f38;
+      color: white;
+      text-align: center;
+      padding: 26px 20px;
+      margin-top: 20px;
+    }
+
+    footer strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    footer span {
+      color: #b9cce0;
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .header-top {
+        min-height: 92px;
+        padding: 8px 14px;
+      }
+
+      .header-brand {
+        gap: 13px;
+      }
+
+      .header-logo {
+        width: 76px;
+        height: 76px;
+      }
+
+      .header-title h1 {
+        font-size: 31px;
+      }
+
+      .header-title span {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      .main-nav a {
+        font-size: 15px;
+        padding: 13px 15px;
+      }
+
+      .container {
+        width: min(100% - 20px, 1250px);
+        padding: 30px 0 42px;
+      }
+
+      .page-heading {
+        margin-bottom: 23px;
+      }
+
+      .page-heading h2 {
+        font-size: 31px;
+      }
+
+      .page-heading p {
+        font-size: 16px;
+      }
+
+      .table-card {
+        border-radius: 16px;
+      }
+
+      .table-title {
+        padding: 18px;
+      }
+
+      .table-title h3 {
+        font-size: 19px;
+      }
+
+      .info-card {
+        border-radius: 16px;
+        padding: 19px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
 
-<!-- =======================================================
-     ENCABEZADO
-     ======================================================= -->
+  <header class="site-header" id="siteHeader">
 
-<header
-  class="site-header"
-  id="siteHeader"
->
+    <div class="header-top">
+      <div class="header-inner">
 
-  <div class="header-top">
+        <a href="index.html" class="header-brand">
 
-    <img
-      class="header-logo"
-      src="FDDF80B7-4151-4091-AB6F-C5DF10F36391.png"
-      alt="Liga Tucson"
-    >
+          <img
+            src="https://raw.githubusercontent.com/ianulisespaez-netizen/Liga-tucson/main/FDDF80B7-4151-4091-AB6F-C5DF10F36391.png"
+            alt="Liga Tucson"
+            class="header-logo"
+          >
 
-    <div class="header-title">
+          <div class="header-title">
+            <h1>LIGA TUCSON</h1>
+            <span>Fútbol Tucumán</span>
+          </div>
 
-      <h1>LIGA TUCSON</h1>
+        </a>
+
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <div class="nav-inner">
+
+        <a href="index.html">Inicio</a>
+        <a href="equipos.html">Equipos</a>
+        <a href="posiciones.html">Posiciones</a>
+        <a href="partidos.html">Partidos</a>
+        <a href="playoff.html">Play-Off</a>
+        <a href="tabla-anual.html" class="active">Tabla Anual</a>
+
+      </div>
+    </nav>
+
+  </header>
+
+
+  <!-- =======================================================
+       CONTENIDO
+       ======================================================= -->
+
+  <main class="container">
+
+    <section class="page-heading">
+
+      <h2>Tabla Anual 2026</h2>
+
+      <p>
+        Clasificación general del campeonato, combinando Apertura y Clausura 2026.
+      </p>
+
+    </section>
+
+
+    <section class="table-card">
+
+      <div class="table-title">
+
+        <h3>Posiciones generales</h3>
+
+        <p>
+          Actualizada con los resultados registrados hasta la fecha 5 del Clausura 2026.
+        </p>
+
+      </div>
+
+
+      <div class="table-wrapper">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>#</th>
+              <th>Equipo</th>
+              <th>PTS</th>
+              <th>PJ</th>
+              <th>PG</th>
+              <th>PE</th>
+              <th>PP</th>
+              <th>GF</th>
+              <th>GC</th>
+              <th>DG</th>
+            </tr>
+
+          </thead>
+
+          <tbody id="tablaAnualBody"></tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <div class="legend">
+
+      <span class="legend-color"></span>
+
+      <span>Repechaje por descenso</span>
 
     </div>
 
-  </div>
+
+    <section class="info-card">
+
+      <h3>Formato de descenso</h3>
+
+      <p>
+        Los cuatro últimos equipos de la Tabla Anual disputarán el repechaje
+        correspondiente al descenso.
+      </p>
+
+      <p>
+        Entre estos cuatro equipos se disputará un partido para determinar
+        los descensos correspondientes.
+      </p>
+
+    </section>
+
+  </main>
 
 
-  <nav class="main-nav">
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
 
-    <a href="index.html">
-      Inicio
-    </a>
+  <footer>
 
-    <a href="posiciones.html">
-      Posiciones
-    </a>
+    <strong>Liga Tucson</strong>
 
-    <a
-      href="tabla-anual.html"
-      class="active"
-    >
-      Tabla Anual
-    </a>
+    <span>Fútbol Tucumán · Clausura 2026</span>
 
-    <a href="partidos.html">
-      Partidos
-    </a>
-
-    <a href="equipos.html">
-      Equipos
-    </a>
-
-    <a href="playoff.html">
-      Play-Off
-    </a>
-
-  </nav>
-
-</header>
+  </footer>
 
 
+  <!-- =======================================================
+       DATOS
+       ======================================================= -->
 
-<!-- =======================================================
-     CONTENIDO
-     ======================================================= -->
-
-<main class="container">
-
-
-  <h1 class="page-title">
-    Tabla Anual
-  </h1>
+  <script src="datos.js?v=20260928"></script>
 
 
-  <p class="page-subtitle">
-    Apertura + Clausura 2026
-  </p>
+  <!-- =======================================================
+       TABLA ANUAL
+       ======================================================= -->
+
+  <script>
+
+    /* =========================================================
+       ESCUDOS
+       ========================================================= */
+
+    const escudos = {
+
+      "Talleres": "IMG_1621.png",
+      "Juventud Unida": "IMG_1622.png",
+      "Estación Experimental": "IMG_1623.png",
+      "Central Norte": "21B48DFD-98C8-4EDD-B633-35738F9B089D.png",
+      "Villa Mitre": "IMG_1625.jpeg",
+      "All Boys": "IMG_1627.png",
+      "San José": "IMG_1628.png",
+
+      "Argentinos del Norte": "IMG_1629.png",
+      "San Martín": "IMG_1630.png",
+      "San Antonio": "IMG_1631.jpeg",
+      "Atlético Tucumán": "IMG_1632.jpeg",
+      "Sportivo Guzmán": "IMG_1633.png",
+      "Amalia": "IMG_1634.png",
+      "Tucumán Central": "IMG_1635.png",
+
+      "Garmendia": "IMG_1637.jpeg",
+      "Atlético Concepción": "IMG_1638.png",
+      "San Juan": "9D389031-3751-4B06-A800-AE5B7A426605.png",
+      "San Lorenzo (DG)": "IMG_1646.png",
+      "Unión del Norte": "IMG_1641.jpeg",
+      "Lastenia": "IMG_1645.png",
+      "Cruz Alta": "IMG_1644.png",
+
+      "Bella Vista": "IMG_1651.png",
+      "San Fernando": "IMG_1652.png",
+      "Almirante Brown": "IMG_1653.jpeg",
+      "Famaillá": "IMG_1654.png",
+      "Ateneo Parroquial Alderetes": "IMG_1655.png",
+      "Santa Lucía": "IMG_1656.jpeg",
+      "San Pablo": "IMG_1671.png",
+
+      "Alto Verde": "IMG_1657.png",
+      "Concepción FC": "IMG_1658.png",
+      "Azucarera Argentina": "IMG_1659.png",
+      "Ñuñorco": "IMG_1660.png",
+      "Unión Simoca": "IMG_1661.jpeg",
+      "San Ramón": "IMG_1662.jpeg",
+      "Santa Rosa": "IMG_1663.png",
+      "La Providencia": "IMG_1664.jpeg",
+
+      "Deportivo Aguilares": "IMG_1665.png",
+      "San Lorenzo (SA)": "IMG_1666.webp",
+      "Jorge Newbery": "IMG_1673.png",
+      "Graneros": "IMG_1667.jpeg",
+      "Santa Ana": "IMG_1668.png",
+      "Trinidad": "IMG_1669.png",
+      "Marapa": "IMG_1670.jpeg",
+      "Llorens": "IMG_1672.jpeg"
+
+    };
 
 
+    /* =========================================================
+       URL DE ESCUDOS
+       ========================================================= */
 
-  <!-- =====================================================
-       TABLA
-       ===================================================== -->
+    const BASE_ESCUDOS =
+      "https://raw.githubusercontent.com/ianulisespaez-netizen/Liga-tucson/main/";
 
-  <div class="table-card">
 
-    <div class="table-wrapper">
+    /* =========================================================
+       GENERAR TABLA
+       ========================================================= */
 
-      <table>
+    function cargarTablaAnual() {
 
-        <thead>
+      let tabla = [];
 
+      /*
+       * Si datos.js ya contiene la tabla anual oficial,
+       * se utiliza directamente.
+       */
+
+      if (
+        typeof datosLiga !== "undefined" &&
+        Array.isArray(datosLiga.tablaAnual)
+      ) {
+
+        tabla = datosLiga.tablaAnual.map(equipo => ({
+          ...equipo,
+          dg: equipo.dg ?? ((equipo.gf || 0) - (equipo.gc || 0))
+        }));
+
+      }
+
+      /*
+       * Si no existe tablaAnual, se intenta generar
+       * utilizando la función disponible en datos.js.
+       */
+
+      else if (
+        typeof generarTablaAnual === "function"
+      ) {
+
+        const generada = generarTablaAnual();
+
+        if (Array.isArray(generada)) {
+          tabla = generada.map(equipo => ({
+            ...equipo,
+            dg: equipo.dg ?? ((equipo.gf || 0) - (equipo.gc || 0))
+          }));
+        }
+
+      }
+
+
+      if (!tabla.length) {
+
+        document.getElementById("tablaAnualBody").innerHTML = `
           <tr>
-
-            <th>
-              Pos.
-            </th>
-
-            <th>
-              Equipo
-            </th>
-
-            <th>
-              PTS
-            </th>
-
-            <th>
-              PJ
-            </th>
-
-            <th>
-              PG
-            </th>
-
-            <th>
-              PE
-            </th>
-
-            <th>
-              PP
-            </th>
-
-            <th>
-              GF
-            </th>
-
-            <th>
-              GC
-            </th>
-
-            <th>
-              DG
-            </th>
-
-          </tr>
-
-        </thead>
-
-
-        <tbody id="tablaAnual">
-
-          <tr>
-
-            <td
-              colspan="10"
-              style="
-                text-align:center;
-                padding:25px;
-              "
-            >
-              Cargando tabla anual...
-
+            <td colspan="10" style="padding:30px;text-align:center;">
+              No hay datos disponibles.
             </td>
-
           </tr>
+        `;
 
-        </tbody>
-
-      </table>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       REFERENCIA DE DESCENSO
-       ===================================================== -->
-
-  <div class="legend">
-
-    <div class="legend-item">
-
-      <span
-        class="legend-box legend-red"
-      ></span>
-
-      <span>
-        Repechaje por descenso
-      </span>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       INFORMACIÓN
-       ===================================================== -->
-
-  <section class="info">
-
-    <h2>
-      Tabla anual
-    </h2>
-
-    <p>
-      La tabla anual reúne los puntos obtenidos durante
-      el Torneo Apertura y el Torneo Clausura 2026.
-      Los cuatro equipos ubicados en las últimas posiciones
-      quedan señalados como zona de repechaje por descenso.
-      Entre estos cuatro equipos se disputará un partido
-      para determinar los descensos correspondientes.
-    </p>
-
-  </section>
-
-
-</main>
-
-
-
-<!-- =======================================================
-     FOOTER
-     ======================================================= -->
-
-<footer>
-
-  Liga Tucson — Liga Tucumana de Fútbol
-
-</footer>
-
-
-
-<!-- =======================================================
-     DATOS
-     ======================================================= -->
-
-<script src="datos.js?v=20260928"></script>
-
-
-
-<script>
-
-/* =========================================================
-   ESCUDOS
-   ========================================================= */
-
-const escudos = {
-
-  "Talleres":
-    "IMG_1621.png",
-
-  "Juventud Unida":
-    "IMG_1622.png",
-
-  "Estación Experimental":
-    "IMG_1623.png",
-
-  "Central Norte":
-    "21B48DFD-98C8-4EDD-B633-35738F9B089D.png",
-
-  "Villa Mitre":
-    "IMG_1625.jpeg",
-
-  "All Boys":
-    "IMG_1627.png",
-
-  "San José":
-    "IMG_1628.png",
-
-  "Argentinos del Norte":
-    "IMG_1629.png",
-
-  "San Martín":
-    "IMG_1630.png",
-
-  "San Antonio":
-    "IMG_1631.jpeg",
-
-  "Atlético Tucumán":
-    "IMG_1632.jpeg",
-
-  "Sportivo Guzmán":
-    "IMG_1633.png",
-
-  "Amalia":
-    "IMG_1634.png",
-
-  "Tucumán Central":
-    "IMG_1635.png",
-
-  "Garmendia":
-    "IMG_1637.jpeg",
-
-  "Atlético Concepción":
-    "IMG_1638.png",
-
-  "San Juan":
-    "9D389031-3751-4B06-A800-AE5B7A426605.png",
-
-  "San Lorenzo (DG)":
-    "IMG_1646.png",
-
-  "Unión del Norte":
-    "IMG_1641.jpeg",
-
-  "Lastenia":
-    "IMG_1645.png",
-
-  "Cruz Alta":
-    "IMG_1644.png",
-
-  "Bella Vista":
-    "IMG_1651.png",
-
-  "San Fernando":
-    "IMG_1652.png",
-
-  "Almirante Brown":
-    "IMG_1653.jpeg",
-
-  "Famaillá":
-    "IMG_1654.png",
-
-  "Ateneo Parroquial Alderetes":
-    "IMG_1655.png",
-
-  "Santa Lucía":
-    "IMG_1656.jpeg",
-
-  "San Pablo":
-    "IMG_1671.png",
-
-  "Alto Verde":
-    "IMG_1657.png",
-
-  "Concepción FC":
-    "IMG_1658.png",
-
-  "Azucarera Argentina":
-    "IMG_1659.png",
-
-  "Ñuñorco":
-    "IMG_1660.png",
-
-  "Unión Simoca":
-    "IMG_1661.jpeg",
-
-  "San Ramón":
-    "IMG_1662.jpeg",
-
-  "Santa Rosa":
-    "IMG_1663.png",
-
-  "La Providencia":
-    "IMG_1664.jpeg",
-
-  "Deportivo Aguilares":
-    "IMG_1665.png",
-
-  "San Lorenzo (SA)":
-    "IMG_1666.webp",
-
-  "Jorge Newbery":
-    "IMG_1673.png",
-
-  "Graneros":
-    "IMG_1667.jpeg",
-
-  "Santa Ana":
-    "IMG_1668.png",
-
-  "Trinidad":
-    "IMG_1669.png",
-
-  "Marapa":
-    "IMG_1670.jpeg",
-
-  "Llorens":
-    "IMG_1672.jpeg"
-
-};
-
-
-
-/* =========================================================
-   MOSTRAR TABLA ANUAL
-   ========================================================= */
-
-function mostrarTablaAnual(){
-
-  const contenedor =
-    document.getElementById(
-      "tablaAnual"
-    );
-
-
-  let tabla =
-    Array.isArray(datosLiga.tablaAnual)
-      ? [...datosLiga.tablaAnual]
-      : [];
-
-
-  /*
-   * Si por alguna razón todavía no existe,
-   * intentamos generarla directamente.
-   */
-
-  if(
-    tabla.length === 0 &&
-    typeof generarTablaAnual === "function"
-  ){
-
-    tabla =
-      generarTablaAnual();
-
-  }
-
-
-  /*
-   * Sin datos.
-   */
-
-  if(
-    !Array.isArray(tabla) ||
-    tabla.length === 0
-  ){
-
-    contenedor.innerHTML = `
-
-      <tr>
-
-        <td
-          colspan="10"
-          style="
-            text-align:center;
-            padding:25px;
-          "
-        >
-          No hay datos disponibles.
-
-        </td>
-
-      </tr>
-
-    `;
-
-    return;
-
-  }
-
-
-
-  /*
-   * Orden oficial:
-   *
-   * 1. Puntos
-   * 2. Menor cantidad de PJ
-   * 3. Diferencia de gol
-   * 4. Goles a favor
-   * 5. Goles en contra
-   */
-
-  tabla.sort(
-    (a,b) => {
-
-      if(
-        b.pts !== a.pts
-      ){
-
-        return b.pts - a.pts;
-
+        return;
       }
 
 
-      if(
-        a.pj !== b.pj
-      ){
+      /*
+       * Orden oficial:
+       *
+       * 1. Puntos
+       * 2. Partidos jugados
+       * 3. Diferencia de gol
+       * 4. Goles a favor
+       * 5. Goles en contra
+       * 6. Orden alfabético
+       */
 
-        return a.pj - b.pj;
+      tabla.sort((a, b) => {
 
-      }
+        if ((b.pts || 0) !== (a.pts || 0)) {
+          return (b.pts || 0) - (a.pts || 0);
+        }
 
+        if ((a.pj || 0) !== (b.pj || 0)) {
+          return (a.pj || 0) - (b.pj || 0);
+        }
 
-      const dgA =
-        Number(a.gf || 0) -
-        Number(a.gc || 0);
+        if ((b.dg || 0) !== (a.dg || 0)) {
+          return (b.dg || 0) - (a.dg || 0);
+        }
 
-      const dgB =
-        Number(b.gf || 0) -
-        Number(b.gc || 0);
+        if ((b.gf || 0) !== (a.gf || 0)) {
+          return (b.gf || 0) - (a.gf || 0);
+        }
 
+        if ((a.gc || 0) !== (b.gc || 0)) {
+          return (a.gc || 0) - (b.gc || 0);
+        }
 
-      if(
-        dgB !== dgA
-      ){
-
-        return dgB - dgA;
-
-      }
-
-
-      if(
-        Number(b.gf || 0) !==
-        Number(a.gf || 0)
-      ){
-
-        return (
-          Number(b.gf || 0) -
-          Number(a.gf || 0)
+        return a.equipo.localeCompare(
+          b.equipo,
+          "es",
+          { sensitivity: "base" }
         );
 
-      }
+      });
 
 
-      if(
-        Number(a.gc || 0) !==
-        Number(b.gc || 0)
-      ){
-
-        return (
-          Number(a.gc || 0) -
-          Number(b.gc || 0)
-        );
-
-      }
+      const tbody =
+        document.getElementById("tablaAnualBody");
 
 
-      return a.equipo.localeCompare(
-        b.equipo,
-        "es"
-      );
-
-    }
-  );
+      tbody.innerHTML = "";
 
 
+      tabla.forEach((equipo, index) => {
 
-  /*
-   * Limpiar tabla.
-   */
+        const posicion = index + 1;
 
-  contenedor.innerHTML = "";
+        const descenso = posicion >= 41;
 
-
-
-  /*
-   * Crear las 44 filas.
-   */
-
-  tabla.forEach(
-    (e,index) => {
-
-      const posicion =
-        index + 1;
+        const dg =
+          equipo.dg ??
+          ((equipo.gf || 0) - (equipo.gc || 0));
 
 
-      const pts =
-        Number(e.pts || 0);
-
-      const pj =
-        Number(e.pj || 0);
-
-      const pg =
-        Number(e.pg || 0);
-
-      const pe =
-        Number(e.pe || 0);
-
-      const pp =
-        Number(e.pp || 0);
-
-      const gf =
-        Number(e.gf || 0);
-
-      const gc =
-        Number(e.gc || 0);
-
-      const dg =
-        gf - gc;
+        const dgClase =
+          dg > 0
+            ? "positive"
+            : dg < 0
+              ? "negative"
+              : "";
 
 
-
-      /*
-       * SOLO LOS ÚLTIMOS CUATRO
-       * SE DESTACAN EN ROJO.
-       */
-
-      const esRepechaje =
-        posicion >= 41;
+        const escudo =
+          escudos[equipo.equipo]
+            ? BASE_ESCUDOS + escudos[equipo.equipo]
+            : "";
 
 
-
-      const claseFila =
-        esRepechaje
-          ? "zona-descenso"
-          : "sin-clasificacion";
+        const tr =
+          document.createElement("tr");
 
 
-
-      /*
-       * SOLO LOS ÚLTIMOS CUATRO
-       * TIENEN LA ETIQUETA.
-       */
-
-      const etiqueta =
-        esRepechaje
-          ? `
-            <span class="badge badge-red">
-              Repechaje
-            </span>
-          `
-          : "";
+        if (descenso) {
+          tr.classList.add("zona-descenso");
+        }
 
 
-
-      /*
-       * Escudo.
-       */
-
-      const escudo =
-        escudos[e.equipo]
-          ? `
-            <img
-              class="team-crest"
-              src="${escudos[e.equipo]}"
-              alt="${e.equipo}"
-            >
-          `
-          : "";
+        const badge =
+          descenso
+            ? `<span class="badge-descenso">Repechaje</span>`
+            : "";
 
 
-
-      /*
-       * Diferencia de gol.
-       */
-
-      let claseDG = "";
-
-      if(
-        dg > 0
-      ){
-
-        claseDG =
-          "dg-positive";
-
-      }
-
-      else if(
-        dg < 0
-      ){
-
-        claseDG =
-          "dg-negative";
-
-      }
-
-
-
-      /*
-       * Crear fila.
-       */
-
-      contenedor.innerHTML += `
-
-        <tr
-          class="${claseFila}"
-        >
+        tr.innerHTML = `
 
           <td class="position">
             ${posicion}
           </td>
 
-
           <td>
 
             <div class="team-cell">
 
-              ${escudo}
+              ${
+                escudo
+                  ? `
+                    <img
+                      src="${escudo}"
+                      alt="Escudo de ${equipo.equipo}"
+                      class="team-crest"
+                    >
+                  `
+                  : ""
+              }
 
-              <span>
-
-                ${e.equipo}
-
-                ${etiqueta}
-
+              <span class="team-name">
+                ${equipo.equipo}
+                ${badge}
               </span>
 
             </div>
 
           </td>
 
-
           <td class="points">
-            ${pts}
+            ${equipo.pts ?? 0}
           </td>
-
 
           <td>
-            ${pj}
+            ${equipo.pj ?? 0}
           </td>
-
 
           <td>
-            ${pg}
+            ${equipo.pg ?? 0}
           </td>
-
 
           <td>
-            ${pe}
+            ${equipo.pe ?? 0}
           </td>
-
 
           <td>
-            ${pp}
+            ${equipo.pp ?? 0}
           </td>
-
 
           <td>
-            ${gf}
+            ${equipo.gf ?? 0}
           </td>
-
 
           <td>
-            ${gc}
+            ${equipo.gc ?? 0}
           </td>
 
-
-          <td
-            class="${claseDG}"
-          >
-            ${dg > 0 ? "+" : ""}${dg}
+          <td class="${dgClase}">
+            ${dg > 0 ? "+" + dg : dg}
           </td>
 
-        </tr>
-
-      `;
-
-    }
-  );
+        `;
 
 
-  console.log(
-    "Tabla anual cargada:",
-    tabla.length,
-    "equipos"
-  );
+        tbody.appendChild(tr);
 
-}
-
-
-
-/* =========================================================
-   OCULTAR / MOSTRAR ENCABEZADO AL DESPLAZARSE
-   ========================================================= */
-
-let ultimaPosicion =
-  window.scrollY;
-
-
-const header =
-  document.getElementById(
-    "siteHeader"
-  );
-
-
-window.addEventListener(
-  "scroll",
-  () => {
-
-    const posicionActual =
-      window.scrollY;
-
-
-    if(
-      posicionActual <= 10
-    ){
-
-      header.classList.remove(
-        "header-hidden"
-      );
-
-    }
-
-    else if(
-      posicionActual >
-      ultimaPosicion
-    ){
-
-      header.classList.add(
-        "header-hidden"
-      );
-
-    }
-
-    else if(
-      posicionActual <
-      ultimaPosicion
-    ){
-
-      header.classList.remove(
-        "header-hidden"
-      );
+      });
 
     }
 
 
-    ultimaPosicion =
-      posicionActual;
+    /* =========================================================
+       INICIAR
+       ========================================================= */
 
-  },
-  {
-    passive:true
-  }
-);
+    cargarTablaAnual();
 
 
+    /* =========================================================
+       HEADER: OCULTAR AL BAJAR / MOSTRAR AL SUBIR
+       ========================================================= */
 
-/* =========================================================
-   INICIAR
-   ========================================================= */
+    let ultimaPosicion = window.scrollY;
 
-mostrarTablaAnual();
+    const header =
+      document.getElementById("siteHeader");
 
-</script>
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        const posicionActual =
+          window.scrollY;
+
+
+        if (
+          posicionActual > ultimaPosicion &&
+          posicionActual > 120
+        ) {
+
+          header.classList.add("hidden");
+
+        } else {
+
+          header.classList.remove("hidden");
+
+        }
+
+
+        ultimaPosicion = posicionActual;
+
+      },
+      { passive: true }
+    );
+
+  </script>
 
 </body>
-
 </html>
