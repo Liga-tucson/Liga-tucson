@@ -12,6 +12,56 @@
 
   <title>Partidos | Liga Tucson</title>
 
+  <meta
+    name="description"
+    content="Partidos, resultados y fixture del Clausura 2026 de Liga Tucson."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="author"
+    content="Liga Tucson"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0b1f38"
+  >
+
+  <link
+    rel="canonical"
+    href="https://liga-tucson.github.io/Liga-tucson/partidos.html"
+  >
+
+  <meta
+    property="og:title"
+    content="Partidos | Liga Tucson"
+  >
+
+  <meta
+    property="og:description"
+    content="Partidos, resultados y fixture del fútbol tucumano."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://liga-tucson.github.io/Liga-tucson/partidos.html"
+  >
+
+  <meta
+    name="google-site-verification"
+    content="_SxIjKfHDSxrk2J8NgNh8GDmd4yMjAKJz3lqsJdlg5g"
+  >
+
 
   <style>
 
@@ -19,6 +69,11 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
     }
 
 
@@ -31,14 +86,16 @@
 
       background: #eef3f9;
 
-      color: #16324f;
+      color: #10233f;
+
+      min-height: 100vh;
 
     }
 
 
-    /* =========================
-       ENCABEZADO
-    ========================= */
+    /* =========================================================
+       HEADER
+       ========================================================= */
 
     .site-header {
 
@@ -49,60 +106,141 @@
       z-index: 1000;
 
       transition:
-        transform 0.35s ease,
-        opacity 0.35s ease;
+        transform 0.28s ease;
 
     }
 
 
-    .site-header.header-hidden {
+    .site-header.hidden {
 
       transform:
         translateY(-100%);
-
-      opacity: 0;
-
-      pointer-events: none;
 
     }
 
 
     .header-top {
 
-      display: flex;
+      background: #0b1f38;
 
-      flex-direction: column;
+      color: white;
+
+      min-height: 112px;
+
+      display: flex;
 
       align-items: center;
 
       justify-content: center;
 
       padding:
-        42px 20px 36px;
+        10px 20px;
 
-      background: #0b1f38;
+    }
 
-      text-align: center;
+
+    .header-inner {
+
+      width: 100%;
+
+      max-width: 1250px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      position: relative;
+
+    }
+
+
+    .header-brand {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 22px;
+
+      text-decoration: none;
+
+      color: white;
 
     }
 
 
     .header-logo {
 
-      width: 110px;
+      width: 90px;
 
-      height: 110px;
+      height: 90px;
 
       object-fit: contain;
+
+      flex-shrink: 0;
 
     }
 
 
-    /* =========================
-       MENÚ
-    ========================= */
+    .header-title {
+
+      text-align: left;
+
+    }
+
+
+    .header-title h1 {
+
+      font-size: 38px;
+
+      line-height: 1;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    .header-title span {
+
+      display: block;
+
+      margin-top: 7px;
+
+      font-size: 17px;
+
+      color: #b9d7f3;
+
+      font-weight: 500;
+
+    }
+
+
+    /* =========================================================
+       NAV
+       ========================================================= */
 
     .main-nav {
+
+      background: #17365d;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    }
+
+
+    .nav-inner {
+
+      max-width: 1250px;
+
+      margin: 0 auto;
 
       display: flex;
 
@@ -110,43 +248,43 @@
 
       align-items: center;
 
-      gap: 10px 24px;
+      overflow-x: auto;
 
-      padding: 18px 20px;
+      scrollbar-width: none;
 
-      background: #17365d;
+    }
 
-      flex-wrap: wrap;
 
+    .nav-inner::-webkit-scrollbar {
+      display: none;
     }
 
 
     .main-nav a {
 
-      display: inline-block;
-
       color: white;
 
       text-decoration: none;
 
-      font-size: 20px;
+      font-size: 17px;
 
-      font-weight: 500;
+      font-weight: 600;
 
-      padding: 14px 18px;
+      padding:
+        15px 20px;
 
-      border-radius: 10px;
+      white-space: nowrap;
 
       transition:
-        background 0.2s ease,
-        color 0.2s ease;
+        background 0.2s ease;
 
     }
 
 
     .main-nav a:hover {
 
-      background: #28527e;
+      background:
+        rgba(255,255,255,0.08);
 
     }
 
@@ -155,72 +293,82 @@
 
       background: #3f7fb8;
 
-      color: white;
-
     }
 
 
-    /* =========================
+    /* =========================================================
        CONTENEDOR
-    ========================= */
+       ========================================================= */
 
     .container {
 
-      max-width: 1200px;
+      width:
+        min(
+          1250px,
+          calc(100% - 32px)
+        );
 
       margin: 0 auto;
 
       padding:
-        45px 20px 70px;
+        42px 0 55px;
 
     }
 
 
-    .page-title {
+    .page-heading {
 
-      text-align: center;
+      margin-bottom: 30px;
 
-      color: #10243d;
+    }
 
-      font-size: 42px;
+
+    .page-heading h2 {
+
+      font-size: 38px;
+
+      line-height: 1.1;
+
+      color: #10233f;
+
+      margin-bottom: 8px;
 
       font-weight: 800;
 
-      margin-bottom: 10px;
+    }
+
+
+    .page-heading p {
+
+      font-size: 18px;
+
+      color: #5e7087;
+
+      line-height: 1.5;
 
     }
 
 
-    .page-subtitle {
-
-      text-align: center;
-
-      color: #6c7b88;
-
-      font-size: 20px;
-
-      margin-bottom: 35px;
-
-    }
-
-
-    /* =========================
+    /* =========================================================
        FILTROS
-    ========================= */
+       ========================================================= */
 
     .filters-card {
 
       background: white;
 
-      border-radius: 22px;
+      border-radius: 20px;
 
-      padding: 25px;
+      padding: 24px;
 
       box-shadow:
         0 8px 25px
-        rgba(0, 0, 0, 0.08);
+        rgba(15, 39, 67, 0.08);
 
-      margin-bottom: 35px;
+      border:
+        1px solid #dce5ef;
+
+      margin-bottom: 30px;
 
     }
 
@@ -243,7 +391,7 @@
 
       margin-bottom: 8px;
 
-      color: #42647d;
+      color: #294766;
 
       font-size: 14px;
 
@@ -256,12 +404,12 @@
 
       width: 100%;
 
-      padding: 14px;
+      padding: 13px 14px;
 
       border:
-        2px solid #dce7f0;
+        1px solid #d7e2ec;
 
-      border-radius: 12px;
+      border-radius: 11px;
 
       background: white;
 
@@ -273,19 +421,27 @@
 
       cursor: pointer;
 
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
     }
 
 
     .filter-group select:focus {
 
-      border-color: #1684d4;
+      border-color: #3f7fb8;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(63,127,184,0.12);
 
     }
 
 
-    /* =========================
+    /* =========================================================
        BOTÓN LIMPIAR
-    ========================= */
+       ========================================================= */
 
     .clear-button {
 
@@ -293,17 +449,17 @@
 
       margin-top: 18px;
 
-      padding: 14px;
+      padding: 13px;
 
       border: none;
 
-      border-radius: 12px;
+      border-radius: 11px;
 
-      background: #e8f0f7;
+      background: #edf4fa;
 
-      color: #15537e;
+      color: #285b82;
 
-      font-size: 16px;
+      font-size: 15px;
 
       font-weight: 700;
 
@@ -317,18 +473,18 @@
 
     .clear-button:hover {
 
-      background: #d7e7f3;
+      background: #dceaf5;
 
     }
 
 
-    /* =========================
+    /* =========================================================
        FECHA
-    ========================= */
+       ========================================================= */
 
     .date-section {
 
-      margin-bottom: 35px;
+      margin-bottom: 30px;
 
     }
 
@@ -343,19 +499,14 @@
 
       gap: 15px;
 
-      margin-bottom: 18px;
+      margin-bottom: 15px;
 
       padding:
-        18px 22px;
+        17px 21px;
 
-      border-radius: 18px;
+      border-radius: 16px;
 
-      background:
-        linear-gradient(
-          135deg,
-          #0a3159,
-          #1269a8
-        );
+      background: #17365d;
 
       color: white;
 
@@ -364,7 +515,9 @@
 
     .date-title h2 {
 
-      font-size: 24px;
+      font-size: 22px;
+
+      font-weight: 800;
 
     }
 
@@ -373,14 +526,14 @@
 
       font-size: 14px;
 
-      color: #dcecf9;
+      color: #c8dced;
 
     }
 
 
-    /* =========================
+    /* =========================================================
        PARTIDOS
-    ========================= */
+       ========================================================= */
 
     .matches-grid {
 
@@ -398,16 +551,19 @@
 
       background: white;
 
-      border-radius: 20px;
+      border-radius: 18px;
 
-      padding: 20px;
+      padding: 19px;
 
       box-shadow:
         0 6px 20px
-        rgba(0, 0, 0, 0.07);
+        rgba(15, 39, 67, 0.07);
+
+      border:
+        1px solid #dce5ef;
 
       border-left:
-        5px solid #258ce0;
+        5px solid #3f7fb8;
 
       transition:
         transform 0.2s ease,
@@ -423,7 +579,7 @@
 
       box-shadow:
         0 10px 25px
-        rgba(0, 0, 0, 0.1);
+        rgba(15, 39, 67, 0.10);
 
     }
 
@@ -431,7 +587,7 @@
     .match-card.interzonal {
 
       border-left-color:
-        #d4a600;
+        #c39a16;
 
     }
 
@@ -444,7 +600,7 @@
 
       justify-content: space-between;
 
-      margin-bottom: 18px;
+      margin-bottom: 17px;
 
     }
 
@@ -452,15 +608,15 @@
     .match-zone {
 
       padding:
-        6px 10px;
+        5px 9px;
 
-      border-radius: 10px;
+      border-radius: 8px;
 
-      background: #e7f2fb;
+      background: #edf4fa;
 
-      color: #14649a;
+      color: #285b82;
 
-      font-size: 12px;
+      font-size: 11px;
 
       font-weight: 800;
 
@@ -470,7 +626,7 @@
     .match-card.interzonal
     .match-zone {
 
-      background: #fff2bc;
+      background: #fff3c9;
 
       color: #806300;
 
@@ -479,7 +635,7 @@
 
     .match-status {
 
-      font-size: 12px;
+      font-size: 11px;
 
       font-weight: 800;
 
@@ -495,7 +651,7 @@
 
     .status-programado {
 
-      color: #1474b9;
+      color: #2875a9;
 
     }
 
@@ -547,9 +703,9 @@
 
     .team img {
 
-      width: 46px;
+      width: 42px;
 
-      height: 46px;
+      height: 42px;
 
       object-fit: contain;
 
@@ -560,22 +716,24 @@
 
     .team-name {
 
-      font-size: 15px;
+      font-size: 14px;
 
       font-weight: 800;
 
       line-height: 1.2;
+
+      color: #10233f;
 
     }
 
 
     .score {
 
-      min-width: 65px;
+      min-width: 62px;
 
       text-align: center;
 
-      font-size: 25px;
+      font-size: 24px;
 
       font-weight: 900;
 
@@ -586,7 +744,7 @@
 
     .score.vs {
 
-      font-size: 18px;
+      font-size: 16px;
 
       color: #7b8b98;
 
@@ -603,9 +761,9 @@
 
       gap: 10px;
 
-      margin-top: 18px;
+      margin-top: 17px;
 
-      padding-top: 14px;
+      padding-top: 13px;
 
       border-top:
         1px solid #edf1f5;
@@ -617,15 +775,15 @@
     }
 
 
-    /* =========================
+    /* =========================================================
        SIN PARTIDOS
-    ========================= */
+       ========================================================= */
 
     .empty-card {
 
       background: white;
 
-      border-radius: 22px;
+      border-radius: 20px;
 
       padding:
         45px 25px;
@@ -634,16 +792,21 @@
 
       box-shadow:
         0 8px 25px
-        rgba(0, 0, 0, 0.07);
+        rgba(15, 39, 67, 0.07);
+
+      border:
+        1px solid #dce5ef;
 
     }
 
 
     .empty-card h3 {
 
-      color: #0b4f82;
+      color: #17365d;
 
       margin-bottom: 8px;
+
+      font-size: 20px;
 
     }
 
@@ -652,27 +815,24 @@
 
       color: #71808d;
 
+      font-size: 15px;
+
     }
 
 
-    /* =========================
+    /* =========================================================
        PLAY-OFF
-    ========================= */
+       ========================================================= */
 
     .playoff-link-card {
 
-      margin-top: 40px;
+      margin-top: 35px;
 
-      padding: 28px;
+      padding: 25px;
 
-      border-radius: 22px;
+      border-radius: 20px;
 
-      background:
-        linear-gradient(
-          135deg,
-          #082d50,
-          #1269a8
-        );
+      background: #17365d;
 
       color: white;
 
@@ -689,18 +849,20 @@
 
     .playoff-link-card h2 {
 
-      font-size: 27px;
+      font-size: 23px;
 
-      margin-bottom: 8px;
+      margin-bottom: 7px;
 
     }
 
 
     .playoff-link-card p {
 
-      color: #dcecf9;
+      color: #c8dced;
 
-      line-height: 1.4;
+      line-height: 1.5;
+
+      font-size: 15px;
 
     }
 
@@ -712,53 +874,77 @@
       flex-shrink: 0;
 
       padding:
-        14px 22px;
+        12px 20px;
 
-      border-radius: 13px;
+      border-radius: 11px;
 
       background: white;
 
-      color: #0b4f82;
+      color: #17365d;
 
       text-decoration: none;
 
       font-weight: 800;
 
+      font-size: 14px;
+
+      transition:
+        background 0.2s ease;
+
     }
 
 
-    /* =========================
+    .playoff-link-card a:hover {
+
+      background: #edf4fa;
+
+    }
+
+
+    /* =========================================================
        FOOTER
-    ========================= */
+       ========================================================= */
 
     footer {
 
-      padding:
-        30px 20px;
+      background: #0b1f38;
+
+      color: white;
 
       text-align: center;
 
-      background: #0b1f38;
+      padding: 26px 20px;
 
-      color: #d8e6f3;
-
-      font-size: 16px;
+      margin-top: 20px;
 
     }
 
 
     footer strong {
 
-      color: white;
+      display: block;
+
+      font-size: 17px;
+
+      margin-bottom: 6px;
 
     }
 
 
-    /* =========================
-       CELULAR
-    ========================= */
+    footer span {
 
-    @media (max-width: 850px) {
+      color: #b9cce0;
+
+      font-size: 14px;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
 
       .filters-grid {
 
@@ -781,59 +967,96 @@
 
       .header-top {
 
+        min-height: 92px;
+
         padding:
-          38px 15px 32px;
+          8px 14px;
+
+      }
+
+
+      .header-brand {
+
+        gap: 13px;
 
       }
 
 
       .header-logo {
 
-        width: 92px;
+        width: 76px;
 
-        height: 92px;
+        height: 76px;
 
       }
 
 
-      .main-nav {
+      .header-title h1 {
 
-        gap: 4px 10px;
+        font-size: 31px;
 
-        padding:
-          12px 10px;
+      }
+
+
+      .header-title span {
+
+        font-size: 14px;
+
+        margin-top: 5px;
 
       }
 
 
       .main-nav a {
 
-        font-size: 18px;
+        font-size: 15px;
 
         padding:
-          10px 12px;
+          13px 15px;
 
       }
 
 
       .container {
 
+        width:
+          min(
+            100% - 20px,
+            1250px
+          );
+
         padding:
-          35px 15px 60px;
+          30px 0 42px;
 
       }
 
 
-      .page-title {
+      .page-heading {
 
-        font-size: 34px;
+        margin-bottom: 23px;
 
       }
 
 
-      .page-subtitle {
+      .page-heading h2 {
+
+        font-size: 31px;
+
+      }
+
+
+      .page-heading p {
 
         font-size: 16px;
+
+      }
+
+
+      .filters-card {
+
+        border-radius: 16px;
+
+        padding: 18px;
 
       }
 
@@ -851,10 +1074,22 @@
 
         flex-direction: column;
 
+        padding:
+          15px 18px;
+
+      }
+
+
+      .date-title h2 {
+
+        font-size: 20px;
+
       }
 
 
       .match-card {
+
+        border-radius: 16px;
 
         padding: 17px;
 
@@ -881,7 +1116,14 @@
 
         min-width: 50px;
 
-        font-size: 22px;
+        font-size: 21px;
+
+      }
+
+
+      .match-bottom {
+
+        font-size: 11px;
 
       }
 
@@ -891,6 +1133,8 @@
         flex-direction: column;
 
         align-items: flex-start;
+
+        border-radius: 16px;
 
       }
 
@@ -913,9 +1157,9 @@
 <body>
 
 
-  <!-- =========================
-       ENCABEZADO
-  ========================= -->
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
 
   <header
     class="site-header"
@@ -924,86 +1168,111 @@
 
     <div class="header-top">
 
-      <img
-        src="FDDF80B7-4151-4091-AB6F-C5DF10F36391.png"
-        alt="Liga Tucson"
-        class="header-logo"
-      >
+      <div class="header-inner">
+
+        <a
+          href="index.html"
+          class="header-brand"
+        >
+
+          <img
+            src="https://raw.githubusercontent.com/ianulisespaez-netizen/Liga-tucson/main/FDDF80B7-4151-4091-AB6F-C5DF10F36391.png"
+            alt="Liga Tucson"
+            class="header-logo"
+          >
+
+
+          <div class="header-title">
+
+            <h1>
+              LIGA TUCSON
+            </h1>
+
+            <span>
+              Fútbol Tucumán
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
 
     </div>
 
 
-    <!-- =========================
-         MENÚ
-    ========================= -->
+    <!-- =====================================================
+         NAV
+         ===================================================== -->
 
     <nav class="main-nav">
 
-      <a href="index.html">
-        Inicio
-      </a>
+      <div class="nav-inner">
 
+        <a href="index.html">
+          Inicio
+        </a>
 
-      <a href="posiciones.html">
-        Posiciones
-      </a>
+        <a href="equipos.html">
+          Equipos
+        </a>
 
+        <a href="posiciones.html">
+          Posiciones
+        </a>
 
-      <a href="tabla-anual.html">
-        Tabla Anual
-      </a>
+        <a
+          href="partidos.html"
+          class="active"
+        >
+          Partidos
+        </a>
 
+        <a href="playoff.html">
+          Play-Off
+        </a>
 
-      <a
-        href="partidos.html"
-        class="active"
-      >
-        Partidos
-      </a>
+        <a href="tabla-anual.html">
+          Tabla Anual
+        </a>
 
-
-      <a href="equipos.html">
-        Equipos
-      </a>
-
-
-      <a href="playoff.html">
-        Play-Off
-      </a>
+      </div>
 
     </nav>
 
   </header>
 
 
-  <!-- =========================
+  <!-- =======================================================
        CONTENIDO
-  ========================= -->
+       ======================================================= -->
 
   <main class="container">
 
 
-    <h1 class="page-title">
-      Partidos
-    </h1>
+    <section class="page-heading">
+
+      <h2>
+        Partidos
+      </h2>
 
 
-    <p class="page-subtitle">
-      Primera División A · Clausura 2026
-    </p>
+      <p>
+        Fixture y resultados del Clausura 2026.
+      </p>
+
+    </section>
 
 
-    <!-- =========================
+    <!-- =====================================================
          FILTROS
-    ========================= -->
+         ===================================================== -->
 
     <section class="filters-card">
 
 
       <div class="filters-grid">
 
-
-        <!-- FECHA -->
 
         <div class="filter-group">
 
@@ -1022,8 +1291,6 @@
 
         </div>
 
-
-        <!-- ZONA -->
 
         <div class="filter-group">
 
@@ -1078,8 +1345,6 @@
         </div>
 
 
-        <!-- EQUIPO -->
-
         <div class="filter-group">
 
           <label for="filtroEquipo">
@@ -1097,8 +1362,6 @@
 
         </div>
 
-
-        <!-- ESTADO -->
 
         <div class="filter-group">
 
@@ -1140,16 +1403,16 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================================
          PARTIDOS
-    ========================= -->
+         ===================================================== -->
 
     <div id="partidosContainer"></div>
 
 
-    <!-- =========================
+    <!-- =====================================================
          PLAY-OFF
-    ========================= -->
+         ===================================================== -->
 
     <section class="playoff-link-card">
 
@@ -1162,7 +1425,7 @@
 
 
         <p>
-          Mirá las clasificaciones y los cruces
+          Consultá las clasificaciones y los cruces
           de las distintas rondas.
         </p>
 
@@ -1178,9 +1441,9 @@
   </main>
 
 
-  <!-- =========================
+  <!-- =======================================================
        FOOTER
-  ========================= -->
+       ======================================================= -->
 
   <footer>
 
@@ -1188,25 +1451,25 @@
       Liga Tucson
     </strong>
 
-    <br>
-
-    Liga Tucumana de Fútbol · Clausura 2026
+    <span>
+      Fútbol Tucumán · Clausura 2026
+    </span>
 
   </footer>
 
 
-  <!-- =========================
+  <!-- =======================================================
        DATOS
-  ========================= -->
+       ======================================================= -->
 
-  <script src="datos.js?v=20260926"></script>
+  <script src="datos.js?v=20260928"></script>
 
 
   <script>
 
-    /* =========================
+    /* =========================================================
        ESCUDOS
-    ========================= */
+       ========================================================= */
 
     const escudos = {
 
@@ -1350,9 +1613,9 @@
     };
 
 
-    /* =========================
+    /* =========================================================
        ELEMENTOS
-    ========================= */
+       ========================================================= */
 
     const filtroFecha =
       document.getElementById(
@@ -1384,9 +1647,9 @@
       );
 
 
-    /* =========================
+    /* =========================================================
        CARGAR FECHAS
-    ========================= */
+       ========================================================= */
 
     function cargarFechas() {
 
@@ -1418,24 +1681,15 @@
     }
 
 
-    /* =========================
+    /* =========================================================
        OBTENER TODOS LOS EQUIPOS
-    ========================= */
+       ========================================================= */
 
     function obtenerTodosLosEquipos() {
 
       const equipos =
         new Set();
 
-
-      /*
-       * datosLiga.zonas contiene
-       * directamente los nombres:
-       *
-       * "Talleres"
-       * "Juventud Unida"
-       * etc.
-       */
 
       for (
         const zona in datosLiga.zonas
@@ -1499,9 +1753,9 @@
     }
 
 
-    /* =========================
+    /* =========================================================
        CARGAR EQUIPOS
-    ========================= */
+       ========================================================= */
 
     function cargarEquipos() {
 
@@ -1537,9 +1791,9 @@
     }
 
 
-    /* =========================
+    /* =========================================================
        PARTIDO PERTENECE A ZONA
-    ========================= */
+       ========================================================= */
 
     function partidoPerteneceAZona(
       partido,
@@ -1589,9 +1843,9 @@
     }
 
 
-    /* =========================
-       ESTADO DEL PARTIDO
-    ========================= */
+    /* =========================================================
+       ESTADO
+       ========================================================= */
 
     function obtenerEstadoPartido(
       partido
@@ -1619,9 +1873,9 @@
     }
 
 
-    /* =========================
-       FILTRAR PARTIDOS
-    ========================= */
+    /* =========================================================
+       FILTRAR
+       ========================================================= */
 
     function obtenerPartidosFiltrados() {
 
@@ -1642,8 +1896,6 @@
         .filter(
           partido => {
 
-
-            /* FECHA */
 
             if (
               filtroFecha.value !==
@@ -1666,8 +1918,6 @@
             }
 
 
-            /* ZONA */
-
             if (
               !partidoPerteneceAZona(
                 partido,
@@ -1679,8 +1929,6 @@
 
             }
 
-
-            /* EQUIPO */
 
             if (
               filtroEquipo.value !==
@@ -1704,8 +1952,6 @@
 
             }
 
-
-            /* ESTADO */
 
             const estado =
               obtenerEstadoPartido(
@@ -1774,9 +2020,9 @@
     }
 
 
-    /* =========================
-       CREAR TARJETA DE PARTIDO
-    ========================= */
+    /* =========================================================
+       CREAR PARTIDO
+       ========================================================= */
 
     function crearPartido(
       partido
@@ -1847,18 +2093,14 @@
 
       const etiquetaZona =
         interzonal
-
           ? "Interzonal"
-
           : "Zona " +
             partido.zona;
 
 
       const textoEstado =
         finalizado
-
           ? "Finalizado"
-
           : "Programado";
 
 
@@ -1874,9 +2116,7 @@
 
       const detalleZona =
         interzonal
-
           ? zonasInterzonal
-
           : (
               "Zona " +
               partido.zona
@@ -1895,7 +2135,6 @@
 
 
           <div class="match-top">
-
 
             <span class="match-zone">
 
@@ -1916,17 +2155,13 @@
 
             </span>
 
-
           </div>
 
 
           <div class="teams">
 
 
-            <!-- LOCAL -->
-
             <div class="team home">
-
 
               <span class="team-name">
 
@@ -1941,26 +2176,20 @@
 
                     <img
                       src="${escudoLocal}"
-                      alt="${partido.local}"
+                      alt="Escudo de ${partido.local}"
                     >
 
                   `
                   : ""
               }
 
-
             </div>
 
-
-            <!-- MARCADOR -->
 
             ${marcador}
 
 
-            <!-- VISITANTE -->
-
             <div class="team away">
-
 
               ${
                 escudoVisitante
@@ -1968,7 +2197,7 @@
 
                     <img
                       src="${escudoVisitante}"
-                      alt="${partido.visitante}"
+                      alt="Escudo de ${partido.visitante}"
                     >
 
                   `
@@ -1982,32 +2211,23 @@
 
               </span>
 
-
             </div>
-
 
           </div>
 
 
           <div class="match-bottom">
 
-
             <span>
-
               Fecha ${partido.fecha}
-
             </span>
 
 
             <span>
-
               ${detalleZona}
-
             </span>
-
 
           </div>
-
 
         </article>
 
@@ -2016,9 +2236,9 @@
     }
 
 
-    /* =========================
+    /* =========================================================
        MOSTRAR PARTIDOS
-    ========================= */
+       ========================================================= */
 
     function mostrarPartidos() {
 
@@ -2104,15 +2324,12 @@
                 class="date-section"
               >
 
-
                 <div
                   class="date-title"
                 >
 
                   <h2>
-
                     Fecha ${fecha}
-
                   </h2>
 
 
@@ -2132,7 +2349,6 @@
 
                   </span>
 
-
                 </div>
 
 
@@ -2150,7 +2366,6 @@
 
                 </div>
 
-
               </section>
 
             `;
@@ -2163,9 +2378,9 @@
     }
 
 
-    /* =========================
+    /* =========================================================
        LIMPIAR FILTROS
-    ========================= */
+       ========================================================= */
 
     function limpiarFiltros() {
 
@@ -2190,9 +2405,9 @@
     }
 
 
-    /* =========================
+    /* =========================================================
        EVENTOS
-    ========================= */
+       ========================================================= */
 
     filtroFecha.addEventListener(
       "change",
@@ -2218,9 +2433,9 @@
     );
 
 
-    /* =========================
-       MENÚ AL DESPLAZARSE
-    ========================= */
+    /* =========================================================
+       HEADER AL HACER SCROLL
+       ========================================================= */
 
     let ultimaPosicion =
       window.scrollY;
@@ -2234,40 +2449,29 @@
 
     window.addEventListener(
       "scroll",
-      function() {
+      () => {
 
         const posicionActual =
           window.scrollY;
 
 
         if (
-          posicionActual <= 10
-        ) {
-
-          header.classList.remove(
-            "header-hidden"
-          );
-
-        }
-
-        else if (
           posicionActual >
-          ultimaPosicion
+            ultimaPosicion &&
+          posicionActual >
+            120
         ) {
 
           header.classList.add(
-            "header-hidden"
+            "hidden"
           );
 
         }
 
-        else if (
-          posicionActual <
-          ultimaPosicion
-        ) {
+        else {
 
           header.classList.remove(
-            "header-hidden"
+            "hidden"
           );
 
         }
@@ -2283,9 +2487,9 @@
     );
 
 
-    /* =========================
+    /* =========================================================
        INICIAR
-    ========================= */
+       ========================================================= */
 
     cargarFechas();
 
