@@ -345,7 +345,7 @@ const tablaAnualBase = {
 
   "Famaillá": {
     pts: 24,
-    pj: 17,
+    pj: 18,
     pg: 7,
     pe: 3,
     pp: 7,
