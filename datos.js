@@ -1707,6 +1707,146 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   }
+  
+    /* =========================
+     FECHA 6
+     ========================= */
+
+  {
+    fecha: 6,
+    local: "Llorens",
+    visitante: "Graneros",
+    golesLocal: 0,
+    golesVisitante: 0
+  },
+
+  {
+    fecha: 6,
+    local: "Marapa",
+    visitante: "Santa Ana",
+    golesLocal: 2,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 6,
+    local: "Lastenia",
+    visitante: "Cruz Alta",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 6,
+    local: "Amalia",
+    visitante: "Sportivo Guzmán",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 6,
+    local: "Unión Simoca",
+    visitante: "Azucarera Argentina",
+    golesLocal: 4,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 6,
+    local: "Trinidad",
+    visitante: "Jorge Newbery",
+    golesLocal: 1,
+    golesVisitante: 3
+  },
+
+  {
+    fecha: 6,
+    local: "Garmendia",
+    visitante: "San Juan",
+    golesLocal: 2,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 6,
+    local: "Bella Vista",
+    visitante: "Famaillá",
+    golesLocal: 0,
+    golesVisitante: 0
+  },
+
+  {
+    fecha: 6,
+    local: "Unión del Norte",
+    visitante: "Argentinos del Norte",
+    golesLocal: 3,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 6,
+    local: "All Boys",
+    visitante: "Villa Mitre",
+    golesLocal: 1,
+    golesVisitante: 2
+  },
+
+  {
+    fecha: 6,
+    local: "San Martín",
+    visitante: "Tucumán Central",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 6,
+    local: "Juventud Unida",
+    visitante: "Talleres",
+    golesLocal: 2,
+    golesVisitante: 2
+  },
+
+  {
+    fecha: 6,
+    local: "San Lorenzo (DG)",
+    visitante: "Atlético Concepción",
+    golesLocal: 0,
+    golesVisitante: 2
+  },
+
+  {
+    fecha: 6,
+    local: "Almirante Brown",
+    visitante: "Santa Lucía",
+    golesLocal: 5,
+    golesVisitante: 0
+  },
+
+  {
+    fecha: 6,
+    local: "Santa Rosa",
+    visitante: "San Ramón",
+    golesLocal: 0,
+    golesVisitante: 0
+  },
+
+  {
+    fecha: 6,
+    local: "San Lorenzo (SA)",
+    visitante: "Deportivo Aguilares",
+    golesLocal: 0,
+    golesVisitante: 5
+  },
+
+  {
+    fecha: 6,
+    local: "Ñuñorco",
+    visitante: "Alto Verde",
+    golesLocal: 0,
+    golesVisitante: 0
+  },
 
   // Pendientes:
   // Fecha 1: San Juan vs Sportivo Guzmán
