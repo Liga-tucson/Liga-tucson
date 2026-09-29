@@ -954,10 +954,10 @@ const resultadosClausura = [
 
   {
     fecha: 1,
-    local: "Santa Rosa",
-    visitante: "Ñuñorco",
+    local: "Ñuñorco",
+    visitante: "Santa Rosa",
     golesLocal: 0,
-    golesVisitante: 2
+    golesVisitante: 2 
   },
 
   {
@@ -1223,7 +1223,7 @@ const resultadosClausura = [
     local: "Amalia",
     visitante: "Argentinos del Norte",
     golesLocal: 1,
-    golesVisitante: 1
+    golesVisitante: 0 
   },
 
   {
@@ -1371,14 +1371,6 @@ const resultadosClausura = [
     fecha: 4,
     local: "San José",
     visitante: "Talleres",
-    golesLocal: 0,
-    golesVisitante: 1
-  },
-
-  {
-    fecha: 4,
-    local: "Estación Experimental",
-    visitante: "All Boys",
     golesLocal: 0,
     golesVisitante: 1
   },
@@ -1585,7 +1577,7 @@ const resultadosClausura = [
     local: "Atlético Concepción",
     visitante: "Unión del Norte",
     golesLocal: 1,
-    golesVisitante: 1
+    golesVisitante: 0 
   },
 
   {
