@@ -5,7 +5,7 @@
 
 const datosLiga = {
   torneo: "Primera División A - Clausura 2026",
-  fechaActual: 5,
+  fechaActual: 6,
 
   zonas: {
     A: [
