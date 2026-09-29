@@ -1706,7 +1706,7 @@ const resultadosClausura = [
     visitante: "Marapa",
     golesLocal: 1,
     golesVisitante: 0
-  }
+  },
   
     /* =========================
      FECHA 6
