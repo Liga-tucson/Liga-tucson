@@ -537,35 +537,41 @@ const fixtureBase = {
       ["All Boys", "Juventud Unida"],
       ["Estación Experimental", "Central Norte"]
     ],
+
     [
       ["San José", "All Boys"],
       ["Talleres", "Estación Experimental"],
       ["Central Norte", "Juventud Unida"]
     ],
+
     [
       ["All Boys", "Central Norte"],
       ["Talleres", "Villa Mitre"],
       ["Juventud Unida", "Estación Experimental"]
     ],
+
     [
       ["Central Norte", "Villa Mitre"],
       ["San José", "Talleres"],
       ["Estación Experimental", "All Boys"]
     ],
+
     [
       ["Villa Mitre", "Estación Experimental"],
       ["Juventud Unida", "San José"],
       ["Talleres", "Central Norte"]
     ],
+
     [
       ["All Boys", "Villa Mitre"],
       ["San José", "Central Norte"],
       ["Juventud Unida", "Talleres"]
     ],
+
     [
-      ["Estación Experimental", "All Boys"],
+      ["Talleres", "All Boys"],
       ["Villa Mitre", "Juventud Unida"],
-      ["San José", "Talleres"]
+      ["San José", "Estación Experimental"]
     ]
   ],
 
@@ -575,35 +581,41 @@ const fixtureBase = {
       ["San Martín", "Amalia"],
       ["Argentinos del Norte", "San Antonio"]
     ],
+
     [
       ["Atlético Tucumán", "San Martín"],
       ["Sportivo Guzmán", "Argentinos del Norte"],
       ["San Antonio", "Amalia"]
     ],
+
     [
       ["San Martín", "San Antonio"],
       ["Sportivo Guzmán", "Tucumán Central"],
       ["Amalia", "Argentinos del Norte"]
     ],
+
     [
       ["San Antonio", "Tucumán Central"],
       ["Atlético Tucumán", "Sportivo Guzmán"],
       ["Argentinos del Norte", "San Martín"]
     ],
+
     [
       ["Tucumán Central", "Argentinos del Norte"],
       ["Amalia", "Atlético Tucumán"],
       ["Sportivo Guzmán", "San Antonio"]
     ],
+
     [
       ["San Martín", "Tucumán Central"],
       ["Atlético Tucumán", "San Antonio"],
       ["Amalia", "Sportivo Guzmán"]
     ],
+
     [
-      ["Argentinos del Norte", "San Martín"],
+      ["Sportivo Guzmán", "San Martín"],
       ["Tucumán Central", "Amalia"],
-      ["Atlético Tucumán", "Sportivo Guzmán"]
+      ["Atlético Tucumán", "Argentinos del Norte"]
     ]
   ],
 
@@ -613,35 +625,41 @@ const fixtureBase = {
       ["San Lorenzo (DG)", "Garmendia"],
       ["Unión del Norte", "Cruz Alta"]
     ],
+
     [
       ["Lastenia", "San Lorenzo (DG)"],
       ["San Juan", "Unión del Norte"],
       ["Cruz Alta", "Garmendia"]
     ],
+
     [
       ["San Lorenzo (DG)", "Cruz Alta"],
       ["San Juan", "Atlético Concepción"],
       ["Garmendia", "Unión del Norte"]
     ],
+
     [
       ["Cruz Alta", "Atlético Concepción"],
       ["Lastenia", "San Juan"],
       ["Unión del Norte", "San Lorenzo (DG)"]
     ],
+
     [
       ["Atlético Concepción", "Unión del Norte"],
       ["Garmendia", "Lastenia"],
       ["San Juan", "Cruz Alta"]
     ],
+
     [
       ["San Lorenzo (DG)", "Atlético Concepción"],
       ["Lastenia", "Cruz Alta"],
       ["Garmendia", "San Juan"]
     ],
+
     [
-      ["Unión del Norte", "San Lorenzo (DG)"],
+      ["San Juan", "San Lorenzo (DG)"],
       ["Atlético Concepción", "Garmendia"],
-      ["Lastenia", "San Juan"]
+      ["Lastenia", "Unión del Norte"]
     ]
   ],
 
@@ -651,35 +669,41 @@ const fixtureBase = {
       ["San Fernando", "Almirante Brown"],
       ["Ateneo Parroquial Alderetes", "Famaillá"]
     ],
+
     [
       ["Bella Vista", "San Fernando"],
       ["Santa Lucía", "Ateneo Parroquial Alderetes"],
       ["Famaillá", "Almirante Brown"]
     ],
+
     [
       ["San Fernando", "Famaillá"],
       ["Santa Lucía", "San Pablo"],
       ["Almirante Brown", "Ateneo Parroquial Alderetes"]
     ],
+
     [
       ["Famaillá", "San Pablo"],
       ["Bella Vista", "Santa Lucía"],
       ["Ateneo Parroquial Alderetes", "San Fernando"]
     ],
+
     [
       ["San Pablo", "Ateneo Parroquial Alderetes"],
       ["Almirante Brown", "Bella Vista"],
       ["Santa Lucía", "Famaillá"]
     ],
+
     [
       ["San Fernando", "San Pablo"],
       ["Bella Vista", "Famaillá"],
       ["Almirante Brown", "Santa Lucía"]
     ],
+
     [
-      ["Ateneo Parroquial Alderetes", "San Fernando"],
+      ["Santa Lucía", "San Fernando"],
       ["San Pablo", "Almirante Brown"],
-      ["Bella Vista", "Santa Lucía"]
+      ["Bella Vista", "Ateneo Parroquial Alderetes"]
     ]
   ],
 
@@ -690,36 +714,42 @@ const fixtureBase = {
       ["Unión Simoca", "San Ramón"],
       ["Santa Rosa", "Ñuñorco"]
     ],
+
     [
       ["Ñuñorco", "Concepción FC"],
       ["Santa Rosa", "Unión Simoca"],
       ["San Ramón", "La Providencia"],
       ["Alto Verde", "Azucarera Argentina"]
     ],
+
     [
       ["Concepción FC", "Alto Verde"],
       ["Azucarera Argentina", "San Ramón"],
       ["La Providencia", "Santa Rosa"],
       ["Unión Simoca", "Ñuñorco"]
     ],
+
     [
       ["Unión Simoca", "Concepción FC"],
       ["Ñuñorco", "La Providencia"],
       ["Santa Rosa", "Azucarera Argentina"],
       ["San Ramón", "Alto Verde"]
     ],
+
     [
       ["Concepción FC", "San Ramón"],
       ["Alto Verde", "Santa Rosa"],
       ["Azucarera Argentina", "Ñuñorco"],
       ["La Providencia", "Unión Simoca"]
     ],
+
     [
       ["La Providencia", "Concepción FC"],
       ["Unión Simoca", "Azucarera Argentina"],
       ["Ñuñorco", "Alto Verde"],
       ["Santa Rosa", "San Ramón"]
     ],
+
     [
       ["Concepción FC", "Santa Rosa"],
       ["San Ramón", "Ñuñorco"],
@@ -735,36 +765,42 @@ const fixtureBase = {
       ["Marapa", "Jorge Newbery"],
       ["Llorens", "Trinidad"]
     ],
+
     [
       ["Llorens", "Deportivo Aguilares"],
       ["Trinidad", "Marapa"],
       ["Jorge Newbery", "San Lorenzo (SA)"],
       ["Graneros", "Santa Ana"]
     ],
+
     [
       ["Deportivo Aguilares", "Graneros"],
       ["Santa Ana", "Jorge Newbery"],
       ["San Lorenzo (SA)", "Trinidad"],
       ["Marapa", "Llorens"]
     ],
+
     [
       ["Marapa", "Deportivo Aguilares"],
       ["Llorens", "San Lorenzo (SA)"],
       ["Trinidad", "Santa Ana"],
       ["Jorge Newbery", "Graneros"]
     ],
+
     [
       ["Deportivo Aguilares", "Jorge Newbery"],
       ["Graneros", "Trinidad"],
       ["Santa Ana", "Llorens"],
       ["San Lorenzo (SA)", "Marapa"]
     ],
+
     [
       ["San Lorenzo (SA)", "Deportivo Aguilares"],
       ["Marapa", "Santa Ana"],
       ["Llorens", "Graneros"],
       ["Trinidad", "Jorge Newbery"]
     ],
+
     [
       ["Deportivo Aguilares", "Trinidad"],
       ["Jorge Newbery", "Llorens"],
@@ -774,9 +810,8 @@ const fixtureBase = {
   ]
 };
 
-
 /* =========================================================
-   INTERZONALES
+   INTERZONALES 
    ========================================================= */
 
 const interzonalesAD = [
@@ -785,15 +820,15 @@ const interzonalesAD = [
   ["Bella Vista", "San José"],
   ["Almirante Brown", "Juventud Unida"],
   ["San Fernando", "All Boys"],
-  ["Estación Experimental", "Ateneo Parroquial Alderetes"],
-  ["Famaillá", "Central Norte"],
+  ["Ateneo Parroquial Alderetes", "Estación Experimental"],
+  ["Central Norte", "Famaillá"],
   ["Talleres", "Santa Lucía"],
   ["San Pablo", "Villa Mitre"],
   ["San José", "Bella Vista"],
   ["Juventud Unida", "Almirante Brown"],
   ["All Boys", "San Fernando"],
-  ["Ateneo Parroquial Alderetes", "Estación Experimental"],
-  ["Central Norte", "Famaillá"]
+  ["Estación Experimental", "Ateneo Parroquial Alderetes"],
+  ["Famaillá", "Central Norte"]
 ];
 
 const interzonalesBC = [
@@ -811,6 +846,7 @@ const interzonalesBC = [
   ["San Martín", "San Lorenzo (DG)"],
   ["Argentinos del Norte", "Unión del Norte"],
   ["Cruz Alta", "San Antonio"]
+];
 ];
 
 
