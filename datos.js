@@ -712,7 +712,7 @@ const fixtureBase = {
       ["Concepción FC", "Azucarera Argentina"],
       ["La Providencia", "Alto Verde"],
       ["Unión Simoca", "San Ramón"],
-      ["Santa Rosa", "Ñuñorco"]
+      ["Ñuñorco", "Santa Rosa"]
     ],
 
     [
@@ -1875,6 +1875,22 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
+  
+  {
+    fecha: 6,
+    local: "La Providencia",
+    visitante: "Concepción FC",
+    golesLocal: 1,
+    golesVisitante: 1
+},
+
+{
+    fecha: 6,
+    local: "San Fernando",
+    visitante: "San Pablo",
+    golesLocal: 2,
+    golesVisitante: 1
+},
 
   // Pendientes:
   // Fecha 1: San Juan vs Sportivo Guzmán
