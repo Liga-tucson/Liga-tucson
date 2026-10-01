@@ -847,7 +847,7 @@ const interzonalesBC = [
   ["Argentinos del Norte", "Unión del Norte"],
   ["Cruz Alta", "San Antonio"]
 ];
-];
+
 
 
 /* =========================================================
