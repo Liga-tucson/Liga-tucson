@@ -1892,6 +1892,66 @@ const resultadosClausura = [
     golesVisitante: 1
 },
 
+  /* =========================
+   FECHA 7
+   ========================= */
+
+{
+  fecha: 7,
+  local: "Bella Vista",
+  visitante: "Ateneo Parroquial Alderetes",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 7,
+  local: "Deportivo Aguilares",
+  visitante: "Trinidad",
+  golesLocal: 3,
+  golesVisitante: 1
+},
+
+{
+  fecha: 7,
+  local: "Villa Mitre",
+  visitante: "Juventud Unida",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
+{
+  fecha: 7,
+  local: "Tucumán Central",
+  visitante: "Amalia",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 7,
+  local: "San Juan",
+  visitante: "San Lorenzo (DG)",
+  golesLocal: 3,
+  golesVisitante: 1
+},
+
+{
+  fecha: 7,
+  local: "Santa Lucía",
+  visitante: "San Fernando",
+  golesLocal: 0,
+  golesVisitante: 2
+},
+
+{
+  fecha: 7,
+  local: "Graneros",
+  visitante: "Marapa",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+
   // Pendientes:
   // Fecha 1: San Juan vs Sportivo Guzmán
   // Fecha 4: Famaillá vs San Pablo
