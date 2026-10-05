@@ -2000,6 +2000,7 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+];
 
 /* =========================================================
    CREAR PARTIDO
