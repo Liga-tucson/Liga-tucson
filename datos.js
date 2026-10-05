@@ -2000,11 +2000,6 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
-  // Pendientes:
-  // Fecha 1: San Juan vs Sportivo Guzmán
-  // Fecha 4: Famaillá vs San Pablo
-];
-
 
 /* =========================================================
    CREAR PARTIDO
