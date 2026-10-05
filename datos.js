@@ -1952,6 +1952,54 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+{
+  fecha: 7,
+  local: "Talleres",
+  visitante: "All Boys",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
+{
+  fecha: 7,
+  local: "Atlético Concepción",
+  visitante: "Garmendia",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 7,
+  local: "Lastenia",
+  visitante: "Unión del Norte",
+  golesLocal: 0,
+  golesVisitante: 3
+},
+
+{
+  fecha: 7,
+  local: "San Ramón",
+  visitante: "Ñuñorco",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 7,
+  local: "Jorge Newbery",
+  visitante: "Llorens",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
+{
+  fecha: 7,
+  local: "Santa Ana",
+  visitante: "San Lorenzo (SA)",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
   // Pendientes:
   // Fecha 1: San Juan vs Sportivo Guzmán
   // Fecha 4: Famaillá vs San Pablo
