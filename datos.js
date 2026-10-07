@@ -2000,6 +2000,38 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+{
+  fecha: 7,
+  local: "Alto Verde",
+  visitante: "Unión Simoca",
+  golesLocal: 2,
+  golesVisitante: 3
+},
+
+{
+  fecha: 7,
+  local: "Atlético Tucumán",
+  visitante: "Argentinos del Norte",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 7,
+  local: "Azucarera Argentina",
+  visitante: "La Providencia",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 7,
+  local: "Sportivo Guzmán",
+  visitante: "San Martín",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
