@@ -2032,6 +2032,34 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+/* =========================
+   FECHA 7
+   ========================= */
+
+{
+  fecha: 7,
+  local: "San José",
+  visitante: "Estación Experimental",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
+{
+  fecha: 7,
+  local: "Central Norte",
+  visitante: "Famaillá",
+  golesLocal: 3,
+  golesVisitante: 4
+},
+
+{
+  fecha: 7,
+  local: "San Antonio",
+  visitante: "Cruz Alta",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
