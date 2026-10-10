@@ -2068,6 +2068,30 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+{
+  fecha: 8,
+  local: "Graneros",
+  visitante: "San Lorenzo (SA)",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 8,
+  local: "Almirante Brown",
+  visitante: "San Fernando",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+
+{
+  fecha: 8,
+  local: "Talleres",
+  visitante: "Santa Lucía",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
