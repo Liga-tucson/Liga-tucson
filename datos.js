@@ -2092,6 +2092,62 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+  fecha: 8,
+  local: "Sportivo Guzmán",
+  visitante: "San Juan",
+  golesLocal: 0,
+  golesVisitante: 2
+},
+
+{
+  fecha: 8,
+  local: "Amalia",
+  visitante: "San Martín",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
+{
+  fecha: 8,
+  local: "Trinidad",
+  visitante: "Llorens",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
+{
+  fecha: 8,
+  local: "Garmendia",
+  visitante: "San Lorenzo (DG)",
+  golesLocal: 4,
+  golesVisitante: 1
+},
+
+{
+  fecha: 8,
+  local: "San Antonio",
+  visitante: "Argentinos del Norte",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 8,
+  local: "Alto Verde",
+  visitante: "La Providencia",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
+{
+  fecha: 8,
+  local: "Santa Rosa",
+  visitante: "Ñuñorco",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
