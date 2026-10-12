@@ -2164,6 +2164,14 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+{
+  fecha: 8,
+  local: "San José",
+  visitante: "Villa Mitre",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
 ];
 
 /* =========================================================
