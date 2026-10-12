@@ -1028,11 +1028,6 @@ const resultadosClausura = [
     golesVisitante: 3
   },
 
-
-  /* =========================
-     FECHA 2
-     ========================= */
-
   {
     fecha: 2,
     local: "San José",
@@ -1209,11 +1204,6 @@ const resultadosClausura = [
     golesVisitante: 0
   },
 
-
-  /* =========================
-     FECHA 3
-     ========================= */
-
   {
     fecha: 3,
     local: "All Boys",
@@ -1390,11 +1380,6 @@ const resultadosClausura = [
     golesVisitante: 2
   },
 
-
-  /* =========================
-     FECHA 4
-     ========================= */
-
   {
     fecha: 4,
     local: "Central Norte",
@@ -1554,11 +1539,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
-
-  /* =========================
-     FECHA 5
-     ========================= */
 
   {
     fecha: 5,
@@ -1735,10 +1715,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-  
-    /* =========================
-     FECHA 6
-     ========================= */
 
   {
     fecha: 6,
@@ -1892,10 +1868,6 @@ const resultadosClausura = [
     golesVisitante: 1
 },
 
-  /* =========================
-   FECHA 7
-   ========================= */
-
 {
   fecha: 7,
   local: "Bella Vista",
@@ -2031,10 +2003,6 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 0
 },
-
-/* =========================
-   FECHA 7
-   ========================= */
 
 {
   fecha: 7,
