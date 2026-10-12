@@ -2148,6 +2148,54 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+  fecha: 8,
+  local: "Lastenia",
+  visitante: "Atlético Concepción",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 8,
+  local: "Cruz Alta",
+  visitante: "Unión del Norte",
+  golesLocal: 0,
+  golesVisitante: 4
+},
+
+{
+  fecha: 8,
+  local: "Santa Ana",
+  visitante: "Deportivo Aguilares",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 8,
+  local: "Jorge Newbery",
+  visitante: "Marapa",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
+{
+  fecha: 8,
+  local: "San Ramón",
+  visitante: "Unión Simoca",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 8,
+  local: "Bella Vista",
+  visitante: "San Pablo",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
