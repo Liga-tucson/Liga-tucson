@@ -2172,6 +2172,14 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+{
+  fecha: 8,
+  local: "Atlético Tucumán",
+  visitante: "Tucumán Central",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
 ];
 
 /* =========================================================
