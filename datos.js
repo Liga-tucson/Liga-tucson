@@ -2180,6 +2180,62 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+{
+  fecha: 8,
+  local: "Argentinos del Norte",
+  visitante: "Sportivo Guzmán",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+
+{
+  fecha: 8,
+  local: "Amalia",
+  visitante: "San Antonio",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+
+{
+  fecha: 8,
+  local: "Unión del Norte",
+  visitante: "San Juan",
+  golesLocal: 4,
+  golesVisitante: 4
+},
+
+{
+  fecha: 8,
+  local: "Garmendia",
+  visitante: "Cruz Alta",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+
+{
+  fecha: 8,
+  local: "San Fernando",
+  visitante: "Bella Vista",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
+{
+  fecha: 8,
+  local: "Almirante Brown",
+  visitante: "Famaillá",
+  golesLocal: 5,
+  golesVisitante: 2
+},
+
+{
+  fecha: 8,
+  local: "Unión Simoca",
+  visitante: "Santa Rosa",
+  golesLocal: 5,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
