@@ -2182,6 +2182,14 @@ const resultadosClausura = [
 
 {
   fecha: 8,
+  local: "Juventud Unida",
+  visitante: "All Boys",
+  golesLocal: 4,
+  golesVisitante: 2
+},
+
+{
+  fecha: 9,
   local: "Argentinos del Norte",
   visitante: "Sportivo Guzmán",
   golesLocal: 3,
@@ -2189,7 +2197,7 @@ const resultadosClausura = [
 },
 
 {
-  fecha: 8,
+  fecha: 9,
   local: "Amalia",
   visitante: "San Antonio",
   golesLocal: 0,
@@ -2197,7 +2205,7 @@ const resultadosClausura = [
 },
 
 {
-  fecha: 8,
+  fecha: 9,
   local: "Unión del Norte",
   visitante: "San Juan",
   golesLocal: 4,
@@ -2205,7 +2213,7 @@ const resultadosClausura = [
 },
 
 {
-  fecha: 8,
+  fecha: 9,
   local: "Garmendia",
   visitante: "Cruz Alta",
   golesLocal: 2,
@@ -2213,7 +2221,7 @@ const resultadosClausura = [
 },
 
 {
-  fecha: 8,
+  fecha: 9,
   local: "San Fernando",
   visitante: "Bella Vista",
   golesLocal: 2,
@@ -2221,7 +2229,7 @@ const resultadosClausura = [
 },
 
 {
-  fecha: 8,
+  fecha: 9,
   local: "Almirante Brown",
   visitante: "Famaillá",
   golesLocal: 5,
@@ -2229,11 +2237,59 @@ const resultadosClausura = [
 },
 
 {
-  fecha: 8,
+  fecha: 9,
   local: "Unión Simoca",
   visitante: "Santa Rosa",
   golesLocal: 5,
   golesVisitante: 1
+},
+
+{
+  fecha: 9,
+  local: "San Lorenzo (DG)",
+  visitante: "Lastenia",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 9,
+  local: "La Providencia",
+  visitante: "San Ramón",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
+{
+  fecha: 9,
+  local: "San Lorenzo (SA)",
+  visitante: "Santa Ana",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 9,
+  local: "San Lorenzo (SA)",
+  visitante: "Jorge Newbery",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
+{
+  fecha: 9,
+  local: "Atlético Concepción",
+  visitante: "Tucumán Central",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
+{
+  fecha: 9,
+  local: "San Pablo",
+  visitante: "Villa Mitre",
+  golesLocal: 0,
+  golesVisitante: 2
 },
 
 ];
