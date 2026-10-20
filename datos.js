@@ -2292,6 +2292,14 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+{
+  fecha: 9,
+  local: "Azucarera Argentina",
+  visitante: "Alto Verde",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
