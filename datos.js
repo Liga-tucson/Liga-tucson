@@ -2310,18 +2310,20 @@ const resultadosClausura = [
 
 {
   fecha: 9,
-  local: "Experimental",
+  local: "Estación Experimental",
   visitante: "Talleres",
   golesLocal: 1,
   golesVisitante: 0
 },
+
 {
   fecha: 9,
-  local: "Ateneo",
+  local: "Ateneo Parroquial Alderetes",
   visitante: "Santa Lucía",
   golesLocal: 6,
   golesVisitante: 0
 },
+
 {
   fecha: 9,
   local: "Marapa",
@@ -2329,6 +2331,7 @@ const resultadosClausura = [
   golesLocal: 0,
   golesVisitante: 0
 },
+
 {
   fecha: 9,
   local: "Santa Ana",
