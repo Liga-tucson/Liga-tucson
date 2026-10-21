@@ -1027,6 +1027,14 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 3
   },
+  
+{
+  fecha: 1,
+  local: "San Juan",
+  visitante: "Sportivo Guzmán",
+  golesLocal: 0,
+  golesVisitante: 1
+},
 
   {
     fecha: 2,
@@ -2298,6 +2306,35 @@ const resultadosClausura = [
   visitante: "Alto Verde",
   golesLocal: 1,
   golesVisitante: 0
+},
+
+{
+  fecha: 9,
+  local: "Experimental",
+  visitante: "Talleres",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+{
+  fecha: 9,
+  local: "Ateneo",
+  visitante: "Santa Lucía",
+  golesLocal: 6,
+  golesVisitante: 0
+},
+{
+  fecha: 9,
+  local: "Marapa",
+  visitante: "Trinidad",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+{
+  fecha: 9,
+  local: "Santa Ana",
+  visitante: "Graneros",
+  golesLocal: 2,
+  golesVisitante: 1
 },
 
 ];
