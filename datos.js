@@ -2340,6 +2340,14 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+  fecha: 9,
+  local: "Concepción FC",
+  visitante: "Ñuñorco",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
