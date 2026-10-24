@@ -2348,6 +2348,47 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+  fecha: 9,
+  local: "Juventud Unida",
+  visitante: "Central Norte",
+  golesLocal: 0,
+  golesVisitante: 5
+},
+
+
+{
+  fecha: 10,
+  local: "San Antonio",
+  visitante: "San Martín",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
+{
+  fecha: 10,
+  local: "Argentinos del Norte",
+  visitante: "Amalia",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "Famaillá",
+  visitante: "San Fernando",
+  golesLocal: 4,
+  golesVisitante: 1
+},
+
+{
+  fecha: 10,
+  local: "Llorens",
+  visitante: "Marapa",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
 ];
 
 /* =========================================================
