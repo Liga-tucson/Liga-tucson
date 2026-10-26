@@ -2389,6 +2389,30 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+{
+  fecha: 10,
+  local: "Cruz Alta",
+  visitante: "San Lorenzo (DG)",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+
+{
+  fecha: 10,
+  local: "Atlético Concepción",
+  visitante: "San Juan",
+  golesLocal: 5,
+  golesVisitante: 2
+},
+
+{
+  fecha: 10,
+  local: "Jorge Newbery",
+  visitante: "Santa Ana",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
