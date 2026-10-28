@@ -2413,6 +2413,86 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+{
+  fecha: 10,
+  local: "Central Norte",
+  visitante: "All Boys",
+  golesLocal: 4,
+  golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "Atlético Tucumán",
+  visitante: "Lastenia",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "Tucumán Central",
+  visitante: "Sportivo Guzmán",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "Unión del Norte",
+  visitante: "Garmendia",
+  golesLocal: 5,
+  golesVisitante: 1
+},
+
+{
+  fecha: 10,
+  local: "Santa Rosa",
+  visitante: "La Providencia",
+  golesLocal: 0,
+  golesVisitante: 2
+},
+
+{
+  fecha: 10,
+  local: "Trinidad",
+  visitante: "San Lorenzo (SA)",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 10,
+  local: "Estación Experimental",
+  visitante: "Juventud Unida",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "San Pablo",
+  visitante: "Santa Lucía",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "San José",
+  visitante: "Bella Vista",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 10,
+  local: "Graneros",
+  visitante: "Deportivo Aguilares",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
