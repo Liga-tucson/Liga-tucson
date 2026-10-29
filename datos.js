@@ -2493,6 +2493,30 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+{
+  fecha: 10,
+  local: "Ateneo Parroquial Alderetes",
+  visitante: "Almirante Brown",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "Alto Verde",
+  visitante: "Concepción FC",
+  golesLocal: 2,
+  golesVisitante: 3
+},
+
+{
+  fecha: 10,
+  local: "Ñuñorco",
+  visitante: "Unión Simoca",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
 ];
 
 /* =========================================================
