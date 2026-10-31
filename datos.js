@@ -2517,6 +2517,62 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 
+{
+  fecha: 11,
+  local: "All Boys",
+  visitante: "Estación Experimental",
+  golesLocal: 2,
+  golesVisitante: 3
+},
+
+{
+  fecha: 11,
+  local: "San Martín",
+  visitante: "Argentinos del Norte",
+  golesLocal: 0,
+  golesVisitante: 2
+},
+
+{
+  fecha: 11,
+  local: "Atlético Concepción",
+  visitante: "Cruz Alta",
+  golesLocal: 5,
+  golesVisitante: 1
+},
+
+{
+  fecha: 11,
+  local: "Juventud Unida",
+  visitante: "Almirante Brown",
+  golesLocal: 3,
+  golesVisitante: 2
+},
+
+{
+  fecha: 11,
+  local: "Amalia",
+  visitante: "Garmendia",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
+{
+  fecha: 11,
+  local: "Azucarera Argentina",
+  visitante: "Santa Rosa",
+  golesLocal: 2,
+  golesVisitante: 3
+},
+
+{
+  fecha: 11,
+  local: "Deportivo Aguilares",
+  visitante: "Marapa",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
