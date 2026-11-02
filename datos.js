@@ -2519,10 +2519,42 @@ const resultadosClausura = [
 
 {
   fecha: 11,
+  local: "Villa Mitre",
+  visitante: "Central Norte",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+
+{
+  fecha: 11,
+  local: "Talleres",
+  visitante: "San José",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+
+{
+  fecha: 11,
   local: "All Boys",
   visitante: "Estación Experimental",
   golesLocal: 2,
   golesVisitante: 3
+},
+
+{
+  fecha: 11,
+  local: "Tucumán Central",
+  visitante: "San Antonio",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+
+{
+  fecha: 11,
+  local: "Sportivo Guzmán",
+  visitante: "Atlético Tucumán",
+  golesLocal: 5,
+  golesVisitante: 1
 },
 
 {
@@ -2539,6 +2571,30 @@ const resultadosClausura = [
   visitante: "Cruz Alta",
   golesLocal: 5,
   golesVisitante: 1
+},
+
+{
+  fecha: 11,
+  local: "San Lorenzo (DG)",
+  visitante: "Unión del Norte",
+  golesLocal: 0,
+  golesVisitante: 3
+},
+
+{
+  fecha: 11,
+  local: "San Pablo",
+  visitante: "Famaillá",
+  golesLocal: 1,
+  golesVisitante: 3
+},
+
+{
+  fecha: 11,
+  local: "Santa Lucía",
+  visitante: "Bella Vista",
+  golesLocal: 1,
+  golesVisitante: 3
 },
 
 {
@@ -2567,10 +2623,42 @@ const resultadosClausura = [
 
 {
   fecha: 11,
+  local: "Alto Verde",
+  visitante: "San Ramón",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
+{
+  fecha: 11,
   local: "Deportivo Aguilares",
   visitante: "Marapa",
   golesLocal: 2,
   golesVisitante: 0
+},
+
+{
+  fecha: 11,
+  local: "San Lorenzo (SA)",
+  visitante: "Llorens",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
+  fecha: 11,
+  local: "Santa Ana",
+  visitante: "Trinidad",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
+{
+  fecha: 11,
+  local: "Graneros",
+  visitante: "Jorge Newbery",
+  golesLocal: 0,
+  golesVisitante: 1
 },
 
 ];
