@@ -2364,6 +2364,13 @@ const resultadosClausura = [
   golesVisitante: 5
 },
 
+{
+  fecha: 9,
+  local: "Deportivo Aguilares",
+  visitante: "Llorens",
+  golesLocal: 2,
+  golesVisitante: 1
+},
 
 {
   fecha: 10,
