@@ -1547,7 +1547,15 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
+  
+{
+    fecha: 4,
+    local: "Estación Experimental",
+    visitante: "All Boys",
+    golesLocal: 3,
+    golesVisitante: 1
+  },
+  
   {
     fecha: 5,
     local: "Villa Mitre",
@@ -2661,6 +2669,14 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+    fecha: 11,
+    local: "La Providencia",
+    visitante: "Ñuñorco",
+    golesLocal: 2,
+    golesVisitante: 1
+  },
+  
 ];
 
 /* =========================================================
