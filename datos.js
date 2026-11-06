@@ -2684,6 +2684,22 @@ const resultadosClausura = [
     golesVisitante: 1
   },
   
+  {
+    fecha: 11,
+    local: "Concepción FC",
+    visitante: "Unión Simoca",
+    golesLocal: 2,
+    golesVisitante: 2
+  },
+  
+  {
+    fecha: 12,
+    local: "San Martín",
+    visitante: "San Lorenzo (DG)",
+    golesLocal: 2,
+    golesVisitante: 0
+  },
+  
 ];
 
 /* =========================================================
