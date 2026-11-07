@@ -2700,6 +2700,29 @@ const resultadosClausura = [
     golesVisitante: 0
   },
   
+  {
+  fecha: 12,
+  local: "San Antonio",
+  visitante: "Sportivo Guzmán",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+{
+  fecha: 12,
+  local: "Argentinos del Norte",
+  visitante: "Tucumán Central",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
+{
+  fecha: 12,
+  local: "Famaillá",
+  visitante: "Santa Lucía",
+  golesLocal: 4,
+  golesVisitante: 3
+},
+
 ];
 
 /* =========================================================
