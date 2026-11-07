@@ -2533,6 +2533,14 @@ const resultadosClausura = [
 },
 
 {
+  fecha: 10,
+  local: "San Ramón",
+  visitante: "Azucarera Argentina",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
+{
   fecha: 11,
   local: "Villa Mitre",
   visitante: "Central Norte",
