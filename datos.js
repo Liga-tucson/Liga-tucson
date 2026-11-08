@@ -2731,6 +2731,54 @@ const resultadosClausura = [
   golesVisitante: 3
 },
 
+{
+  fecha: 12,
+  local: "Unión del Norte",
+  visitante: "Atlético Concepción",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
+{
+  fecha: 12,
+  local: "Cruz Alta",
+  visitante: "San Juan",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+
+{
+  fecha: 12,
+  local: "Ateneo Parroquial Alderetes",
+  visitante: "San Pablo",
+  golesLocal: 3,
+  golesVisitante: 1
+},
+
+{
+  fecha: 12,
+  local: "Santa Rosa",
+  visitante: "Alto Verde",
+  golesLocal: 1,
+  golesVisitante: 3
+},
+
+{
+  fecha: 12,
+  local: "Trinidad",
+  visitante: "Graneros",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+
+{
+  fecha: 12,
+  local: "Bella Vista",
+  visitante: "Almirante Brown",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
