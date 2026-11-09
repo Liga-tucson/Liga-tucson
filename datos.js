@@ -2822,6 +2822,22 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+  fecha: 12,
+  local: "Ñuñorco",
+  visitante: "Azucarera Argentina",
+  golesLocal: 4,
+  golesVisitante: 0
+},
+
+{
+  fecha: 12,
+  local: "Unión Simoca",
+  visitante: "La Providencia",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
