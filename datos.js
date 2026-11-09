@@ -2779,6 +2779,49 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+{
+  fecha: 12,
+  local: "Estación Experimental",
+  visitante: "Villa Mitre",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+{
+  fecha: 12,
+  local: "San José",
+  visitante: "Juventud Unida",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+{
+  fecha: 12,
+  local: "Central Norte",
+  visitante: "Talleres",
+  golesLocal: 2,
+  golesVisitante: 4
+},
+{
+  fecha: 12,
+  local: "All Boys",
+  visitante: "San Fernando",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+{
+  fecha: 12,
+  local: "Jorge Newbery",
+  visitante: "Deportivo Aguilares",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+{
+  fecha: 12,
+  local: "Llorens",
+  visitante: "Santa Ana",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
