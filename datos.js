@@ -1556,7 +1556,15 @@ const resultadosClausura = [
     golesVisitante: 1
   },
   
-  {
+{
+  fecha: 4,
+  local: "Famaillá",
+  visitante: "San Pablo",
+  golesLocal: 0,
+  golesVisitante: 2
+ },
+
+{
     fecha: 5,
     local: "Villa Mitre",
     visitante: "Estación Experimental",
@@ -2834,6 +2842,21 @@ const resultadosClausura = [
   fecha: 12,
   local: "Unión Simoca",
   visitante: "La Providencia",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
+  {
+  fecha: 12,
+  local: "Atlético Tucumán",
+  visitante: "Amalia",
+  golesLocal: 3,
+  golesVisitante: 2
+},
+{
+  fecha: 12,
+  local: "Marapa",
+  visitante: "San Lorenzo (SA)",
   golesLocal: 2,
   golesVisitante: 1
 },
