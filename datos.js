@@ -1893,6 +1893,22 @@ const resultadosClausura = [
 },
 
 {
+  fecha: 6,
+  local: "San José",
+  visitante: "Central Norte",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
+{
+  fecha: 6,
+  local: "Ateneo Parroquial Alderetes",
+  visitante: "Estación Experimental",
+  golesLocal: 5,
+  golesVisitante: 2
+},
+
+{
   fecha: 7,
   local: "Bella Vista",
   visitante: "Ateneo Parroquial Alderetes",
@@ -2709,6 +2725,14 @@ const resultadosClausura = [
   },
   
   {
+  fecha: 11,
+  local: "San Juan",
+  visitante: "Lastenia",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+  
+  {
     fecha: 12,
     local: "San Martín",
     visitante: "San Lorenzo (DG)",
@@ -2857,6 +2881,14 @@ const resultadosClausura = [
   fecha: 12,
   local: "Marapa",
   visitante: "San Lorenzo (SA)",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
+{
+  fecha: 12,
+  local: "San Ramón",
+  visitante: "Concepción FC",
   golesLocal: 2,
   golesVisitante: 1
 },
