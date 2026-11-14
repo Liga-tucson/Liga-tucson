@@ -2893,6 +2893,50 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+
+{
+  fecha: 13,
+  local: "Tucumán Central",
+  visitante: "San Martín",
+  golesLocal: 0,
+  golesVisitante: 2
+},
+{
+  fecha: 13,
+  local: "San Antonio",
+  visitante: "Atlético Tucumán",
+  golesLocal: 3,
+  golesVisitante: 2
+},
+{
+  fecha: 13,
+  local: "Argentinos del Norte",
+  visitante: "Unión del Norte",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+{
+  fecha: 13,
+  local: "Alto Verde",
+  visitante: "Ñuñorco",
+  golesLocal: 3,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "Azucarera Argentina",
+  visitante: "Unión Simoca",
+  golesLocal: 1,
+  golesVisitante: 3
+},
+{
+  fecha: 13,
+  local: "Jorge Newbery",
+  visitante: "Trinidad",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
