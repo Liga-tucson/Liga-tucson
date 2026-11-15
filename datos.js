@@ -2937,6 +2937,28 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+{
+  fecha: 13,
+  local: "Villa Mitre",
+  visitante: "All Boys",
+  golesLocal: 7,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "Famaillá",
+  visitante: "Bella Vista",
+  golesLocal: 1,
+  golesVisitante: 4
+},
+{
+  fecha: 13,
+  local: "Santa Ana",
+  visitante: "Marapa",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
