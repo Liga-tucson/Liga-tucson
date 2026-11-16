@@ -2075,6 +2075,13 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 2
 },
+{
+  fecha: 7,
+  local: "San Pablo",
+  visitante: "Almirante Brown",
+  golesLocal: 0,
+  golesVisitante: 1
+},
 
 {
   fecha: 8,
@@ -2987,13 +2994,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 0
 },
-{
-  fecha: 13,
-  local: "San Pablo",
-  visitante: "Almirante Brown",
-  golesLocal: 0,
-  golesVisitante: 1
-},
+
 {
   fecha: 13,
   local: "Cruz Alta",
