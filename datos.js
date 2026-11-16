@@ -2959,6 +2959,49 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+  fecha: 13,
+  local: "Talleres",
+  visitante: "Juventud Unida",
+  golesLocal: 5,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "Sportivo Guzmán",
+  visitante: "Amalia",
+  golesLocal: 3,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "Estación Experimental",
+  visitante: "Ateneo Parroquial Alderetes",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "San Ramón",
+  visitante: "Santa Rosa",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+{
+  fecha: 13,
+  local: "San Pablo",
+  visitante: "Almirante Brown",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "Cruz Alta",
+  visitante: "Lastenia",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
