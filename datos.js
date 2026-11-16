@@ -1909,6 +1909,14 @@ const resultadosClausura = [
 },
 
 {
+  fecha: 6,
+  local: "Atlético Tucumán",
+  visitante: "San Antonio",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+
+{
   fecha: 7,
   local: "Bella Vista",
   visitante: "Ateneo Parroquial Alderetes",
