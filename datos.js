@@ -3011,6 +3011,13 @@ const resultadosClausura = [
   golesVisitante: 0
 },
 
+{
+  fecha: 13,
+  local: "Graneros",
+  visitante: "Llorens",
+  golesLocal: 2,
+  golesVisitante: 0
+},
 ];
 
 /* =========================================================
