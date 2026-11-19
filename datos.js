@@ -3036,7 +3036,7 @@ const resultadosClausura = [
 
 {
   fecha: 13,
-  local: "Concepción FC",
+  local: "Atlético Concepción",
   visitante: "San Lorenzo (DG)",
   golesLocal: 0,
   golesVisitante: 0
