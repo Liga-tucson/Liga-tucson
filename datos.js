@@ -2244,6 +2244,14 @@ const resultadosClausura = [
 },
 
 {
+  fecha: 8,
+  local: "Central Norte",
+  visitante: "Estación Experimental",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
+{
   fecha: 9,
   local: "Argentinos del Norte",
   visitante: "Sportivo Guzmán",
@@ -2908,6 +2916,13 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+{
+  fecha: 12,
+  local: "Lastenia",
+  visitante: "Garmendia",
+  golesLocal: 0,
+  golesVisitante: 0
+},
 
 {
   fecha: 13,
@@ -3018,6 +3033,36 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 0
 },
+
+{
+  fecha: 13,
+  local: "Concepción FC",
+  visitante: "San Lorenzo (DG)",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+{
+  fecha: 13,
+  local: "San Pablo",
+  visitante: "San Fernando",
+  golesLocal: 3,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "Concepción FC",
+  visitante: "La Providencia",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+{
+  fecha: 13,
+  local: "Santa Lucía",
+  visitante: "Almirante Brown",
+  golesLocal: 3,
+  golesVisitante: 2
+},
+
 ];
 
 /* =========================================================
