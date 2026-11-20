@@ -2252,6 +2252,14 @@ const resultadosClausura = [
 },
 
 {
+  fecha: 8,
+  local: "Famaillá",
+  visitante: "Ateneo Parroquial Alderetes",
+  golesLocal: 1,
+  golesVisitante: 4
+},
+
+{
   fecha: 9,
   local: "Argentinos del Norte",
   visitante: "Sportivo Guzmán",
@@ -2415,6 +2423,14 @@ const resultadosClausura = [
   fecha: 9,
   local: "Deportivo Aguilares",
   visitante: "Llorens",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
+{
+  fecha: 9,
+  local: "San Martín",
+  visitante: "Atlético Tucumán",
   golesLocal: 2,
   golesVisitante: 1
 },
@@ -2585,6 +2601,14 @@ const resultadosClausura = [
   visitante: "Azucarera Argentina",
   golesLocal: 0,
   golesVisitante: 0
+},
+
+{
+  fecha: 10,
+  local: "Villa Mitre",
+  visitante: "Talleres",
+  golesLocal: 1,
+  golesVisitante: 1
 },
 
 {
