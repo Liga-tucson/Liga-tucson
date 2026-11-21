@@ -3086,7 +3086,41 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 2
 },
-
+{
+  fecha: 14,
+  local: "Ñuñorco",
+  visitante: "San Ramón",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "Unión Simoca",
+  visitante: "Alto Verde",
+  golesLocal: 3,
+  golesVisitante: 1
+},
+{
+  fecha: 14,
+  local: "San Juan",
+  visitante: "Garmendia",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "Trinidad",
+  visitante: "Deportivo Aguilares",
+  golesLocal: 2,
+  golesVisitante: 4
+},
+{
+  fecha: 14,
+  local: "Llorens",
+  visitante: "Jorge Newbery",
+  golesLocal: 1,
+  golesVisitante: 2
+},
 ];
 
 /* =========================================================
