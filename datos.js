@@ -3088,6 +3088,13 @@ const resultadosClausura = [
 },
 {
   fecha: 14,
+  local: "San Juan",
+  visitante: "Garmendia",
+  golesLocal: 0,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
   local: "Ñuñorco",
   visitante: "San Ramón",
   golesLocal: 1,
@@ -3100,13 +3107,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 1
 },
-{
-  fecha: 14,
-  local: "San Juan",
-  visitante: "Garmendia",
-  golesLocal: 0,
-  golesVisitante: 0
-},
+
 {
   fecha: 14,
   local: "Trinidad",
