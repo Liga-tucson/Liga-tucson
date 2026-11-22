@@ -3087,7 +3087,7 @@ const resultadosClausura = [
   golesVisitante: 2
 },
 {
-  fecha: 14,
+  fecha: 13,
   local: "San Juan",
   visitante: "Garmendia",
   golesLocal: 0,
