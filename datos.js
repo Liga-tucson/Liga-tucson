@@ -2778,6 +2778,14 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 1
 },
+
+ {
+  fecha: 11,
+  local: "San Fernando",
+  visitante: "Ateneo Parroquial Alderetes",
+  golesLocal: 2,
+  golesVisitante: 1
+},
   
   {
     fecha: 12,
@@ -2785,7 +2793,7 @@ const resultadosClausura = [
     visitante: "San Lorenzo (DG)",
     golesLocal: 2,
     golesVisitante: 0
-  },
+},
   
   {
   fecha: 12,
@@ -3093,6 +3101,14 @@ const resultadosClausura = [
   golesLocal: 0,
   golesVisitante: 0
 },
+
+{
+  fecha: 13,
+  local: "Central Norte",
+  visitante: "San José",
+  golesLocal: 3,
+  golesVisitante: 1
+},
 {
   fecha: 14,
   local: "Ñuñorco",
@@ -3122,6 +3138,22 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 2
 },
+
+{
+  fecha: 14,
+  local: "Marapa",
+  visitante: "Graneros",
+  golesLocal: 1,
+  golesVisitante: 2
+},
+{
+  fecha: 14,
+  local: "San Lorenzo (SA)",
+  visitante: "Santa Ana",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+
 ];
 
 /* =========================================================
