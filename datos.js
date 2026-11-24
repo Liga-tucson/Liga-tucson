@@ -3154,6 +3154,63 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
+
+{
+  fecha: 14,
+  local: "All Boys",
+  visitante: "Talleres",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "Juventud Unida",
+  visitante: "Villa Mitre",
+  golesLocal: 2,
+  golesVisitante: 3
+},
+{
+  fecha: 14,
+  local: "San Martín",
+  visitante: "Sportivo Guzmán",
+  golesLocal: 1,
+  golesVisitante: 1
+},
+{
+  fecha: 14,
+  local: "Argentinos del Norte",
+  visitante: "Atlético Tucumán",
+  golesLocal: 2,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "San Lorenzo (DG)",
+  visitante: "San Juan",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "Unión del Norte",
+  visitante: "Lastenia",
+  golesLocal: 3,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "Almirante Brown",
+  visitante: "San Pablo",
+  golesLocal: 5,
+  golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "Cruz Alta",
+  visitante: "San Antonio",
+  golesLocal: 1,
+  golesVisitante: 2
+},
 ];
 
 /* =========================================================
