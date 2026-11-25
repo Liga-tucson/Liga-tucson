@@ -3241,6 +3241,13 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 3
 },
+{
+  fecha: 14,
+  local: "San Fernando",
+  visitante: "Santa Lucía",
+  golesLocal: 4,
+  golesVisitante: 0
+},
 
 ];
 
