@@ -3110,6 +3110,14 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 {
+  fecha: 13,
+  local: "Deportivo Aguilares",
+  visitante: "San Lorenzo (SA)",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+
+{
   fecha: 14,
   local: "Ñuñorco",
   visitante: "San Ramón",
@@ -3218,6 +3226,20 @@ const resultadosClausura = [
   visitante: "Atlético Concepción",
   golesLocal: 1,
   golesVisitante: 0
+},
+{
+  fecha: 14,
+  local: "Santa Rosa",
+  visitante: "Concepción FC",
+  golesLocal: 0,
+  golesVisitante: 1
+},
+{
+  fecha: 14,
+  local: "Ateneo Parroquial Alderetes",
+  visitante: "Bella Vista",
+  golesLocal: 2,
+  golesVisitante: 3
 },
 
 ];
