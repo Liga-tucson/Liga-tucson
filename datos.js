@@ -3211,6 +3211,15 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 2
 },
+
+{
+  fecha: 14,
+  local: "Garmendia",
+  visitante: "Atlético Concepción",
+  golesLocal: 1,
+  golesVisitante: 0
+},
+
 ];
 
 /* =========================================================
