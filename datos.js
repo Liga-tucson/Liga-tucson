@@ -523,8 +523,6 @@ const tablaAnualBase = {
     gc: 44
   }
 };
-
-
 /* =========================================================
    FIXTURE BASE
    ========================================================= */
@@ -537,37 +535,31 @@ const fixtureBase = {
       ["All Boys", "Juventud Unida"],
       ["Estación Experimental", "Central Norte"]
     ],
-
     [
       ["San José", "All Boys"],
       ["Talleres", "Estación Experimental"],
       ["Central Norte", "Juventud Unida"]
     ],
-
     [
       ["All Boys", "Central Norte"],
       ["Talleres", "Villa Mitre"],
       ["Juventud Unida", "Estación Experimental"]
     ],
-
     [
       ["Central Norte", "Villa Mitre"],
       ["San José", "Talleres"],
       ["Estación Experimental", "All Boys"]
     ],
-
     [
       ["Villa Mitre", "Estación Experimental"],
       ["Juventud Unida", "San José"],
       ["Talleres", "Central Norte"]
     ],
-
     [
       ["All Boys", "Villa Mitre"],
       ["San José", "Central Norte"],
       ["Juventud Unida", "Talleres"]
     ],
-
     [
       ["Talleres", "All Boys"],
       ["Villa Mitre", "Juventud Unida"],
@@ -581,37 +573,31 @@ const fixtureBase = {
       ["San Martín", "Amalia"],
       ["Argentinos del Norte", "San Antonio"]
     ],
-
     [
       ["Atlético Tucumán", "San Martín"],
       ["Sportivo Guzmán", "Argentinos del Norte"],
       ["San Antonio", "Amalia"]
     ],
-
     [
       ["San Martín", "San Antonio"],
       ["Sportivo Guzmán", "Tucumán Central"],
       ["Amalia", "Argentinos del Norte"]
     ],
-
     [
       ["San Antonio", "Tucumán Central"],
       ["Atlético Tucumán", "Sportivo Guzmán"],
       ["Argentinos del Norte", "San Martín"]
     ],
-
     [
       ["Tucumán Central", "Argentinos del Norte"],
       ["Amalia", "Atlético Tucumán"],
       ["Sportivo Guzmán", "San Antonio"]
     ],
-
     [
       ["San Martín", "Tucumán Central"],
       ["Atlético Tucumán", "San Antonio"],
       ["Amalia", "Sportivo Guzmán"]
     ],
-
     [
       ["Sportivo Guzmán", "San Martín"],
       ["Tucumán Central", "Amalia"],
@@ -625,37 +611,31 @@ const fixtureBase = {
       ["San Lorenzo (DG)", "Garmendia"],
       ["Unión del Norte", "Cruz Alta"]
     ],
-
     [
       ["Lastenia", "San Lorenzo (DG)"],
       ["San Juan", "Unión del Norte"],
       ["Cruz Alta", "Garmendia"]
     ],
-
     [
       ["San Lorenzo (DG)", "Cruz Alta"],
       ["San Juan", "Atlético Concepción"],
       ["Garmendia", "Unión del Norte"]
     ],
-
     [
       ["Cruz Alta", "Atlético Concepción"],
       ["Lastenia", "San Juan"],
       ["Unión del Norte", "San Lorenzo (DG)"]
     ],
-
     [
       ["Atlético Concepción", "Unión del Norte"],
       ["Garmendia", "Lastenia"],
       ["San Juan", "Cruz Alta"]
     ],
-
     [
       ["San Lorenzo (DG)", "Atlético Concepción"],
       ["Lastenia", "Cruz Alta"],
       ["Garmendia", "San Juan"]
     ],
-
     [
       ["San Juan", "San Lorenzo (DG)"],
       ["Atlético Concepción", "Garmendia"],
@@ -669,37 +649,31 @@ const fixtureBase = {
       ["San Fernando", "Almirante Brown"],
       ["Ateneo Parroquial Alderetes", "Famaillá"]
     ],
-
     [
       ["Bella Vista", "San Fernando"],
       ["Santa Lucía", "Ateneo Parroquial Alderetes"],
       ["Famaillá", "Almirante Brown"]
     ],
-
     [
       ["San Fernando", "Famaillá"],
       ["Santa Lucía", "San Pablo"],
       ["Almirante Brown", "Ateneo Parroquial Alderetes"]
     ],
-
     [
       ["Famaillá", "San Pablo"],
       ["Bella Vista", "Santa Lucía"],
       ["Ateneo Parroquial Alderetes", "San Fernando"]
     ],
-
     [
       ["San Pablo", "Ateneo Parroquial Alderetes"],
       ["Almirante Brown", "Bella Vista"],
       ["Santa Lucía", "Famaillá"]
     ],
-
     [
       ["San Fernando", "San Pablo"],
       ["Bella Vista", "Famaillá"],
       ["Almirante Brown", "Santa Lucía"]
     ],
-
     [
       ["Santa Lucía", "San Fernando"],
       ["San Pablo", "Almirante Brown"],
@@ -714,42 +688,36 @@ const fixtureBase = {
       ["Unión Simoca", "San Ramón"],
       ["Ñuñorco", "Santa Rosa"]
     ],
-
     [
       ["Ñuñorco", "Concepción FC"],
       ["Santa Rosa", "Unión Simoca"],
       ["San Ramón", "La Providencia"],
       ["Alto Verde", "Azucarera Argentina"]
     ],
-
     [
       ["Concepción FC", "Alto Verde"],
       ["Azucarera Argentina", "San Ramón"],
       ["La Providencia", "Santa Rosa"],
       ["Unión Simoca", "Ñuñorco"]
     ],
-
     [
       ["Unión Simoca", "Concepción FC"],
       ["Ñuñorco", "La Providencia"],
       ["Santa Rosa", "Azucarera Argentina"],
       ["San Ramón", "Alto Verde"]
     ],
-
     [
       ["Concepción FC", "San Ramón"],
       ["Alto Verde", "Santa Rosa"],
       ["Azucarera Argentina", "Ñuñorco"],
       ["La Providencia", "Unión Simoca"]
     ],
-
     [
       ["La Providencia", "Concepción FC"],
       ["Unión Simoca", "Azucarera Argentina"],
       ["Ñuñorco", "Alto Verde"],
       ["Santa Rosa", "San Ramón"]
     ],
-
     [
       ["Concepción FC", "Santa Rosa"],
       ["San Ramón", "Ñuñorco"],
@@ -765,42 +733,36 @@ const fixtureBase = {
       ["Marapa", "Jorge Newbery"],
       ["Llorens", "Trinidad"]
     ],
-
     [
       ["Llorens", "Deportivo Aguilares"],
       ["Trinidad", "Marapa"],
       ["Jorge Newbery", "San Lorenzo (SA)"],
       ["Graneros", "Santa Ana"]
     ],
-
     [
       ["Deportivo Aguilares", "Graneros"],
       ["Santa Ana", "Jorge Newbery"],
       ["San Lorenzo (SA)", "Trinidad"],
       ["Marapa", "Llorens"]
     ],
-
     [
       ["Marapa", "Deportivo Aguilares"],
       ["Llorens", "San Lorenzo (SA)"],
       ["Trinidad", "Santa Ana"],
       ["Jorge Newbery", "Graneros"]
     ],
-
     [
       ["Deportivo Aguilares", "Jorge Newbery"],
       ["Graneros", "Trinidad"],
       ["Santa Ana", "Llorens"],
       ["San Lorenzo (SA)", "Marapa"]
     ],
-
     [
       ["San Lorenzo (SA)", "Deportivo Aguilares"],
       ["Marapa", "Santa Ana"],
       ["Llorens", "Graneros"],
       ["Trinidad", "Jorge Newbery"]
     ],
-
     [
       ["Deportivo Aguilares", "Trinidad"],
       ["Jorge Newbery", "Llorens"],
@@ -810,8 +772,9 @@ const fixtureBase = {
   ]
 };
 
+
 /* =========================================================
-   INTERZONALES 
+   INTERZONALES
    ========================================================= */
 
 const interzonalesAD = [
@@ -847,9 +810,6 @@ const interzonalesBC = [
   ["Argentinos del Norte", "Unión del Norte"],
   ["Cruz Alta", "San Antonio"]
 ];
-
-
-
 /* =========================================================
    RESULTADOS CLAUSURA 2026
    ========================================================= */
@@ -867,7 +827,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 0
   },
-
   {
     fecha: 1,
     local: "All Boys",
@@ -875,7 +834,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 3
   },
-
   {
     fecha: 1,
     local: "Estación Experimental",
@@ -883,7 +841,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "Tucumán Central",
@@ -891,7 +848,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "San Martín",
@@ -899,7 +855,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-
   {
     fecha: 1,
     local: "Argentinos del Norte",
@@ -907,7 +862,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 2
   },
-
   {
     fecha: 1,
     local: "Atlético Concepción",
@@ -915,7 +869,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "San Lorenzo (DG)",
@@ -923,7 +876,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "Unión del Norte",
@@ -931,7 +883,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 0
   },
-
   {
     fecha: 1,
     local: "San Pablo",
@@ -939,7 +890,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "San Fernando",
@@ -947,7 +897,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "Ateneo Parroquial Alderetes",
@@ -955,7 +904,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 2
   },
-
   {
     fecha: 1,
     local: "Santa Lucía",
@@ -963,7 +911,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-
   {
     fecha: 1,
     local: "Concepción FC",
@@ -971,7 +918,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "La Providencia",
@@ -979,7 +925,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 3
   },
-
   {
     fecha: 1,
     local: "Unión Simoca",
@@ -987,15 +932,13 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "Ñuñorco",
     visitante: "Santa Rosa",
     golesLocal: 0,
-    golesVisitante: 2 
+    golesVisitante: 2
   },
-
   {
     fecha: 1,
     local: "Llorens",
@@ -1003,7 +946,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 1,
     local: "Deportivo Aguilares",
@@ -1011,7 +953,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 1,
     local: "San Lorenzo (SA)",
@@ -1019,7 +960,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 2
   },
-
   {
     fecha: 1,
     local: "Marapa",
@@ -1027,14 +967,17 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 3
   },
-  
-{
-  fecha: 1,
-  local: "San Juan",
-  visitante: "Sportivo Guzmán",
-  golesLocal: 0,
-  golesVisitante: 1
-},
+  {
+    fecha: 1,
+    local: "San Juan",
+    visitante: "Sportivo Guzmán",
+    golesLocal: 0,
+    golesVisitante: 1
+  },
+
+  /* =========================
+     FECHA 2
+     ========================= */
 
   {
     fecha: 2,
@@ -1043,7 +986,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 2,
     local: "Talleres",
@@ -1051,7 +993,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Central Norte",
@@ -1059,7 +1000,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-
   {
     fecha: 2,
     local: "Atlético Tucumán",
@@ -1067,7 +1007,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Sportivo Guzmán",
@@ -1075,7 +1014,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "San Antonio",
@@ -1083,7 +1021,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 0
   },
-
   {
     fecha: 2,
     local: "Lastenia",
@@ -1091,7 +1028,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "San Juan",
@@ -1099,7 +1035,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Cruz Alta",
@@ -1107,7 +1042,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Bella Vista",
@@ -1115,7 +1049,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Santa Lucía",
@@ -1123,7 +1056,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Famaillá",
@@ -1131,7 +1063,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 3
   },
-
   {
     fecha: 2,
     local: "Villa Mitre",
@@ -1139,7 +1070,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 3
   },
-
   {
     fecha: 2,
     local: "Tucumán Central",
@@ -1147,7 +1077,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Ñuñorco",
@@ -1155,7 +1084,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Santa Rosa",
@@ -1163,7 +1091,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "San Ramón",
@@ -1171,7 +1098,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-
   {
     fecha: 2,
     local: "Alto Verde",
@@ -1179,7 +1105,6 @@ const resultadosClausura = [
     golesLocal: 6,
     golesVisitante: 0
   },
-
   {
     fecha: 2,
     local: "Llorens",
@@ -1187,7 +1112,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 3
   },
-
   {
     fecha: 2,
     local: "Trinidad",
@@ -1195,7 +1119,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 2,
     local: "Jorge Newbery",
@@ -1203,7 +1126,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-
   {
     fecha: 2,
     local: "Graneros",
@@ -1211,15 +1133,13 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 0
   },
-
-  {
+    {
     fecha: 3,
     local: "All Boys",
     visitante: "Central Norte",
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Talleres",
@@ -1227,7 +1147,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Juventud Unida",
@@ -1235,7 +1154,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 3,
     local: "San Martín",
@@ -1243,7 +1161,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Sportivo Guzmán",
@@ -1251,15 +1168,13 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 3,
     local: "Amalia",
     visitante: "Argentinos del Norte",
     golesLocal: 1,
-    golesVisitante: 0 
+    golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "San Lorenzo (DG)",
@@ -1267,7 +1182,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 1
   },
-
   {
     fecha: 3,
     local: "San Juan",
@@ -1275,7 +1189,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 1
   },
-
   {
     fecha: 3,
     local: "Garmendia",
@@ -1283,7 +1196,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "San Fernando",
@@ -1291,7 +1203,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 3,
     local: "Santa Lucía",
@@ -1299,7 +1210,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Almirante Brown",
@@ -1307,7 +1217,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 3
   },
-
   {
     fecha: 3,
     local: "Bella Vista",
@@ -1315,7 +1224,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Lastenia",
@@ -1323,7 +1231,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Concepción FC",
@@ -1331,7 +1238,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 3,
     local: "Azucarera Argentina",
@@ -1339,7 +1245,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 2
   },
-
   {
     fecha: 3,
     local: "La Providencia",
@@ -1347,7 +1252,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Unión Simoca",
@@ -1355,7 +1259,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 2
   },
-
   {
     fecha: 3,
     local: "Deportivo Aguilares",
@@ -1363,7 +1266,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "Santa Ana",
@@ -1371,7 +1273,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-
   {
     fecha: 3,
     local: "San Lorenzo (SA)",
@@ -1379,7 +1280,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 3,
     local: "Marapa",
@@ -1395,7 +1295,6 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-
   {
     fecha: 4,
     local: "San José",
@@ -1403,7 +1302,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 4,
     local: "San Antonio",
@@ -1411,7 +1309,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 4,
     local: "Atlético Tucumán",
@@ -1419,7 +1316,6 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 1
   },
-
   {
     fecha: 4,
     local: "Argentinos del Norte",
@@ -1427,7 +1323,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 1
   },
-
   {
     fecha: 4,
     local: "Cruz Alta",
@@ -1435,7 +1330,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 4
   },
-
   {
     fecha: 4,
     local: "Lastenia",
@@ -1443,7 +1337,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 4,
     local: "Unión del Norte",
@@ -1451,7 +1344,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 4,
     local: "Bella Vista",
@@ -1459,7 +1351,6 @@ const resultadosClausura = [
     golesLocal: 5,
     golesVisitante: 0
   },
-
   {
     fecha: 4,
     local: "Ateneo Parroquial Alderetes",
@@ -1467,7 +1358,6 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 0
   },
-
   {
     fecha: 4,
     local: "Almirante Brown",
@@ -1475,7 +1365,6 @@ const resultadosClausura = [
     golesLocal: 5,
     golesVisitante: 0
   },
-
   {
     fecha: 4,
     local: "Garmendia",
@@ -1483,7 +1372,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 0
   },
-
   {
     fecha: 4,
     local: "Unión Simoca",
@@ -1491,7 +1379,6 @@ const resultadosClausura = [
     golesLocal: 1,
     golesVisitante: 1
   },
-
   {
     fecha: 4,
     local: "Ñuñorco",
@@ -1499,8 +1386,7 @@ const resultadosClausura = [
     golesLocal: 3,
     golesVisitante: 0
   },
-
-  {
+    {
     fecha: 4,
     local: "Santa Rosa",
     visitante: "Azucarera Argentina",
@@ -1547,24 +1433,24 @@ const resultadosClausura = [
     golesLocal: 2,
     golesVisitante: 1
   },
-  
-{
+
+  {
     fecha: 4,
     local: "Estación Experimental",
     visitante: "All Boys",
     golesLocal: 3,
     golesVisitante: 1
   },
-  
-{
-  fecha: 4,
-  local: "Famaillá",
-  visitante: "San Pablo",
-  golesLocal: 0,
-  golesVisitante: 2
- },
 
-{
+  {
+    fecha: 4,
+    local: "Famaillá",
+    visitante: "San Pablo",
+    golesLocal: 0,
+    golesVisitante: 2
+  },
+
+  {
     fecha: 5,
     local: "Villa Mitre",
     visitante: "Estación Experimental",
@@ -1825,7 +1711,7 @@ const resultadosClausura = [
     local: "San Martín",
     visitante: "Tucumán Central",
     golesLocal: 1,
-    golesVisitante: 1
+        golesVisitante: 1
   },
 
   {
@@ -1875,282 +1761,283 @@ const resultadosClausura = [
     golesLocal: 0,
     golesVisitante: 0
   },
-  
+
   {
     fecha: 6,
     local: "La Providencia",
     visitante: "Concepción FC",
     golesLocal: 1,
     golesVisitante: 1
-},
+  },
 
-{
+  {
     fecha: 6,
     local: "San Fernando",
     visitante: "San Pablo",
     golesLocal: 2,
     golesVisitante: 1
-},
+  },
 
-{
-  fecha: 6,
-  local: "San José",
-  visitante: "Central Norte",
-  golesLocal: 1,
-  golesVisitante: 0
-},
+  {
+    fecha: 6,
+    local: "San José",
+    visitante: "Central Norte",
+    golesLocal: 1,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 6,
-  local: "Ateneo Parroquial Alderetes",
-  visitante: "Estación Experimental",
-  golesLocal: 5,
-  golesVisitante: 2
-},
+  {
+    fecha: 6,
+    local: "Ateneo Parroquial Alderetes",
+    visitante: "Estación Experimental",
+    golesLocal: 5,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 6,
-  local: "Atlético Tucumán",
-  visitante: "San Antonio",
-  golesLocal: 2,
-  golesVisitante: 0
-},
+  {
+    fecha: 6,
+    local: "Atlético Tucumán",
+    visitante: "San Antonio",
+    golesLocal: 2,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "Bella Vista",
-  visitante: "Ateneo Parroquial Alderetes",
-  golesLocal: 0,
-  golesVisitante: 0
-},
+  {
+    fecha: 7,
+    local: "Bella Vista",
+    visitante: "Ateneo Parroquial Alderetes",
+    golesLocal: 0,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "Deportivo Aguilares",
-  visitante: "Trinidad",
-  golesLocal: 3,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "Deportivo Aguilares",
+    visitante: "Trinidad",
+    golesLocal: 3,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 7,
-  local: "Villa Mitre",
-  visitante: "Juventud Unida",
-  golesLocal: 2,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "Villa Mitre",
+    visitante: "Juventud Unida",
+    golesLocal: 2,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 7,
-  local: "Tucumán Central",
-  visitante: "Amalia",
-  golesLocal: 1,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "Tucumán Central",
+    visitante: "Amalia",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 7,
-  local: "San Juan",
-  visitante: "San Lorenzo (DG)",
-  golesLocal: 3,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "San Juan",
+    visitante: "San Lorenzo (DG)",
+    golesLocal: 3,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 7,
-  local: "Santa Lucía",
-  visitante: "San Fernando",
-  golesLocal: 0,
-  golesVisitante: 2
-},
+  {
+    fecha: 7,
+    local: "Santa Lucía",
+    visitante: "San Fernando",
+    golesLocal: 0,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 7,
-  local: "Graneros",
-  visitante: "Marapa",
-  golesLocal: 3,
-  golesVisitante: 0
-},
+  {
+    fecha: 7,
+    local: "Graneros",
+    visitante: "Marapa",
+    golesLocal: 3,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "Talleres",
-  visitante: "All Boys",
-  golesLocal: 1,
-  golesVisitante: 0
-},
+  {
+    fecha: 7,
+    local: "Talleres",
+    visitante: "All Boys",
+    golesLocal: 1,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "Atlético Concepción",
-  visitante: "Garmendia",
-  golesLocal: 0,
-  golesVisitante: 0
-},
+  {
+    fecha: 7,
+    local: "Atlético Concepción",
+    visitante: "Garmendia",
+    golesLocal: 0,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "Lastenia",
-  visitante: "Unión del Norte",
-  golesLocal: 0,
-  golesVisitante: 3
-},
+  {
+    fecha: 7,
+    local: "Lastenia",
+    visitante: "Unión del Norte",
+    golesLocal: 0,
+    golesVisitante: 3
+  },
 
-{
-  fecha: 7,
-  local: "San Ramón",
-  visitante: "Ñuñorco",
-  golesLocal: 1,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "San Ramón",
+    visitante: "Ñuñorco",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 7,
-  local: "Jorge Newbery",
-  visitante: "Llorens",
-  golesLocal: 2,
-  golesVisitante: 2
-},
+  {
+    fecha: 7,
+    local: "Jorge Newbery",
+    visitante: "Llorens",
+    golesLocal: 2,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 7,
-  local: "Santa Ana",
-  visitante: "San Lorenzo (SA)",
-  golesLocal: 2,
-  golesVisitante: 2
-},
+  {
+    fecha: 7,
+    local: "Santa Ana",
+    visitante: "San Lorenzo (SA)",
+    golesLocal: 2,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 7,
-  local: "Alto Verde",
-  visitante: "Unión Simoca",
-  golesLocal: 2,
-  golesVisitante: 3
-},
+  {
+    fecha: 7,
+    local: "Alto Verde",
+    visitante: "Unión Simoca",
+    golesLocal: 2,
+    golesVisitante: 3
+  },
 
-{
-  fecha: 7,
-  local: "Atlético Tucumán",
-  visitante: "Argentinos del Norte",
-  golesLocal: 1,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "Atlético Tucumán",
+    visitante: "Argentinos del Norte",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 7,
-  local: "Azucarera Argentina",
-  visitante: "La Providencia",
-  golesLocal: 0,
-  golesVisitante: 0
-},
+  {
+    fecha: 7,
+    local: "Azucarera Argentina",
+    visitante: "La Providencia",
+    golesLocal: 0,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "Sportivo Guzmán",
-  visitante: "San Martín",
-  golesLocal: 1,
-  golesVisitante: 0
-},
+  {
+    fecha: 7,
+    local: "Sportivo Guzmán",
+    visitante: "San Martín",
+    golesLocal: 1,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "San José",
-  visitante: "Estación Experimental",
-  golesLocal: 2,
-  golesVisitante: 2
-},
+  {
+    fecha: 7,
+    local: "San José",
+    visitante: "Estación Experimental",
+    golesLocal: 2,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 7,
-  local: "Central Norte",
-  visitante: "Famaillá",
-  golesLocal: 3,
-  golesVisitante: 4
-},
+  {
+    fecha: 7,
+    local: "Central Norte",
+    visitante: "Famaillá",
+    golesLocal: 3,
+    golesVisitante: 4
+  },
 
-{
-  fecha: 7,
-  local: "San Antonio",
-  visitante: "Cruz Alta",
-  golesLocal: 1,
-  golesVisitante: 0
-},
+  {
+    fecha: 7,
+    local: "San Antonio",
+    visitante: "Cruz Alta",
+    golesLocal: 1,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 7,
-  local: "Concepción FC",
-  visitante: "Santa Rosa",
-  golesLocal: 3,
-  golesVisitante: 2
-},
-{
-  fecha: 7,
-  local: "San Pablo",
-  visitante: "Almirante Brown",
-  golesLocal: 0,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "Concepción FC",
+    visitante: "Santa Rosa",
+    golesLocal: 3,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 8,
-  local: "Graneros",
-  visitante: "San Lorenzo (SA)",
-  golesLocal: 1,
-  golesVisitante: 1
-},
+  {
+    fecha: 7,
+    local: "San Pablo",
+    visitante: "Almirante Brown",
+    golesLocal: 0,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 8,
-  local: "Almirante Brown",
-  visitante: "San Fernando",
-  golesLocal: 2,
-  golesVisitante: 0
-},
+  {
+    fecha: 8,
+    local: "Graneros",
+    visitante: "San Lorenzo (SA)",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 8,
-  local: "Talleres",
-  visitante: "Santa Lucía",
-  golesLocal: 1,
-  golesVisitante: 1
-},
+  {
+    fecha: 8,
+    local: "Almirante Brown",
+    visitante: "San Fernando",
+    golesLocal: 2,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 8,
-  local: "Sportivo Guzmán",
-  visitante: "San Juan",
-  golesLocal: 0,
-  golesVisitante: 2
-},
+  {
+    fecha: 8,
+    local: "Talleres",
+    visitante: "Santa Lucía",
+    golesLocal: 1,
+    golesVisitante: 1
+  },
 
-{
-  fecha: 8,
-  local: "Amalia",
-  visitante: "San Martín",
-  golesLocal: 1,
-  golesVisitante: 2
-},
+  {
+    fecha: 8,
+    local: "Sportivo Guzmán",
+    visitante: "San Juan",
+    golesLocal: 0,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 8,
-  local: "Trinidad",
-  visitante: "Llorens",
-  golesLocal: 1,
-  golesVisitante: 0
-},
+  {
+    fecha: 8,
+    local: "Amalia",
+    visitante: "San Martín",
+    golesLocal: 1,
+    golesVisitante: 2
+  },
 
-{
-  fecha: 8,
-  local: "Garmendia",
-  visitante: "San Lorenzo (DG)",
-  golesLocal: 4,
-  golesVisitante: 1
-},
+  {
+    fecha: 8,
+    local: "Trinidad",
+    visitante: "Llorens",
+    golesLocal: 1,
+    golesVisitante: 0
+  },
 
-{
-  fecha: 8,
-  local: "San Antonio",
-  visitante: "Argentinos del Norte",
+  {
+    fecha: 8,
+    local: "Garmendia",
+    visitante: "San Lorenzo (DG)",
+    golesLocal: 4,
+    golesVisitante: 1
+  },
+
+  {
+    fecha: 8,
+    local: "San Antonio",
+      visitante: "Argentinos del Norte",
   golesLocal: 0,
   golesVisitante: 0
 },
@@ -2474,7 +2361,6 @@ const resultadosClausura = [
   golesLocal: 0,
   golesVisitante: 1
 },
-
 {
   fecha: 10,
   local: "Atlético Concepción",
@@ -2756,22 +2642,22 @@ const resultadosClausura = [
 },
 
 {
-    fecha: 11,
-    local: "La Providencia",
-    visitante: "Ñuñorco",
-    golesLocal: 2,
-    golesVisitante: 1
-  },
-  
-  {
-    fecha: 11,
-    local: "Concepción FC",
-    visitante: "Unión Simoca",
-    golesLocal: 2,
-    golesVisitante: 2
-  },
-  
-  {
+  fecha: 11,
+  local: "La Providencia",
+  visitante: "Ñuñorco",
+  golesLocal: 2,
+  golesVisitante: 1
+},
+
+{
+  fecha: 11,
+  local: "Concepción FC",
+  visitante: "Unión Simoca",
+  golesLocal: 2,
+  golesVisitante: 2
+},
+
+{
   fecha: 11,
   local: "San Juan",
   visitante: "Lastenia",
@@ -2779,29 +2665,30 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
- {
+{
   fecha: 11,
   local: "San Fernando",
   visitante: "Ateneo Parroquial Alderetes",
   golesLocal: 2,
   golesVisitante: 1
 },
-  
-  {
-    fecha: 12,
-    local: "San Martín",
-    visitante: "San Lorenzo (DG)",
-    golesLocal: 2,
-    golesVisitante: 0
+
+{
+  fecha: 12,
+  local: "San Martín",
+  visitante: "San Lorenzo (DG)",
+  golesLocal: 2,
+  golesVisitante: 0
 },
-  
-  {
+
+{
   fecha: 12,
   local: "San Antonio",
   visitante: "Sportivo Guzmán",
   golesLocal: 2,
-  golesVisitante: 0
+    golesVisitante: 0
 },
+
 {
   fecha: 12,
   local: "Argentinos del Norte",
@@ -2873,6 +2760,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 0
 },
+
 {
   fecha: 12,
   local: "San José",
@@ -2880,6 +2768,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 0
 },
+
 {
   fecha: 12,
   local: "Central Norte",
@@ -2887,6 +2776,7 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 4
 },
+
 {
   fecha: 12,
   local: "All Boys",
@@ -2894,6 +2784,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 2
 },
+
 {
   fecha: 12,
   local: "Jorge Newbery",
@@ -2901,6 +2792,7 @@ const resultadosClausura = [
   golesLocal: 0,
   golesVisitante: 0
 },
+
 {
   fecha: 12,
   local: "Llorens",
@@ -2925,13 +2817,14 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
-  {
+{
   fecha: 12,
   local: "Atlético Tucumán",
   visitante: "Amalia",
   golesLocal: 3,
   golesVisitante: 2
 },
+
 {
   fecha: 12,
   local: "Marapa",
@@ -2963,6 +2856,7 @@ const resultadosClausura = [
   golesLocal: 0,
   golesVisitante: 2
 },
+
 {
   fecha: 13,
   local: "San Antonio",
@@ -2970,6 +2864,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 2
 },
+
 {
   fecha: 13,
   local: "Argentinos del Norte",
@@ -2977,6 +2872,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 2
 },
+
 {
   fecha: 13,
   local: "Alto Verde",
@@ -2984,6 +2880,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "Azucarera Argentina",
@@ -2991,6 +2888,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 3
 },
+
 {
   fecha: 13,
   local: "Jorge Newbery",
@@ -3006,6 +2904,7 @@ const resultadosClausura = [
   golesLocal: 7,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "Famaillá",
@@ -3013,6 +2912,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 4
 },
+
 {
   fecha: 13,
   local: "Santa Ana",
@@ -3028,6 +2928,7 @@ const resultadosClausura = [
   golesLocal: 5,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "Sportivo Guzmán",
@@ -3035,6 +2936,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "Estación Experimental",
@@ -3042,6 +2944,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "San Ramón",
@@ -3073,6 +2976,7 @@ const resultadosClausura = [
   golesLocal: 0,
   golesVisitante: 0
 },
+
 {
   fecha: 13,
   local: "San Pablo",
@@ -3080,6 +2984,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "Concepción FC",
@@ -3087,6 +2992,7 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "Santa Lucía",
@@ -3094,6 +3000,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 2
 },
+
 {
   fecha: 13,
   local: "San Juan",
@@ -3109,6 +3016,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 1
 },
+
 {
   fecha: 13,
   local: "Deportivo Aguilares",
@@ -3122,8 +3030,9 @@ const resultadosClausura = [
   local: "Ñuñorco",
   visitante: "San Ramón",
   golesLocal: 1,
-  golesVisitante: 0
+    golesVisitante: 0
 },
+
 {
   fecha: 14,
   local: "Unión Simoca",
@@ -3139,6 +3048,7 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 4
 },
+
 {
   fecha: 14,
   local: "Llorens",
@@ -3154,6 +3064,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 2
 },
+
 {
   fecha: 14,
   local: "San Lorenzo (SA)",
@@ -3162,7 +3073,6 @@ const resultadosClausura = [
   golesVisitante: 1
 },
 
-
 {
   fecha: 14,
   local: "All Boys",
@@ -3170,6 +3080,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 0
 },
+
 {
   fecha: 14,
   local: "Juventud Unida",
@@ -3177,6 +3088,7 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 3
 },
+
 {
   fecha: 14,
   local: "San Martín",
@@ -3184,6 +3096,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 1
 },
+
 {
   fecha: 14,
   local: "Argentinos del Norte",
@@ -3191,6 +3104,7 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 0
 },
+
 {
   fecha: 14,
   local: "San Lorenzo (DG)",
@@ -3198,6 +3112,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 0
 },
+
 {
   fecha: 14,
   local: "Unión del Norte",
@@ -3205,6 +3120,7 @@ const resultadosClausura = [
   golesLocal: 3,
   golesVisitante: 0
 },
+
 {
   fecha: 14,
   local: "Almirante Brown",
@@ -3212,6 +3128,7 @@ const resultadosClausura = [
   golesLocal: 5,
   golesVisitante: 0
 },
+
 {
   fecha: 14,
   local: "Cruz Alta",
@@ -3227,6 +3144,7 @@ const resultadosClausura = [
   golesLocal: 1,
   golesVisitante: 0
 },
+
 {
   fecha: 14,
   local: "Santa Rosa",
@@ -3234,6 +3152,7 @@ const resultadosClausura = [
   golesLocal: 0,
   golesVisitante: 1
 },
+
 {
   fecha: 14,
   local: "Ateneo Parroquial Alderetes",
@@ -3241,6 +3160,7 @@ const resultadosClausura = [
   golesLocal: 2,
   golesVisitante: 3
 },
+
 {
   fecha: 14,
   local: "San Fernando",
@@ -3450,7 +3370,20 @@ function aplicarResultados(partidos) {
 
 
     if (!partido) {
+      continue;
+    }
 
+    partido.golesLocal =
+      resultado.golesLocal;
+
+    partido.golesVisitante =
+      resultado.golesVisitante;
+
+    partido.jugado = true;
+
+  }
+
+}
       console.warn(
         "RESULTADO NO ENCONTRADO EN FIXTURE:",
         resultado
@@ -3774,9 +3707,7 @@ function actualizarTablaAnualConResultado(
 
   const visitante =
     tabla[resultado.visitante];
-
-
-  if (!local || !visitante) {
+      if (!local || !visitante) {
 
     console.warn(
       "EQUIPO NO ENCONTRADO EN TABLA ANUAL:",
@@ -4100,7 +4031,6 @@ function obtenerGanadorPlayoff(
       resultado.penalesVisitante >
       resultado.penalesLocal
     ) {
-
       return visitante;
 
     }
@@ -4556,3 +4486,5 @@ datosLiga.tablasClausura =
 
 datosLiga.tablaAnual =
   generarTablaAnual();
+
+    
