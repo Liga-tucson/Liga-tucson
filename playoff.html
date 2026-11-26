@@ -151,98 +151,179 @@ body{
   margin-top:5px;
 }
 
-.round-section{margin-top:35px}
+/* CUADRO HORIZONTAL */
+
+.bracket-instructions{
+  text-align:center;
+  color:#687785;
+  font-size:14px;
+  margin:28px 0 12px;
+  font-weight:600;
+}
+
+.bracket-scroll{
+  width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:12px 4px 25px;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:#3975a6 #dce5ef;
+}
+
+.bracket-scroll::-webkit-scrollbar{
+  height:9px;
+}
+.bracket-scroll::-webkit-scrollbar-track{
+  background:#dce5ef;
+  border-radius:20px;
+}
+.bracket-scroll::-webkit-scrollbar-thumb{
+  background:#3975a6;
+  border-radius:20px;
+}
+
+.bracket-board{
+  display:flex;
+  align-items:stretch;
+  gap:32px;
+  width:max-content;
+  min-width:100%;
+}
+
+.round-section{
+  position:relative;
+  flex:0 0 285px;
+  width:285px;
+  min-width:285px;
+  display:flex;
+  flex-direction:column;
+}
+
+.round-section:not(:last-child)::after{
+  content:"›";
+  position:absolute;
+  right:-26px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#3975a6;
+  font-size:35px;
+  font-weight:800;
+  z-index:2;
+}
+
 .round-heading{
   background:#0b1f3a;
   color:white;
-  padding:17px 22px;
-  border-radius:14px 14px 0 0;
-  font-size:22px;
+  padding:17px 12px;
+  border-radius:13px 13px 0 0;
+  font-size:17px;
   font-weight:800;
+  text-align:center;
+  min-height:55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
+
 .round-description{
   background:white;
-  padding:13px 20px;
+  padding:12px;
   color:#687785;
-  font-size:14px;
+  font-size:12px;
   border-bottom:1px solid #edf1f5;
   line-height:1.5;
+  min-height:68px;
 }
 
 .matches-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:16px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  flex:1;
   background:#e3ebf4;
-  padding:18px;
-  border-radius:0 0 14px 14px;
+  padding:13px;
+  border-radius:0 0 13px 13px;
 }
 
 .match-card{
   background:white;
-  border-radius:15px;
-  padding:17px;
+  border-radius:12px;
+  padding:13px;
   box-shadow:0 4px 13px rgba(0,0,0,.05);
   border:1px solid #e4eaf0;
 }
+
 .match-top{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:10px;
-  margin-bottom:14px;
+  gap:8px;
+  margin-bottom:10px;
   color:#82909c;
-  font-size:12px;
+  font-size:11px;
   font-weight:700;
 }
-.match-id{color:#3975a6}
+.match-id{
+  color:#3975a6;
+  font-size:13px;
+}
 
 .team-line{
   display:flex;
   align-items:center;
-  gap:10px;
-  min-height:47px;
-  padding:7px 0;
+  gap:8px;
+  min-height:42px;
+  padding:6px 0;
   border-bottom:1px solid #edf1f5;
 }
 .team-line:last-of-type{border-bottom:0}
 .team-line img{
-  width:34px;
-  height:34px;
+  width:30px;
+  height:30px;
   object-fit:contain;
   flex-shrink:0;
 }
 .team-name{
   flex:1;
-  font-size:15px;
+  min-width:0;
+  font-size:13px;
   font-weight:700;
   color:#243f59;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 .team-score{
-  min-width:30px;
+  min-width:25px;
   text-align:center;
-  font-size:19px;
+  font-size:17px;
   font-weight:800;
   color:#102a49;
 }
 .match-status{
-  margin-top:13px;
-  padding-top:10px;
+  margin-top:10px;
+  padding-top:9px;
   border-top:1px solid #edf1f5;
   color:#71808e;
-  font-size:12px;
+  font-size:11px;
   line-height:1.5;
 }
 .match-status strong{color:#286b9e}
 
 .empty-round{
-  grid-column:1/-1;
   background:white;
   color:#7b8996;
   text-align:center;
-  padding:25px;
+  padding:20px 12px;
   border-radius:10px;
   line-height:1.6;
+  font-size:12px;
+  min-height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .champion-card{
@@ -251,7 +332,7 @@ body{
   padding:30px;
   border-radius:18px;
   text-align:center;
-  margin-top:20px;
+  margin-top:35px;
 }
 .champion-card h2{
   font-size:25px;
@@ -283,8 +364,8 @@ footer{
 
 @media(max-width:800px){
   .primeros-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .matches-grid{grid-template-columns:1fr}
 }
+
 @media(max-width:600px){
   .header-top{padding:25px 15px 22px}
   .header-logo{width:92px;height:92px}
@@ -296,6 +377,15 @@ footer{
   .page-subtitle{font-size:17px}
   .primeros-grid{grid-template-columns:1fr}
   .section-title{font-size:24px}
+  .bracket-board{gap:28px}
+  .round-section{
+    flex-basis:275px;
+    width:275px;
+    min-width:275px;
+  }
+  .round-section:not(:last-child)::after{
+    right:-23px;
+  }
 }
 </style>
 </head>
@@ -327,15 +417,6 @@ footer{
   <h1 class="page-title">Play-Off</h1>
   <p class="page-subtitle">Primera División A · Clausura 2026</p>
 
-  <section class="info-card">
-    <h2>Formato de competencia</h2>
-    <p><strong>Primera ronda:</strong> participan 20 equipos: los seis segundos, seis terceros, seis cuartos y los dos mejores quintos de las zonas.</p>
-    <p><strong>Octavos de final:</strong> ingresan los seis primeros de cada zona, junto con los diez ganadores de la primera ronda.</p>
-    <p><strong>Cuartos, semifinales y final:</strong> los equipos avanzan mediante eliminación directa.</p>
-    <p><strong>Ventaja deportiva:</strong> en la primera ronda, en caso de empate, clasifica el equipo con mejor posición en el ranking original. Desde octavos de final, los empates se definen por penales.</p>
-    <p><strong>Ranking:</strong> se toma como referencia la clasificación original del Clausura, una vez finalizada la Fecha 14. Los resultados del Play-Off no modifican ese ranking.</p>
-  </section>
-
   <div class="status-card" id="estadoPlayoff">
     Cargando información del Play-Off...
   </div>
@@ -343,49 +424,70 @@ footer{
   <h2 class="section-title">Clasificados directamente a octavos</h2>
   <div class="primeros-grid" id="primeros"></div>
 
-  <section class="round-section">
-    <div class="round-heading">Primera ronda</div>
-    <div class="round-description">
-      Diez cruces oficiales. El equipo mejor ubicado en el ranking original cuenta con ventaja deportiva.
-    </div>
-    <div class="matches-grid" id="primera-ronda"></div>
-  </section>
+  <div class="bracket-instructions">
+    Deslizá hacia los costados para recorrer todas las rondas →
+  </div>
 
-  <section class="round-section">
-    <div class="round-heading">Octavos de final</div>
-    <div class="round-description">
-      Seis primeros de zona y diez ganadores de la primera ronda.
-    </div>
-    <div class="matches-grid" id="octavos"></div>
-  </section>
+  <div class="bracket-scroll">
+    <div class="bracket-board">
 
-  <section class="round-section">
-    <div class="round-heading">Cuartos de final</div>
-    <div class="round-description">
-      Los ocho ganadores de octavos de final.
-    </div>
-    <div class="matches-grid" id="cuartos"></div>
-  </section>
+      <section class="round-section">
+        <div class="round-heading">Primera ronda</div>
+        <div class="round-description">
+          Diez cruces oficiales. Ventaja deportiva para el mejor ubicado en el ranking original.
+        </div>
+        <div class="matches-grid" id="primera-ronda"></div>
+      </section>
 
-  <section class="round-section">
-    <div class="round-heading">Semifinales</div>
-    <div class="round-description">
-      Los cuatro equipos que superen los cuartos de final.
-    </div>
-    <div class="matches-grid" id="semifinales"></div>
-  </section>
+      <section class="round-section">
+        <div class="round-heading">Octavos de final</div>
+        <div class="round-description">
+          Seis primeros de zona y diez ganadores de primera ronda.
+        </div>
+        <div class="matches-grid" id="octavos"></div>
+      </section>
 
-  <section class="round-section">
-    <div class="round-heading">Final</div>
-    <div class="round-description">
-      Los dos equipos que definirán el campeonato.
+      <section class="round-section">
+        <div class="round-heading">Cuartos de final</div>
+        <div class="round-description">
+          Los ocho ganadores de octavos.
+        </div>
+        <div class="matches-grid" id="cuartos"></div>
+      </section>
+
+      <section class="round-section">
+        <div class="round-heading">Semifinales</div>
+        <div class="round-description">
+          Los cuatro equipos que superen los cuartos.
+        </div>
+        <div class="matches-grid" id="semifinales"></div>
+      </section>
+
+      <section class="round-section">
+        <div class="round-heading">Final</div>
+        <div class="round-description">
+          Los dos equipos que definirán el campeonato.
+        </div>
+        <div class="matches-grid" id="final"></div>
+      </section>
+
     </div>
-    <div class="matches-grid" id="final"></div>
-  </section>
+  </div>
 
   <section class="champion-card" id="campeon">
     <h2>Campeón del Clausura 2026</h2>
     <p>El ganador de la final se consagrará campeón.</p>
+  </section>
+
+  <!-- FORMATO DE COMPETENCIA AL FINAL -->
+
+  <section class="info-card" style="margin-top:35px">
+    <h2>Formato de competencia</h2>
+    <p><strong>Primera ronda:</strong> participan 20 equipos: los seis segundos, seis terceros, seis cuartos y los dos mejores quintos de las zonas.</p>
+    <p><strong>Octavos de final:</strong> ingresan los seis primeros de zona, junto con los diez ganadores de la primera ronda.</p>
+    <p><strong>Cuartos, semifinales y final:</strong> los equipos avanzan mediante eliminación directa.</p>
+    <p><strong>Ventaja deportiva:</strong> en la primera ronda, en caso de empate, clasifica el equipo con mejor posición en el ranking original. Desde octavos de final, los empates se definen por penales.</p>
+    <p><strong>Ranking:</strong> se toma como referencia la clasificación original del Clausura, una vez finalizada la Fecha 14. Los resultados del Play-Off no modifican ese ranking.</p>
   </section>
 
 </main>
@@ -397,9 +499,7 @@ footer{
 <script src="datos.js?v=20261126"></script>
 
 <script>
-/* ==========================================
-   ESCUDOS DE LOS CLUBES
-========================================== */
+/* ESCUDOS */
 
 const escudos = {
   "Talleres":"IMG_1621.png",
@@ -409,7 +509,6 @@ const escudos = {
   "Villa Mitre":"IMG_1625.jpeg",
   "All Boys":"IMG_1627.png",
   "San José":"IMG_1628.png",
-
   "Argentinos del Norte":"IMG_1629.png",
   "San Martín":"IMG_1630.png",
   "San Antonio":"IMG_1631.jpeg",
@@ -417,7 +516,6 @@ const escudos = {
   "Sportivo Guzmán":"IMG_1633.png",
   "Amalia":"IMG_1634.png",
   "Tucumán Central":"IMG_1635.png",
-
   "Garmendia":"IMG_1637.jpeg",
   "Atlético Concepción":"IMG_1638.png",
   "San Juan":"9D389031-3751-4B06-A800-AE5B7A426605.png",
@@ -425,7 +523,6 @@ const escudos = {
   "Unión del Norte":"IMG_1641.jpeg",
   "Lastenia":"IMG_1645.png",
   "Cruz Alta":"IMG_1644.png",
-
   "Bella Vista":"IMG_1651.png",
   "San Fernando":"IMG_1652.png",
   "Almirante Brown":"IMG_1653.jpeg",
@@ -433,7 +530,6 @@ const escudos = {
   "Ateneo Parroquial Alderetes":"IMG_1655.png",
   "Santa Lucía":"IMG_1656.jpeg",
   "San Pablo":"IMG_1671.png",
-
   "Alto Verde":"IMG_1657.png",
   "Concepción FC":"IMG_1658.png",
   "Azucarera Argentina":"IMG_1659.png",
@@ -442,7 +538,6 @@ const escudos = {
   "San Ramón":"IMG_1662.jpeg",
   "Santa Rosa":"IMG_1663.png",
   "La Providencia":"IMG_1664.jpeg",
-
   "Deportivo Aguilares":"IMG_1665.png",
   "San Lorenzo (SA)":"IMG_1666.webp",
   "Jorge Newbery":"IMG_1673.png",
@@ -453,10 +548,7 @@ const escudos = {
   "Llorens":"IMG_1672.jpeg"
 };
 
-
-/* ==========================================
-   CRUCES OFICIALES DE PRIMERA RONDA
-========================================== */
+/* CRUCES OFICIALES */
 
 const crucesPrimeraRonda = [
   ["Jorge Newbery","Santa Ana"],
@@ -471,19 +563,9 @@ const crucesPrimeraRonda = [
   ["Almirante Brown","Villa Mitre"]
 ];
 
-
-/* ==========================================
-   VARIABLES GENERALES
-========================================== */
-
 let rankingOriginal = [];
 let posicionOriginal = {};
 let clasificadosPlayoff = [];
-
-
-/* ==========================================
-   FUNCIONES DE EQUIPOS Y POSICIONES
-========================================== */
 
 function nombreEquipo(e){
   if(typeof e === "string") return e;
@@ -508,437 +590,225 @@ function puntosEquipo(e){
 function diferenciaEquipo(e){
   if(e?.dg !== undefined) return Number(e.dg);
   if(e?.diferencia !== undefined) return Number(e.diferencia);
-
-  const gf = Number(e?.gf ?? 0);
-  const gc = Number(e?.gc ?? 0);
-
-  return gf-gc;
+  return Number(e?.gf ?? 0)-Number(e?.gc ?? 0);
 }
 
 function compararEquiposPlayoff(a,b){
+  if(puntosEquipo(a)!==puntosEquipo(b))
+    return puntosEquipo(b)-puntosEquipo(a);
 
-  const puntosA = puntosEquipo(a);
-  const puntosB = puntosEquipo(b);
+  if(diferenciaEquipo(a)!==diferenciaEquipo(b))
+    return diferenciaEquipo(b)-diferenciaEquipo(a);
 
-  if(puntosA !== puntosB) return puntosB-puntosA;
+  if(Number(a?.gf??0)!==Number(b?.gf??0))
+    return Number(b?.gf??0)-Number(a?.gf??0);
 
-  const diferenciaA = diferenciaEquipo(a);
-  const diferenciaB = diferenciaEquipo(b);
-
-  if(diferenciaA !== diferenciaB){
-    return diferenciaB-diferenciaA;
-  }
-
-  const golesA = Number(a?.gf ?? 0);
-  const golesB = Number(b?.gf ?? 0);
-
-  if(golesA !== golesB) return golesB-golesA;
-
-  const contraA = Number(a?.gc ?? 0);
-  const contraB = Number(b?.gc ?? 0);
-
-  if(contraA !== contraB) return contraA-contraB;
+  if(Number(a?.gc??0)!==Number(b?.gc??0))
+    return Number(a?.gc??0)-Number(b?.gc??0);
 
   return nombreEquipo(a).localeCompare(nombreEquipo(b),"es");
 }
 
-
-/* ==========================================
-   OBTENER CLASIFICACIÓN DEL CLAUSURA
-========================================== */
-
 function obtenerListadoClasificacion(){
-
   if(typeof generarClasificacionPlayoff !== "function"){
-    throw new Error(
-      "No se encontró generarClasificacionPlayoff() en datos.js."
-    );
+    throw new Error("No se encontró generarClasificacionPlayoff() en datos.js.");
   }
 
   const resultado = generarClasificacionPlayoff();
 
   if(Array.isArray(resultado)) return resultado;
-
   if(Array.isArray(resultado?.ranking)) return resultado.ranking;
+  if(Array.isArray(resultado?.clasificados)) return resultado.clasificados;
 
-  if(Array.isArray(resultado?.clasificados)){
-    return resultado.clasificados;
-  }
-
-  throw new Error(
-    "La función generarClasificacionPlayoff() no devolvió una clasificación válida."
-  );
+  throw new Error("La clasificación generada no es válida.");
 }
 
-
-/* ==========================================
-   ARMAR LOS 26 CLASIFICADOS
-   6 primeros
-   6 segundos
-   6 terceros
-   6 cuartos
-   2 mejores quintos
-========================================== */
-
 function prepararClasificacion(){
-
   const listado = obtenerListadoClasificacion()
     .filter(e=>nombreEquipo(e));
 
-  const primeros = listado
-    .filter(e=>posicionZona(e)===1)
-    .sort(compararEquiposPlayoff);
+  const primeros = listado.filter(e=>posicionZona(e)===1).sort(compararEquiposPlayoff);
+  const segundos = listado.filter(e=>posicionZona(e)===2).sort(compararEquiposPlayoff);
+  const terceros = listado.filter(e=>posicionZona(e)===3).sort(compararEquiposPlayoff);
+  const cuartos = listado.filter(e=>posicionZona(e)===4).sort(compararEquiposPlayoff);
+  const quintos = listado.filter(e=>posicionZona(e)===5).sort(compararEquiposPlayoff).slice(0,2);
 
-  const segundos = listado
-    .filter(e=>posicionZona(e)===2)
-    .sort(compararEquiposPlayoff);
+  if(primeros.length!==6)
+    throw new Error("Se esperaban seis primeros de zona.");
 
-  const terceros = listado
-    .filter(e=>posicionZona(e)===3)
-    .sort(compararEquiposPlayoff);
+  if(segundos.length!==6 || terceros.length!==6 || cuartos.length!==6)
+    throw new Error("La clasificación debe contener seis segundos, terceros y cuartos.");
 
-  const cuartos = listado
-    .filter(e=>posicionZona(e)===4)
-    .sort(compararEquiposPlayoff);
+  if(quintos.length!==2)
+    throw new Error("No se encontraron los dos mejores quintos.");
 
-  const quintos = listado
-    .filter(e=>posicionZona(e)===5)
-    .sort(compararEquiposPlayoff)
-    .slice(0,2);
+  clasificadosPlayoff=[...primeros,...segundos,...terceros,...cuartos,...quintos];
 
-  if(primeros.length!==6){
-    throw new Error(
-      "Se esperaban 6 primeros de zona y se encontraron "+primeros.length+"."
-    );
-  }
-
-  if(segundos.length!==6 || terceros.length!==6 || cuartos.length!==6){
-    throw new Error(
-      "La clasificación debe contener seis segundos, seis terceros y seis cuartos."
-    );
-  }
-
-  if(quintos.length!==2){
-    throw new Error(
-      "No se encontraron los dos mejores quintos de zona."
-    );
-  }
-
-  clasificadosPlayoff = [
-    ...primeros,
-    ...segundos,
-    ...terceros,
-    ...cuartos,
-    ...quintos
-  ];
-
-  rankingOriginal = [...clasificadosPlayoff]
-    .sort(compararEquiposPlayoff);
-
-  posicionOriginal = {};
+  rankingOriginal=[...clasificadosPlayoff].sort(compararEquiposPlayoff);
+  posicionOriginal={};
 
   rankingOriginal.forEach((equipo,index)=>{
-    posicionOriginal[nombreEquipo(equipo)] = index+1;
+    posicionOriginal[nombreEquipo(equipo)]=index+1;
   });
 
   return clasificadosPlayoff;
 }
-
 
 function rankingDe(nombre){
   return posicionOriginal[nombre] ?? 999;
 }
 
 function ordenarPorRanking(equipos){
-  return [...equipos].sort((a,b)=>{
-    return rankingDe(nombreEquipo(a))-rankingDe(nombreEquipo(b));
-  });
+  return [...equipos].sort((a,b)=>
+    rankingDe(nombreEquipo(a))-rankingDe(nombreEquipo(b))
+  );
 }
 
 function obtenerPrimerosDeZona(){
-
   return clasificadosPlayoff
     .filter(e=>posicionZona(e)===1)
     .sort((a,b)=>rankingDe(nombreEquipo(a))-rankingDe(nombreEquipo(b)));
 }
 
-
-/* ==========================================
-   RESULTADOS DEL PLAY-OFF
-   Admite resultados en formato por rondas
-   y también el formato anterior en array.
-========================================== */
+/* RESULTADOS */
 
 function obtenerResultadosPlayoff(){
-
-  if(typeof resultadosPlayoff !== "undefined"){
-    return resultadosPlayoff;
-  }
-
-  if(typeof datosLiga !== "undefined" && datosLiga.resultadosPlayoff){
+  if(typeof resultadosPlayoff !== "undefined") return resultadosPlayoff;
+  if(typeof datosLiga !== "undefined" && datosLiga.resultadosPlayoff)
     return datosLiga.resultadosPlayoff;
-  }
-
   return {};
 }
 
-
 function buscarResultado(ronda,id,partido){
+  const resultados=obtenerResultadosPlayoff();
 
-  const resultados = obtenerResultadosPlayoff();
-
-  /* Formato nuevo: resultadosPlayoff[ronda][id] */
-  if(
-    !Array.isArray(resultados) &&
-    resultados[ronda] &&
-    resultados[ronda][id]
-  ){
+  if(!Array.isArray(resultados) && resultados[ronda] && resultados[ronda][id])
     return resultados[ronda][id];
-  }
 
-  /* Formato alternativo: resultadosPlayoff[id] */
-  if(!Array.isArray(resultados) && resultados[id]){
+  if(!Array.isArray(resultados) && resultados[id])
     return resultados[id];
-  }
 
-  /* Compatibilidad con el formato anterior en array */
   if(Array.isArray(resultados)){
-
-    const encontrado = resultados.find(r=>{
-
-      const local = r.local || r.equipoLocal;
-      const visitante = r.visitante || r.equipoVisitante;
-
-      return (
-        local===nombreEquipo(partido.local) &&
-        visitante===nombreEquipo(partido.visitante)
-      );
-    });
-
+    const encontrado=resultados.find(r=>
+      (r.local||r.equipoLocal)===nombreEquipo(partido.local) &&
+      (r.visitante||r.equipoVisitante)===nombreEquipo(partido.visitante)
+    );
     if(encontrado) return encontrado;
   }
 
   return {};
 }
 
-
 function numeroGoles(valor){
-
-  if(valor===null || valor===undefined || valor===""){
-    return null;
-  }
-
-  const numero = Number(valor);
-
-  return Number.isFinite(numero) ? numero : null;
+  if(valor===null || valor===undefined || valor==="") return null;
+  const numero=Number(valor);
+  return Number.isFinite(numero)?numero:null;
 }
 
-
-/* ==========================================
-   DETERMINAR GANADORES
-========================================== */
-
 function obtenerGanador(partido,ronda){
+  const resultado=buscarResultado(ronda,partido.id,partido);
+  const gl=numeroGoles(resultado.golesLocal);
+  const gv=numeroGoles(resultado.golesVisitante);
 
-  const resultado = buscarResultado(
-    ronda,
-    partido.id,
-    partido
-  );
+  if(gl===null || gv===null) return null;
+  if(gl>gv) return partido.local;
+  if(gv>gl) return partido.visitante;
 
-  const golesLocal = numeroGoles(resultado.golesLocal);
-  const golesVisitante = numeroGoles(resultado.golesVisitante);
-
-  if(golesLocal===null || golesVisitante===null){
-    return null;
-  }
-
-  if(golesLocal>golesVisitante){
-    return partido.local;
-  }
-
-  if(golesVisitante>golesLocal){
-    return partido.visitante;
-  }
-
-  /* Primera ronda: ventaja deportiva */
   if(ronda==="primeraRonda"){
-
-    return rankingDe(nombreEquipo(partido.local)) <
+    return rankingDe(nombreEquipo(partido.local))<
       rankingDe(nombreEquipo(partido.visitante))
-      ? partido.local
-      : partido.visitante;
+      ?partido.local:partido.visitante;
   }
 
-  /* Desde octavos: definición por penales */
-  const penalesLocal = numeroGoles(resultado.penalesLocal);
-  const penalesVisitante = numeroGoles(resultado.penalesVisitante);
+  const pl=numeroGoles(resultado.penalesLocal);
+  const pv=numeroGoles(resultado.penalesVisitante);
 
-  if(penalesLocal===null || penalesVisitante===null){
-    return null;
-  }
-
-  if(penalesLocal>penalesVisitante) return partido.local;
-  if(penalesVisitante>penalesLocal) return partido.visitante;
+  if(pl===null || pv===null) return null;
+  if(pl>pv) return partido.local;
+  if(pv>pl) return partido.visitante;
 
   return null;
 }
 
-
-/* ==========================================
-   PRIMERA RONDA
-========================================== */
+/* PRIMERA RONDA */
 
 function crearPrimeraRonda(){
-
   return crucesPrimeraRonda.map((cruce,index)=>({
-
     id:"PR-"+(index+1),
     local:cruce[0],
     visitante:cruce[1],
     ronda:"primeraRonda"
-
   }));
-
 }
 
-
-/* ==========================================
-   OCTAVOS DE FINAL
-========================================== */
-
-function crearOctavos(primeraRonda){
-
-  const ganadores = primeraRonda
-    .map(partido=>obtenerGanador(partido,"primeraRonda"));
-
-  if(ganadores.length!==10 || ganadores.some(g=>!g)){
-    return [];
-  }
-
-  const primeros = obtenerPrimerosDeZona()
-    .map(nombreEquipo);
-
-  if(primeros.length!==6){
-    return [];
-  }
-
-  const clasificados = ordenarPorRanking([
-    ...primeros,
-    ...ganadores
-  ]);
-
-  if(clasificados.length!==16){
-    return [];
-  }
-
-  return crearCrucesPorRanking(
-    clasificados,
-    "O",
-    "segundaRonda"
-  );
-}
-
-
-/* ==========================================
-   CRUCES POR RANKING ORIGINAL
-   Mejor ubicado contra peor ubicado
-========================================== */
+/* CRUCES POR RANKING */
 
 function crearCrucesPorRanking(equipos,prefijo,ronda){
-
-  const ordenados = ordenarPorRanking(equipos);
-  const cruces = [];
+  const ordenados=ordenarPorRanking(equipos);
+  const cruces=[];
 
   for(let i=0;i<ordenados.length/2;i++){
-
     cruces.push({
-
       id:prefijo+"-"+(i+1),
       local:ordenados[i],
       visitante:ordenados[ordenados.length-1-i],
       ronda:ronda
-
     });
-
   }
 
   return cruces;
 }
 
+/* OCTAVOS */
 
-/* ==========================================
-   GENERAR RONDAS POSTERIORES
-========================================== */
+function crearOctavos(primeraRonda){
+  const ganadores=primeraRonda.map(p=>obtenerGanador(p,"primeraRonda"));
 
-function crearSiguienteRonda(
-  partidos,
-  rondaAnterior,
-  prefijo,
-  rondaActual
-){
+  if(ganadores.length!==10 || ganadores.some(g=>!g)) return [];
 
+  const primeros=obtenerPrimerosDeZona().map(nombreEquipo);
+  if(primeros.length!==6) return [];
+
+  const clasificados=ordenarPorRanking([...primeros,...ganadores]);
+  if(clasificados.length!==16) return [];
+
+  return crearCrucesPorRanking(clasificados,"O","segundaRonda");
+}
+
+/* RONDAS SIGUIENTES */
+
+function crearSiguienteRonda(partidos,rondaAnterior,prefijo,rondaActual){
   if(!partidos.length) return [];
 
-  const ganadores = partidos
-    .map(partido=>obtenerGanador(partido,rondaAnterior));
+  const ganadores=partidos.map(p=>obtenerGanador(p,rondaAnterior));
+  if(ganadores.some(g=>!g)) return [];
 
-  if(ganadores.some(g=>!g)){
-    return [];
-  }
-
-  return crearCrucesPorRanking(
-    ganadores,
-    prefijo,
-    rondaActual
-  );
+  return crearCrucesPorRanking(ganadores,prefijo,rondaActual);
 }
 
-
-/* ==========================================
-   ESCUDOS
-========================================== */
+/* ESCUDOS */
 
 function escudo(nombre){
+  const archivo=escudos[nombre];
+  if(!archivo) return "";
 
-  const archivo = escudos[nombre];
-
-  if(!archivo){
-    return "";
-  }
-
-  return `
-    <img
-      src="${archivo}"
-      alt="${nombre}"
-      onerror="this.style.display='none'"
-    >
-  `;
+  return `<img src="${archivo}" alt="${nombre}" onerror="this.style.display='none'">`;
 }
 
-
-/* ==========================================
-   MOSTRAR PRIMEROS DE ZONA
-========================================== */
+/* CLASIFICADOS DIRECTOS */
 
 function mostrarPrimeros(){
-
-  const primeros = obtenerPrimerosDeZona();
-
-  const contenedor = document.getElementById("primeros");
+  const primeros=obtenerPrimerosDeZona();
+  const contenedor=document.getElementById("primeros");
 
   if(!primeros.length){
-
-    contenedor.innerHTML =
-      "<p>No se encontraron los primeros de zona.</p>";
-
+    contenedor.innerHTML="<p>No se encontraron los primeros de zona.</p>";
     return;
   }
 
-  contenedor.innerHTML = primeros.map(e=>{
-
-    const nombre = nombreEquipo(e);
-    const zona = e.zona ? "Zona "+e.zona : "";
+  contenedor.innerHTML=primeros.map(e=>{
+    const nombre=nombreEquipo(e);
+    const zona=e.zona?"Zona "+e.zona:"";
 
     return `
       <div class="first-card">
@@ -949,76 +819,42 @@ function mostrarPrimeros(){
         </div>
       </div>
     `;
-
   }).join("");
-
 }
 
-
-/* ==========================================
-   MOSTRAR PARTIDOS
-========================================== */
+/* MOSTRAR PARTIDOS */
 
 function mostrarPartido(partido,ronda){
+  const resultado=buscarResultado(ronda,partido.id,partido);
+  const gl=numeroGoles(resultado.golesLocal);
+  const gv=numeroGoles(resultado.golesVisitante);
+  const ganador=obtenerGanador(partido,ronda);
 
-  const resultado = buscarResultado(
-    ronda,
-    partido.id,
-    partido
-  );
+  let estado="Pendiente de resultado";
 
-  const golesLocal = numeroGoles(resultado.golesLocal);
-  const golesVisitante = numeroGoles(resultado.golesVisitante);
-
-  const ganador = obtenerGanador(partido,ronda);
-
-  let estado = "Pendiente de resultado";
-
-  if(golesLocal!==null && golesVisitante!==null){
-
-    if(golesLocal===golesVisitante && ronda==="primeraRonda"){
-
-      estado = "Empate: ventaja deportiva para "+nombreEquipo(ganador);
-
-    }else if(golesLocal===golesVisitante && !ganador){
-
-      estado = "Empate: pendiente definición por penales";
-
+  if(gl!==null && gv!==null){
+    if(gl===gv && ronda==="primeraRonda"){
+      estado="Empate: ventaja deportiva para "+nombreEquipo(ganador);
+    }else if(gl===gv && !ganador){
+      estado="Empate: pendiente definición por penales";
     }else if(ganador){
-
-      estado = "Clasificado: "+nombreEquipo(ganador);
-
+      estado="Clasificado: "+nombreEquipo(ganador);
     }
-
   }
 
-  let penales = "";
+  let penales="";
 
-  if(
-    golesLocal!==null &&
-    golesVisitante!==null &&
-    golesLocal===golesVisitante &&
-    ronda!=="primeraRonda"
-  ){
-
-    const pl = numeroGoles(resultado.penalesLocal);
-    const pv = numeroGoles(resultado.penalesVisitante);
+  if(gl!==null && gv!==null && gl===gv && ronda!=="primeraRonda"){
+    const pl=numeroGoles(resultado.penalesLocal);
+    const pv=numeroGoles(resultado.penalesVisitante);
 
     if(pl!==null && pv!==null){
-
-      penales = `
-        <div class="match-status">
-          Penales: ${pl} - ${pv}
-        </div>
-      `;
-
+      penales=`<div class="match-status">Penales: ${pl} - ${pv}</div>`;
     }
-
   }
 
   return `
     <article class="match-card">
-
       <div class="match-top">
         <span class="match-id">${partido.id}</span>
         <span>Play-Off</span>
@@ -1027,268 +863,151 @@ function mostrarPartido(partido,ronda){
       <div class="team-line">
         ${escudo(nombreEquipo(partido.local))}
         <span class="team-name">${nombreEquipo(partido.local)}</span>
-        <span class="team-score">
-          ${golesLocal===null ? "–" : golesLocal}
-        </span>
+        <span class="team-score">${gl===null?"–":gl}</span>
       </div>
 
       <div class="team-line">
         ${escudo(nombreEquipo(partido.visitante))}
         <span class="team-name">${nombreEquipo(partido.visitante)}</span>
-        <span class="team-score">
-          ${golesVisitante===null ? "–" : golesVisitante}
-        </span>
+        <span class="team-score">${gv===null?"–":gv}</span>
       </div>
 
-      <div class="match-status">
-        ${estado}
-      </div>
-
+      <div class="match-status">${estado}</div>
       ${penales}
-
     </article>
   `;
-
 }
 
-
 function mostrarRonda(id,partidos,ronda){
-
-  const contenedor = document.getElementById(id);
+  const contenedor=document.getElementById(id);
 
   if(!partidos.length){
-
-    contenedor.innerHTML = `
+    contenedor.innerHTML=`
       <div class="empty-round">
         Esta ronda se completará cuando se definan todos los clasificados de la instancia anterior.
       </div>
     `;
-
     return;
   }
 
-  contenedor.innerHTML = partidos
-    .map(partido=>mostrarPartido(partido,ronda))
-    .join("");
-
+  contenedor.innerHTML=partidos.map(p=>mostrarPartido(p,ronda)).join("");
 }
 
-
-/* ==========================================
-   CAMPEÓN
-========================================== */
+/* CAMPEÓN */
 
 function mostrarCampeon(final){
-
-  const contenedor = document.getElementById("campeon");
+  const contenedor=document.getElementById("campeon");
 
   if(!final.length){
-
-    contenedor.innerHTML = `
+    contenedor.innerHTML=`
       <h2>Campeón del Clausura 2026</h2>
       <p>El campeón se definirá al finalizar la competencia.</p>
     `;
-
     return;
   }
 
-  const ganador = obtenerGanador(final[0],"final");
+  const ganador=obtenerGanador(final[0],"final");
 
   if(!ganador){
-
-    contenedor.innerHTML = `
+    contenedor.innerHTML=`
       <h2>Final del Clausura 2026</h2>
       <p>La definición del campeonato está pendiente.</p>
     `;
-
     return;
   }
 
-  const nombre = nombreEquipo(ganador);
+  const nombre=nombreEquipo(ganador);
 
-  contenedor.innerHTML = `
+  contenedor.innerHTML=`
     <h2>CAMPEÓN DEL CLAUSURA 2026</h2>
     ${escudo(nombre)}
     <div class="champion-name">${nombre}</div>
   `;
-
 }
 
+/* ESTADO GENERAL */
 
-/* ==========================================
-   ESTADO GENERAL DEL PLAY-OFF
-========================================== */
-
-function actualizarEstado(
-  primera,
-  octavos,
-  cuartos,
-  semifinales,
-  final
-){
-
-  const definidos = primera.filter(partido=>
-    obtenerGanador(partido,"primeraRonda")
-  ).length;
-
-  let mensaje = "";
+function actualizarEstado(primera,octavos,cuartos,semifinales,final){
+  const definidos=primera.filter(p=>obtenerGanador(p,"primeraRonda")).length;
+  let mensaje="";
 
   if(definidos<10){
-
-    mensaje =
-      `Primera ronda: ${definidos} de 10 cruces definidos.`;
-
+    mensaje=`Primera ronda: ${definidos} de 10 cruces definidos.`;
   }else if(!octavos.length){
-
-    mensaje =
-      "Primera ronda finalizada. Los octavos están pendientes de generación.";
-
+    mensaje="Primera ronda finalizada. Los octavos están pendientes de generación.";
   }else if(!cuartos.length){
-
-    mensaje =
-      "Primera ronda finalizada. Octavos de final en desarrollo.";
-
+    mensaje="Primera ronda finalizada. Octavos de final en desarrollo.";
   }else if(!semifinales.length){
-
-    mensaje =
-      "Octavos de final finalizados. Cuartos de final en desarrollo.";
-
+    mensaje="Octavos de final finalizados. Cuartos de final en desarrollo.";
   }else if(!final.length){
-
-    mensaje =
-      "Cuartos de final finalizados. Semifinales en desarrollo.";
-
+    mensaje="Cuartos de final finalizados. Semifinales en desarrollo.";
   }else{
-
-    mensaje =
-      "Semifinales finalizadas. La final está en juego.";
-
+    mensaje="Semifinales finalizadas. La final está en juego.";
   }
 
-  document.getElementById("estadoPlayoff").textContent = mensaje;
-
+  document.getElementById("estadoPlayoff").textContent=mensaje;
 }
 
-
-/* ==========================================
-   INICIALIZACIÓN
-========================================== */
+/* INICIALIZACIÓN */
 
 function cargarPlayoff(){
-
   try{
-
     prepararClasificacion();
-
     mostrarPrimeros();
 
-    const primera = crearPrimeraRonda();
+    const primera=crearPrimeraRonda();
+    const octavos=crearOctavos(primera);
 
-    const octavos = crearOctavos(primera);
-
-    const cuartos = crearSiguienteRonda(
-      octavos,
-      "segundaRonda",
-      "CF",
-      "cuartos"
+    const cuartos=crearSiguienteRonda(
+      octavos,"segundaRonda","CF","cuartos"
     );
 
-    const semifinales = crearSiguienteRonda(
-      cuartos,
-      "cuartos",
-      "SF",
-      "semifinales"
+    const semifinales=crearSiguienteRonda(
+      cuartos,"cuartos","SF","semifinales"
     );
 
-    const final = crearSiguienteRonda(
-      semifinales,
-      "semifinales",
-      "F",
-      "final"
+    const final=crearSiguienteRonda(
+      semifinales,"semifinales","F","final"
     );
 
-    mostrarRonda(
-      "primera-ronda",
-      primera,
-      "primeraRonda"
-    );
-
-    mostrarRonda(
-      "octavos",
-      octavos,
-      "segundaRonda"
-    );
-
-    mostrarRonda(
-      "cuartos",
-      cuartos,
-      "cuartos"
-    );
-
-    mostrarRonda(
-      "semifinales",
-      semifinales,
-      "semifinales"
-    );
-
-    mostrarRonda(
-      "final",
-      final,
-      "final"
-    );
+    mostrarRonda("primera-ronda",primera,"primeraRonda");
+    mostrarRonda("octavos",octavos,"segundaRonda");
+    mostrarRonda("cuartos",cuartos,"cuartos");
+    mostrarRonda("semifinales",semifinales,"semifinales");
+    mostrarRonda("final",final,"final");
 
     mostrarCampeon(final);
-
-    actualizarEstado(
-      primera,
-      octavos,
-      cuartos,
-      semifinales,
-      final
-    );
+    actualizarEstado(primera,octavos,cuartos,semifinales,final);
 
   }catch(error){
-
     console.error("Error al cargar Play-Off:",error);
 
-    document.getElementById("estadoPlayoff").textContent =
+    document.getElementById("estadoPlayoff").textContent=
       "No se pudo cargar el Play-Off: "+error.message;
 
-    document.getElementById("primeros").innerHTML =
+    document.getElementById("primeros").innerHTML=
       "<p>Revisá la clasificación generada desde datos.js.</p>";
-
   }
-
 }
 
 cargarPlayoff();
 
+/* OCULTAR CABECERA AL DESPLAZARSE */
 
-/* ==========================================
-   OCULTAR CABECERA AL DESPLAZARSE
-========================================== */
-
-let ultimaPosicion = 0;
+let ultimaPosicion=0;
 
 window.addEventListener("scroll",()=>{
-
-  const header = document.getElementById("siteHeader");
-  const actual = window.scrollY;
+  const header=document.getElementById("siteHeader");
+  const actual=window.scrollY;
 
   if(actual>ultimaPosicion && actual>150){
-
     header.classList.add("header-hidden");
-
   }else{
-
     header.classList.remove("header-hidden");
-
   }
 
-  ultimaPosicion = actual;
-
+  ultimaPosicion=actual;
 });
-
 </script>
 
 </body>
